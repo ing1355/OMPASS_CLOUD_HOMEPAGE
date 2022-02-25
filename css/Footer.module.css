@@ -1,0 +1,204 @@
+.footer {
+  color: #fff;
+}
+.footerTextBox h2 a {
+  color: #fff;
+}
+.footerBox {
+  width: 100%;
+  height: auto;
+  background: #01395a;
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+}
+.footerSubBox {
+  width: 80rem;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+}
+.footerSubBox ul {
+  display: flex;
+  width: 100%;
+}
+.footerSubBox li {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.footerSubBox li:nth-child(2) {
+  flex: 2.7;
+}
+.footerSubBox li:nth-child(3) {
+  flex: 1;
+
+  justify-content: flex-end;
+}
+
+.footerSubBox p {
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  font-weight: 100 !important;
+}
+.footerBox .on-Premise-div {
+  display: flex;
+  justify-content: right;
+}
+.footerBox .on-Premise-div button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0.5rem 1rem;
+  outline: 0;
+  background: none;
+  color: #fff;
+  background: #000;
+  font-size: 1rem;
+}
+.footerBox .on-Premise-div button:hover {
+  background: #fff;
+  color: #0ca6ff;
+  font-weight: bold;
+}
+.footerBox .on-Premise-div .green-color:hover {
+  color: rgb(2, 170, 58);
+}
+.footerSubBox h2 {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.footerSubBox .copyRight {
+  font-weight: 100 !important;
+  font-size: 0.7rem;
+  width: 100%;
+  text-align: right;
+}
+
+.footerTextBox2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.footerTextBox2 .agree {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.footerTextBox2 .agree:hover {
+  color: #0ca6ff;
+}
+
+/* ==========팝업============ */
+.ant-modal-content {
+  height: 1050px;
+  width: 100% !important;
+  overflow: scroll;
+  overflow-x: hidden !important;
+}
+.ant-modal-close-icon {
+  display: none !important;
+}
+.ant-btn:nth-child(1) {
+  display: none !important;
+}
+.ant-btn-primary {
+  display: block !important;
+  margin: 0 auto !important;
+  background: rgb(141, 141, 141) !important;
+  border: 0 !important;
+}
+.modal-agree p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.ant-btn-primary:hover {
+  background: #0ca6ff !important;
+}
+/* ========================= */
+
+@media (max-width: 1920px) {
+  .footerSubBox ul {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .footerSubBox li:nth-child(2) {
+    flex: 2;
+    width: 100%;
+  }
+  .footerSubBox li:nth-child(3) {
+    flex: 1;
+  }
+  .footerSubBox li {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footerBox {
+    width: 100%;
+    height: auto;
+    background: #01395a;
+    position: relative;
+    bottom: 0;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .footerSubBox {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 2rem;
+  }
+
+  .footerSubBox ul {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .footerSubBox li {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .footerSubBox li:nth-child(3) {
+    width: 100%;
+    flex: 1;
+    text-align: left;
+  }
+  .footerTextBox {
+    margin: 1rem 0;
+  }
+  .footerTextBox2 {
+    align-items: flex-start;
+    margin: 1rem 0;
+  }
+  .footerBox .on-Premise-div {
+    margin-bottom: 1rem;
+  }
+  .footerSubBox .copyRight {
+    font-size: 0.8rem;
+  }
+  /* ==========팝업============ */
+  .ant-modal-content {
+    height: 550px;
+    width: 100% !important;
+    overflow: scroll;
+    overflow-x: hidden !important;
+  }
+
+  .ant-modal-mask {
+    background-color: rgb(0 0 0 / 80%) !important;
+  }
+}

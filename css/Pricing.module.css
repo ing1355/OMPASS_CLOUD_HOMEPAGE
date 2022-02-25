@@ -1,0 +1,323 @@
+:lang(en) .en-p {
+  display: none;
+}
+
+.pricingBox {
+  width: 85rem !important;
+  height: auto;
+  margin: 0 auto;
+}
+.pricingTtileBox {
+  width: 100%;
+  height: 350px;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(/static/images/pricing_Bg.png) no-repeat;
+  background-size: cover;
+}
+.pricingTtileBox h2 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 4rem;
+}
+.pricingContentsBox1 {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding: 4rem 0;
+}
+.pricingContentsBox1 h3 {
+  margin-bottom: 4rem;
+  padding: 0;
+}
+.pricingContentsBox1 ul {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: auto;
+  padding: 2.5rem 0;
+
+  margin: 0 auto;
+}
+.pricingContentsBox1 ul li:nth-child(1) {
+  border-right: 1px solid rgb(155, 155, 155);
+}
+.pricingContentsBox1 ul:nth-child(3) {
+  border-bottom: 0;
+}
+.pricingContentsBox1 ul li {
+  display: flex;
+  flex: 1;
+}
+.pricingContentsBox1 ul li:nth-child(1) {
+  align-items: center;
+  justify-content: center;
+}
+.pricingContentsBox1 ul li:nth-child(1) p {
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+.pricingContentsBox1 ul li:nth-child(2) {
+  /* flex: 2.5; */
+  align-items: center;
+  padding-left: 5rem;
+}
+
+.pricingContentsBox1 ul li:nth-child(2) p {
+  text-align: left !important;
+}
+.pricingContentsBox1 ul .country {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.pricingContentsBox1 ul .country div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid rgb(167, 167, 167);
+}
+.pricingContentsBox1 ul .country div img {
+  width: 110%;
+}
+.pricingContentsBox1 ul p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+.pricingContentsBox1 ul:nth-child(3) .country div img {
+  width: 180%;
+  margin-top: 0.5rem;
+}
+.pricingContentsBox1 ul li:nth-child(2) p:nth-child(1) {
+  margin-top: 0 !important;
+}
+
+.pricingContentsBox2 {
+  width: 100%;
+  height: auto;
+  background-color: #f6f6f6;
+}
+.pricingBox h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.pricingBox h6 {
+  text-align: center;
+  font-size: 1rem;
+  color: rgb(143, 143, 143);
+  margin-top: 0.5rem;
+}
+
+.pricingContents3Box {
+  width: 100%;
+  height: auto;
+  background-color: #f3f3f3;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.pricingContents3Box div {
+  display: flex;
+  flex-direction: column;
+}
+.pricingContents3Box button {
+  width: 10rem;
+  height: 3.5rem;
+  background: #000;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  margin-left: 8rem;
+}
+.pricingContents3Box button:hover {
+  background-color: #0782c9;
+}
+/* ---------------------- 1920 ----------------------- */
+@media (max-width: 1920px) {
+  .pricingBox {
+    width: 85rem;
+  }
+}
+@media (max-width: 1200px) {
+  .pricingBox {
+    width: 100% !important;
+  }
+}
+@media (max-width: 540px) {
+  .pricingBox {
+    width: 100% !important;
+    height: auto;
+    margin: 0 auto;
+  }
+  .pricingTtileBox {
+    width: 100%;
+    height: 200px;
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/static/images/pricing_Bg.png)
+      no-repeat;
+    background-size: cover;
+    background-position: right 0px;
+  }
+  .pricingTtileBox h2 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+  .pricingContentsBox1 {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 3rem 0;
+  }
+  .pricingContentsBox1 h3 {
+    margin-bottom: 0.5rem;
+    padding: 0;
+    font-size: 1.5rem !important;
+  }
+  .pricingContentsBox1 ul {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    height: auto;
+    padding: 2rem 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .pricingContentsBox1 ul:nth-child(3) {
+    padding-bottom: 0 !important;
+  }
+  .pricingContentsBox1 ul li:nth-child(1) {
+    border-right: 1px solid rgb(155, 155, 155);
+  }
+  .pricingContentsBox1 ul:nth-child(3) {
+    border-bottom: 0;
+  }
+  .pricingContentsBox1 ul li {
+    display: flex;
+    flex: 1;
+  }
+  .pricingContentsBox1 ul li:nth-child(1) {
+    align-items: center;
+    justify-content: center;
+  }
+  .pricingContentsBox1 ul li:nth-child(1) p {
+    font-size: 0.5rem;
+    margin-top: 0;
+  }
+  .pricingContentsBox1 ul li:nth-child(2) {
+    flex: 2;
+    align-items: center;
+    padding-left: 1rem;
+  }
+
+  .pricingContentsBox1 ul li:nth-child(2) p {
+    text-align: left !important;
+  }
+  .pricingContentsBox1 ul .country {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .pricingContentsBox1 ul .country div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid rgb(167, 167, 167);
+  }
+  .pricingContentsBox1 ul .country h4 {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+  .pricingContentsBox1 ul li:nth-child(2) p {
+    font-size: 0.8rem;
+  }
+  .pricingContentsBox1 ul .country div img {
+    width: 110%;
+  }
+  .pricingContentsBox1 ul p {
+    margin-top: 0rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  .pricingContentsBox1 ul:nth-child(3) .country div img {
+    width: 180%;
+    margin-top: 0.5rem;
+  }
+  .pricingContentsBox1 ul li:nth-child(2) p:nth-child(1) {
+    margin-top: 0 !important;
+  }
+
+  .pricingContentsBox2 {
+    width: 100%;
+    height: auto;
+    background-color: #f6f6f6;
+  }
+  .pricingBox h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .pricingBox h6 {
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgb(143, 143, 143);
+    margin-top: 0rem;
+  }
+
+  .pricingContents3Box {
+    width: 100%;
+    height: auto;
+
+    background-color: #f3f3f3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 0;
+  }
+  .pricingContents3Box div {
+    display: flex;
+    flex-direction: column;
+  }
+  .pricingContents3Box button {
+    width: 8.5rem;
+    height: 2.5rem;
+    background: #000;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    text-align: center;
+    margin-left: 0rem;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .pricingContents3Box button:hover {
+    background-color: #0782c9;
+  }
+  .pricingContentsBox1 ul:nth-child(2) {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}

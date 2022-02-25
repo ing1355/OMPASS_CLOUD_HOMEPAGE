@@ -1,0 +1,354 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+header {
+  width: 95rem;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 4rem !important;
+}
+.cloudHeader {
+  width: 100%;
+  height: 750px;
+  background-image: url(/static/images/2bac.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.cloud-div {
+  padding-bottom: 6rem;
+}
+.MainBgBox img {
+  text-align: right;
+  display: flex;
+}
+.MainTitle {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 2;
+}
+
+.MainTitle ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 750px;
+  align-items: center;
+}
+.MainTitle ul img {
+  width: 42rem;
+  display: flex;
+}
+.MainTitle ul:nth-child(1) li {
+  text-align: right;
+  display: flex;
+}
+.MainTitle ul:nth-child(2) {
+  text-align: left;
+  line-height: 4rem;
+}
+.MainTitle h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+}
+.MainTitle h5 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+.MainTitle p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.MainTitle .button {
+  width: 100%;
+  text-align: center;
+}
+.MainTitle span {
+  padding: 1rem 2rem;
+  background: #000;
+  color: #fff;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.MainTitle span:hover {
+  background: #fff;
+  color: #0ca6ff;
+  font-weight: 900;
+}
+
+.MainBgBox img {
+  animation: driftAcross 150s infinite linear;
+}
+
+@media (max-width: 2560px) {
+  header {
+    width: 85rem;
+  }
+  .MainTitle ul img {
+    width: 35rem !important;
+  }
+  .MainTitle h1 {
+    font-size: 2.8rem !important;
+  }
+  .MainTitle h5 {
+    font-size: 2.8rem !important;
+  }
+  .MainTitle p {
+    font-size: 1.5rem;
+  }
+  .MainTitle {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 2;
+  }
+
+  .MainTitle ul:nth-child(1) {
+    flex: 1;
+  }
+  .MainTitle ul:nth-child(2) {
+    flex: 1;
+  }
+}
+@media (max-width: 1200px) {
+  header {
+    width: 100%;
+  }
+  .CloudcontentsBox2 .contentsSubBox {
+    width: 100% !important;
+    padding: 6rem 2rem !important;
+  }
+  .CloudcontentsBox3 .contents2Box {
+    width: 100% !important;
+    padding: 0rem 2rem !important;
+  }
+  .CloudcontentsBox5 .contentsSubBox {
+    width: 100% !important;
+    padding: 0rem 2rem !important;
+  }
+  .CloudcontentsBox5 .contentsSubBox img {
+    width: 100% !important;
+  }
+  .CloudcontentsBox5 .contentsSubBox ul li {
+    padding: 2rem;
+  }
+  .CloudcontentsBox5 {
+    padding: 0 !important;
+  }
+  .contentsBox6 .contentsSubBox {
+    width: 100% !important;
+  }
+  .cloudVideo .contentsSubBox .videoDiv {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .cloud-div {
+    padding-bottom: 0;
+  }
+  .MainTitle ul img {
+    width: 27rem !important;
+  }
+  .CloudcontentsBox1 ul:nth-child(3) li p {
+    padding: 0 1rem;
+  }
+  .CloudcontentsBox2 .contentsSubBox .contents2Box div {
+    padding: 0 1rem;
+  }
+  .CloudcontentsBox5 .contentsSubBox ul li h1 {
+    font-size: 3rem !important;
+  }
+  .CloudcontentsBox5 .contentsSubBox ul li:nth-child(2) p {
+    font-size: 1.5rem !important;
+  }
+  .CloudcontentsBox5 span {
+    font-size: 1.1rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .MainTitle {
+    flex-direction: column;
+  }
+  .MainTitle ul img {
+    width: 60% !important;
+  }
+  .MainTitle p {
+    font-size: 1.5rem !important;
+  }
+  .MainTitle span {
+    font-size: 1.2rem;
+  }
+  header {
+    padding-top: 4rem !important;
+  }
+  .MainTitle ul img {
+    width: 60% !important;
+  }
+  .cloudHeader {
+    width: 100%;
+    height: auto;
+    background-image: url(/static/images/2bac.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .MainBgBox {
+    width: 90%;
+    text-align: right;
+    overflow: hidden !important;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  .MainBgBox img {
+    text-align: right;
+    display: flex;
+  }
+  .MainTitle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .MainTitle ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+  .MainTitle ul li {
+    width: 100%;
+  }
+  .MainTitle ul:nth-child(1) {
+    order: 2;
+    display: flex;
+  }
+  .MainTitle ul:nth-child(2) {
+    order: 1;
+    display: flex;
+  }
+  .MainTitle ul img {
+    width: 80% !important;
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .MainTitle ul:nth-child(1) li {
+    text-align: center;
+    display: flex;
+  }
+  .MainTitle h1 {
+    font-size: 2rem !important;
+    font-weight: 900;
+    color: #fff;
+  }
+  .MainTitle h5 {
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    color: #fff;
+  }
+  .MainTitle p {
+    font-size: 1rem !important;
+    font-weight: bold;
+    padding: 0 2rem 0 0;
+    color: #fff;
+  }
+  .MainTitle .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 540px) {
+  header {
+    width: 100%;
+  }
+  .cloudHeader {
+    width: 100%;
+    height: auto;
+    background-image: url(/static/images/2bac.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .MainBgBox {
+    width: 90%;
+    text-align: right;
+    overflow: hidden !important;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  .MainBgBox img {
+    text-align: right;
+    display: flex;
+  }
+  .MainTitle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .MainTitle ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+  .MainTitle ul li {
+    width: 100%;
+  }
+  .MainTitle ul:nth-child(1) {
+    order: 2;
+    display: flex;
+  }
+  .MainTitle ul:nth-child(2) {
+    order: 1;
+    display: flex;
+  }
+  .MainTitle ul img {
+    width: 80% !important;
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .MainTitle ul:nth-child(1) li {
+    text-align: center;
+    display: flex;
+  }
+  .MainTitle h1 {
+    font-size: 2rem !important;
+    font-weight: 900;
+    color: #fff;
+  }
+  .MainTitle h5 {
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    color: #fff;
+  }
+  .MainTitle p {
+    font-size: 1rem !important;
+    font-weight: bold;
+    padding: 0 2rem 0 0;
+    color: #fff;
+  }
+  .MainTitle .button {
+    width: 100%;
+    text-align: center;
+  }
+}

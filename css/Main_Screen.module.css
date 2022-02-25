@@ -1,0 +1,229 @@
+.screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: url(/static/images/img.png) no-repeat 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.screen .screenBox {
+  display: flex;
+  width: 100%;
+  height: 45rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.screen div h2 {
+  font-size: 3.7rem;
+  font-weight: bold;
+  color: #fff;
+  line-height: 7rem;
+  text-align: center;
+}
+.screen .buttonBox {
+  display: flex;
+  width: 90rem;
+  height: 25rem;
+  margin-top: 2rem;
+}
+.screen button {
+  display: flex;
+  flex: 1;
+  margin: 3rem;
+  border-radius: 1rem;
+  outline: 0;
+  border: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.7rem;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+}
+.screen .buttonBox button {
+  background-color: #0ca6ff;
+}
+.screen .buttonBox button:nth-child(1) {
+  background-color: #1daf61;
+}
+.screen .buttonBox button:hover {
+  background-color: #0079be;
+}
+.screen .buttonBox button:nth-child(1):hover {
+  background-color: #009445;
+}
+/* ==================================== */
+.screen .screenFooter {
+  width: 100%;
+  height: 80px;
+  background: #042d44;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  font-size: 1rem;
+  color: rgb(228, 228, 228);
+}
+.screen .screenFooter div {
+  flex: 1;
+}
+.screen .screenFooter div:nth-child(1) {
+  text-align: left;
+}
+.screen .screenFooter div:nth-child(2) {
+  text-align: center;
+}
+.screen .screenFooter div:nth-child(2) div {
+  text-align: center;
+}
+.screen .screenFooter div:nth-child(3) {
+  text-align: right;
+}
+.screen .screenFooter .copy {
+  color: rgb(179, 179, 179);
+  font-size: 0.7rem;
+}
+.footer:hover {
+  color: #0cc6ff;
+}
+.screenFooter span a:hover {
+  color: #0cc6ff;
+}
+
+@media (max-width: 1920px) {
+  .screen div h2 {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+  .screen .buttonBox {
+    width: 85rem;
+    margin-top: 0rem;
+  }
+  .screen button {
+    margin: 5.5rem;
+    font-size: 3rem;
+  }
+}
+@media (max-width: 1200px) {
+  .screen {
+    width: 100% !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: none;
+    background: url(/static/images/img.png) no-repeat 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media (max-width: 540px) {
+  .screen {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: none;
+    background: url(/static/images/img.png) no-repeat 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .screen .screenBox {
+    display: flex;
+    width: 100%;
+    max-height: 450px !important;
+    align-items: center;
+    justify-content: none;
+    flex-direction: column;
+    flex: 1;
+    margin-top: -8rem;
+  }
+  .screen .screenBox .h2 {
+    width: 100%;
+    height: 300px;
+  }
+  .screen div h2 {
+    font-size: 1.3rem !important;
+    font-weight: bold;
+    color: #fff;
+    line-height: 2rem;
+    text-align: center !important;
+    padding: 0 1rem;
+  }
+  .screen .buttonBox {
+    display: flex;
+    width: 80%;
+    max-height: 250px !important;
+    margin-top: -10rem;
+    flex: 1;
+    flex-direction: column;
+  }
+  .screen button {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 10rem !important;
+    margin: 1rem 0rem;
+    border-radius: 1rem;
+    outline: 0;
+    border: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    background: #000;
+    color: #fff;
+  }
+
+  .screen .screenFooter {
+    width: 100%;
+    height: 80px;
+    background: #042d44;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 0.5rem !important;
+    color: rgb(228, 228, 228) !important;
+  }
+  .screenFooter .lang {
+    font-size: 0.8rem;
+    color: #fff !important;
+  }
+
+  .screen .screenFooter div {
+    flex: 1;
+  }
+  .screen .screenFooter div:nth-child(1) {
+    text-align: left;
+  }
+  .screen .screenFooter div:nth-child(2) {
+    text-align: center;
+    flex: 2;
+  }
+  .screen .screenFooter div:nth-child(2) div {
+    text-align: center;
+  }
+  .screen .screenFooter div:nth-child(3) {
+    text-align: right;
+  }
+  .screen .screenFooter .copy {
+    color: rgb(179, 179, 179);
+    font-size: 0.4rem !important;
+  }
+}
