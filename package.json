@@ -8,7 +8,7 @@
     "dev": "next",
     "build": "next build&&next export",
     "start": "next start",
-    "export": "next export",
+    "export": "next export -o dist",
     "deployComponent": "scp -r ./components oms@192.168.182.140:/usr/local/ompass_homepage",
     "deployPages": "scp -r ./pages oms@192.168.182.140:/usr/local/ompass_homepage",
     "deployResources": "scp -r ./static/ oms@192.168.182.140:/usr/local/resources",
