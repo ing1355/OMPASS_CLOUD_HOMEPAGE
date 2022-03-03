@@ -620,7 +620,7 @@
   "결제완료 후 사용자 수를 변경 시 결제는 당일이 아닌 다음 결제일에 변경된 총 결제 인원으로 계산되어 정기결제(자동결제)가 진행됩니다.": "When the number of users changes after the payment, the payment is calculated as the new total number of users on the next payment date.",
   "구독 취소를 한 상태에서는 사용자 수를 재결제 시 변경할 수 있습니다.": "In order to change the number of users after the Cancel Auto-Renewal, the payment should be remade in order to apply the new total number of users, and both recurring payment (subscriptionl) and a period of 30 days will be restarted from the new payment.",
   "구독 취소를 통해 정기결제를 취소하는 경우 남은 기간 동안 서비스 및 사이트 이용이 가능하며 재결제 시 재결제일로부터 정기결제가 다시 활성화 됩니다.": "Eventhough the Customer cancels the subscription by the [Cancel Auto-Renewal] button, the Service is still provided for the remaining period, and the recurring payment (subscription) will be reactivated by the new payment from that date.",
-  "결제일에 정기결제(자동결제)가 실패된 경우 월 (30일) 기간 동안 기존 서비스가 유지되며 하루 1회 결제시도가 진행됩니다.": "Eventhough the recurring payment (subscription) fails on the payment date, the existing service will be still provicded for a month (30 days) and the payment attempt will be made once a day until then.",
+  "결제일에 정기결제(자동결제)가 실패된 경우 월 (30일) 기간 동안 기존 서비스가 유지되며 하루 1회 결제시도가 진행됩니다. 단, 페이팔의 경우는 결제 실패 일로부터 5일마다 최대 2번 결제시도가 진행됩니다.": "Eventhough the recurring payment (subscription) fails on the payment date, the existing service will be still provicded for a month (30 days) and the payment attempt will be made once a day until then. However, in the case of PayPal, payment attempts are made up to 2 times every 5 days from the date of payment failure.",
   "제4조 ❶": "4.1",
   "제4조 ❷": "4.2",
   "제4조 ❸": "4.3",

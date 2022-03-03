@@ -133,7 +133,7 @@ select {
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
   outline: 0;
 }
-:lang(en) .joinEmail .dobuleCheck {
+:lang(en) .joinEmail .doubleCheck {
   font-size: 0.85rem;
 }
 .login-page-go {
@@ -454,7 +454,7 @@ select {
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
     outline: 0;
   }
-  :lang(en) .joinEmail .dobuleCheck {
+  :lang(en) .joinEmail .doubleCheck {
     font-size: 0.9rem;
   }
   .login-page-go {

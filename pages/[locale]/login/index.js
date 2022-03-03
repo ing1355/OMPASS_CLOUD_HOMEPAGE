@@ -15,6 +15,7 @@ import axios from "axios";
 import useTranslation from "../../../lib/useTranslation";
 import { message } from "antd";
 import i18nextConfig from '../../../next-i18next.config';
+import LinkComponent from "../../../components/Link";
 
 const getPathSlugs = () => {
   return i18nextConfig.i18n.locales.map(locale => ({
@@ -32,7 +33,7 @@ export async function getStaticPaths(...args) {
   }
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   return {
     props: {
       ...params
@@ -46,6 +47,23 @@ const passwordTest = (value) => {
 
   return _.test(value);
 };
+
+const LinkToLoginPage = () => {
+  const { t } = useTranslation();
+  return <LinkComponent
+    style={{
+      marginLeft: '4px',
+      textDecoration: "underline",
+      cursor: "pointer",
+      fontWeight: "500",
+      color: "blue",
+    }}
+    href="https://admin.ompasscloud.com/login"
+    target="_blank"
+  >
+    {t("로그인 페이지 이동하기")}
+  </LinkComponent>
+}
 
 function login() {
   const { t } = useTranslation();
@@ -132,6 +150,7 @@ function login() {
       alert("이용약관과 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.");
     }
   };
+
   return (
     <div className="LoginBox">
       {agree === true ? (
@@ -172,7 +191,7 @@ function login() {
                 />
               </div>
               <div>
-                <label for="agree1">
+                <label htmlFor="agree1">
                   {t("이용약관 동의")} <b>{t("(필수)")}</b>
                 </label>
               </div>
@@ -195,7 +214,7 @@ function login() {
                 />
               </div>
               <div>
-                <label for="agree2">
+                <label htmlFor="agree2">
                   {t("개인정보 수집 및 이용 동의")} <b>{t("(필수)")}</b>
                 </label>
               </div>
@@ -207,19 +226,8 @@ function login() {
           <button onClick={agreeCheck}>{t("확인")}</button>
 
           <p className="login-page-go login-mobile">
-            {t("혹시 계정이 있으신가요?")}　
-            <a
-              style={{
-                textDecoration: "underline",
-                cursor: "pointer",
-                fontWeight: "500",
-                color: "blue",
-              }}
-              href="https://admin.ompasscloud.com/login"
-              target="_blank"
-            >
-              {t("로그인 페이지 이동하기")}
-            </a>
+            {t("혹시 계정이 있으신가요?")}
+            <LinkToLoginPage />
           </p>
         </div>
       ) : null}
@@ -341,7 +349,7 @@ function login() {
               />
               <button
                 type="button"
-                className="dobuleCheck"
+                className="doubleCheck"
                 onClick={isExistCheckTrigger}
               >
                 {t("중복확인")}
@@ -381,19 +389,8 @@ function login() {
           </form>
 
           <p className="login-page-go login-mobile">
-            {t("혹시 계정이 있으신가요?")}　
-            <a
-              style={{
-                textDecoration: "underline",
-                cursor: "pointer",
-                fontWeight: "500",
-                color: "blue",
-              }}
-              href="https://admin.ompasscloud.com/login"
-              target="_blank"
-            >
-              {t("로그인 페이지 이동하기")}
-            </a>
+            {t("혹시 계정이 있으신가요?")}
+            <LinkToLoginPage />
           </p>
         </div>
       ) : null}
@@ -421,19 +418,8 @@ function login() {
       ) : null}
 
       <p className="login-page-go login-pc">
-        {t("혹시 계정이 있으신가요?")}　
-        <a
-          style={{
-            textDecoration: "underline",
-            cursor: "pointer",
-            fontWeight: "500",
-            color: "blue",
-          }}
-          href="https://admin.ompasscloud.com/login"
-          target="_blank"
-        >
-          {t("로그인 페이지 이동하기")}
-        </a>
+        {t("혹시 계정이 있으신가요?")}
+        <LinkToLoginPage />
       </p>
     </div>
   );

@@ -18,7 +18,7 @@ function NavbarTop() {
   const router = useRouter();
   const { t, isKr } = useTranslation();
   const [langbox, setLangbox] = useState(false);
-  
+
   useEffect(() => {
     $(window)
       .resize(function () {
@@ -69,36 +69,30 @@ function NavbarTop() {
               Pricing
             </LinkComponent>
           </li>
-          <li>
-            <LinkComponent href="/support">
-              Support
+            <li>
+              <LinkComponent href="/support">
+                Support
             </LinkComponent>
-          </li>
-          <li>
-            <LinkComponent href="/document/u2f-uaf">
-              Document
+            </li>
+            <li>
+              <LinkComponent href="/document/u2f-uaf">
+                Document
             </LinkComponent>
-          </li></>}
+            </li></>}
           <li className="langbutton-mobile">
-            {/* <LinkComponent href={langToggleRoute} locale="ko">
-              <a className="langkobutton">
-                <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
+            <LanguageSwitchLink locale="ko" className="langkobutton">
+              <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
                 &nbsp;&nbsp; KOREA / 한국어
-              </a>
-            </LinkComponent>
-            <LinkComponent href={langToggleRoute} locale="en">
-              <a className="langenbutton">
-                <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
+            </LanguageSwitchLink>
+            <LanguageSwitchLink locale="en" className="langenbutton">
+              <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
                 &nbsp;&nbsp; GLOBAL / ENGLISH
-              </a>
-            </LinkComponent> */}
+            </LanguageSwitchLink>
           </li>
           <li className="admin-login-button-mobile">
-            <LinkComponent href="https://admin.ompasscloud.com/login">
-              <a target="_blank">
-                <LogoutOutlined />
+            <LinkComponent href="https://admin.ompasscloud.com/login" target="_blank">
+              <LogoutOutlined />
                 &nbsp;{t("ADMIN LOGIN")}
-              </a>
             </LinkComponent>
           </li>
         </ul>
@@ -116,17 +110,15 @@ function NavbarTop() {
 
             {langbox === true && (
               <div className="lang-drop-down-box">
-                <LanguageSwitchLink locale="en"/>
-                <LanguageSwitchLink locale="ko"/>
+                <LanguageSwitchLink locale="en" />
+                <LanguageSwitchLink locale="ko" />
               </div>
             )}
           </button>
           <li className="admin-login-button">
-            <LinkComponent href="https://admin.ompasscloud.com/login">
-              <a target="_blank">
-                <LogoutOutlined />
+            <LinkComponent href="https://admin.ompasscloud.com/login" target="_blank">
+              <LogoutOutlined />
                 &nbsp;ADMIN LOGIN
-              </a>
             </LinkComponent>
           </li>
         </ul>

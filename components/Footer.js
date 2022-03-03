@@ -15,9 +15,9 @@ function Foooter() {
           <li>
             <div className="footerTextBox">
               <h2>
-                <a className="footer" href={isKr ? "/ko" : '/en'}>
+                <LinkComponent className="footer" href="/">
                   {t("원모어패스")}
-                </a>
+                </LinkComponent>
               </h2>
             </div>
           </li>
@@ -41,15 +41,15 @@ function Foooter() {
           <li>
             <div className="footerTextBox2">
               <p className="agree">
-                <a className="footer" href={isKr ? "/ko/terms-of-Service" : "/en/terms-of-Service"}>
+                <LinkComponent className="footer" href="/terms-of-Service">
                   {t("이용약관")}
-                </a>
+                </LinkComponent>
               </p>
 
               <p className="agree">
-                <a className="footer" href={isKr ? "/ko/privacy-policy" : "/en/privacy-policy"}>
+                <LinkComponent className="footer" href="/privacy-policy">
                   {t("개인정보 처리 방침")}
-                </a>
+                </LinkComponent>
               </p>
 
               <p className="copyRight">
