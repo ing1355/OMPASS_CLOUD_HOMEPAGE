@@ -1,6 +1,10 @@
 * {
   word-break: keep-all;
 }
+
+.title-img-mobile {
+  display: none !important;
+}
 header {
   width: 95rem;
   height: auto;
@@ -198,6 +202,13 @@ header {
   }
 }
 @media (max-width: 768px) {
+  .title-img-mobile {
+    display: block !important;
+  }
+  .title-img-pc {
+    display: none !important;
+  }
+
   .MainTitle {
     flex-direction: column;
   }
@@ -231,7 +242,7 @@ header {
     font-size: 1rem !important;
     line-height: 25px;
     word-break: keep-all;
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
   header {

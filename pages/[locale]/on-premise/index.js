@@ -3,30 +3,30 @@ import "../../../css/Build_Title.module.css";
 import "../../../css/Main.module.css";
 import Contents from "../../../components/on-premise/Contents";
 import useTranslation from "../../../lib/useTranslation";
-import i18nextConfig from '../../../next-i18next.config';
+import i18nextConfig from "../../../next-i18next.config";
 
 const getPathSlugs = () => {
-  return i18nextConfig.i18n.locales.map(locale => ({
+  return i18nextConfig.i18n.locales.map((locale) => ({
     params: {
-      locale
-    }
-  }))
-}
+      locale,
+    },
+  }));
+};
 
 export async function getStaticPaths(...args) {
   const pathsWithLocale = getPathSlugs();
   return {
     paths: pathsWithLocale,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   return {
     props: {
-      ...params
-    }
-  }
+      ...params,
+    },
+  };
 }
 
 function onpremise() {
@@ -39,9 +39,22 @@ function onpremise() {
           <ul>
             <li>
               <img
-                className="OmpassSolutionBox"
-                src={isKr ? "/static/images/Build_TitleImg_Kor.png" : "/static/images/Build_TitleImg_Eng.png"}
-                alt="원모어패스 패키지박스_한글"
+                className="OmpassSolutionBox title-img-pc"
+                src={
+                  isKr
+                    ? "/static/images/TitleImg_Kor.png"
+                    : "/static/images/TitleImg_Eng.png"
+                }
+                alt="원모어패스 타이틀 이미지 - PC"
+              />
+              <img
+                className="OmpassSolutionBox title-img-mobile"
+                src={
+                  isKr
+                    ? "/static/images/mobile_TitleImg.png"
+                    : "/static/images/mobile_TitleImg_Eng.png"
+                }
+                alt="원모어패스 타이틀 이미지 - 모바일"
               />
             </li>
           </ul>
@@ -54,7 +67,11 @@ function onpremise() {
               </p>
               <div className="button">
                 <a
-                  href={isKr ? "/static/pdf/원모어패스 구축형 브로셔.pdf" : "/static/pdf/OMPASS_OnPremise_Brochure.pdf"}
+                  href={
+                    isKr
+                      ? "/static/pdf/원모어패스 구축형 브로셔.pdf"
+                      : "/static/pdf/OMPASS_OnPremise_Brochure.pdf"
+                  }
                   download
                 >
                   <span>{t("브로셔 다운")}</span>

@@ -76,14 +76,12 @@ function NavbarTop() {
 
           <div className="langbutton-mobile-div">
             <li className="langbutton-mobile">
-              <LanguageSwitchLink locale="ko" className="langkobutton">
+              <LanguageSwitchLink
+                locale={isKr ? "en" : "ko"}
+                className={isKr ? "langenbutton" : "langkobutton"}
+              >
                 <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
-                &nbsp;&nbsp; KOREA / 한국어
-              </LanguageSwitchLink>
-
-              <LanguageSwitchLink locale="en" className="langenbutton">
-                <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
-                &nbsp;&nbsp; GLOBAL / ENGLISH
+                &nbsp;{isKr ? "GLOBAL / 영어" : "KOREA / KOREAN"}
               </LanguageSwitchLink>
             </li>
             <li className="admin-login-button-mobile">

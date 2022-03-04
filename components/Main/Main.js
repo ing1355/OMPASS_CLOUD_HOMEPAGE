@@ -15,10 +15,23 @@ function Main(props) {
           <ul>
             <li>
               <img
-                className="OmpassSolutionBox"
-                src={isKr ? "/static/images/Cloud_TitleImg_Kor.png" : "/static/images/Cloud_TitleImg_Eng.png"}
-                alt="원모어패스 패키지박스_한글"
-              />{" "}
+                className="OmpassSolutionBox title-img-pc"
+                src={
+                  isKr
+                    ? "/static/images/TitleImg_Kor.png"
+                    : "/static/images/TitleImg_Eng.png"
+                }
+                alt="원모어패스 타이틀 이미지 - PC"
+              />
+              <img
+                className="OmpassSolutionBox title-img-mobile"
+                src={
+                  isKr
+                    ? "/static/images/mobile_TitleImg.png"
+                    : "/static/images/mobile_TitleImg_Eng.png"
+                }
+                alt="원모어패스 타이틀 이미지 - 모바일"
+              />
             </li>
           </ul>
           <ul>
@@ -33,7 +46,11 @@ function Main(props) {
                   <span>{t("체험하기")}</span>
                 </LinkComponent>
                 <a
-                  href={isKr ? "/static/pdf/원모어패스 클라우드형 브로셔.pdf" : "/static/pdf/OMPASS_Cloud_Brochure.pdf"}
+                  href={
+                    isKr
+                      ? "/static/pdf/원모어패스 클라우드형 브로셔.pdf"
+                      : "/static/pdf/OMPASS_Cloud_Brochure.pdf"
+                  }
                   download
                 >
                   <span>{t("브로셔 다운")}</span>
