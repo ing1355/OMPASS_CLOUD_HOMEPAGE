@@ -1,16 +1,9 @@
 .mobile-button {
   display: none;
 }
-.langbutton-mobile {
-  display: none;
+.langbutton-pc {
+  display: flex !important;
 }
-.dropDown_bg {
-  display: none;
-}
-.admin-login-button-mobile {
-  display: none;
-}
-
 .navbar-div {
   width: 100%;
   background: #fff;
@@ -25,6 +18,13 @@
 }
 a {
   text-decoration: none !important;
+}
+.nav-menu-item-div {
+  display: flex;
+}
+.langbutton-mobile-div {
+  display: flex;
+  display: none;
 }
 .navbar-div a {
   color: #000;
@@ -46,7 +46,6 @@ a {
   align-items: center;
 }
 .navbar-div .navbar-nav ul li {
-  padding-right: 1rem;
   cursor: pointer;
 }
 .navbar-div .navbar-nav ul:nth-child(2) li {
@@ -70,6 +69,7 @@ a {
   height: 40px;
   justify-content: center;
   display: flex;
+  align-items: center !important;
 }
 .navbar-div .navbar-nav .admin-login-button a {
   display: flex;
@@ -113,12 +113,18 @@ a {
 .lang-drop-down-box li:hover {
   text-decoration: underline;
 }
+.langbutton-pc {
+  display: flex;
+  align-items: center;
+  justify-content: end !important;
+}
+
 @media (max-width: 1200px) {
   .navbar-div {
     width: 100% !important;
   }
   .navbar-div .navbar-nav {
-    width: 97% !important;
+    width: 98% !important;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -136,20 +142,42 @@ a {
 }
 
 @media (max-width: 768px) {
-  .navbar-nav .menu-title {
-    padding: 0 1rem;
-  }
   .langbutton-pc {
     display: none !important;
+  }
+  .langbutton-mobile-div {
+    display: block;
+    width: 100%;
+    margin-top: 0 !important;
+    background: #f8f7f8;
+  }
+  .langbutton-mobile-div li:last-child {
+    border-bottom: 0;
+  }
+  .nav-menu-item-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    background: #f8f7f8;
   }
   .mobile-button {
     display: block;
   }
-  .admin-login-button {
-    display: none !important;
+
+  .navbar-nav .menu-title {
+    padding: 0 1rem;
   }
+
+  .navbar-div .navbar-nav ul:nth-child(2) li {
+    padding-left: 1rem;
+    width: 100%;
+  }
+  .navbar-div .navbar-nav ul {
+    align-items: flex-start !important;
+  }
+
   .langbutton-mobile {
-    display: block;
     display: flex;
     flex-direction: row !important;
   }
@@ -159,11 +187,12 @@ a {
     top: 0;
   }
   .navbar-div .navbar-nav {
-    width: 100%;
+    width: 98%;
     display: flex;
     flex-direction: column;
     position: absolute;
     justify-content: left;
+    padding: 0rem;
   }
   .navbar-nav ul:nth-child(1) {
     justify-content: space-between;
@@ -209,12 +238,7 @@ a {
     font-weight: bold;
     border-bottom: 1px solid rgba(121, 121, 121, 0.493);
   }
-  .nav-menu-item li:last-child {
-    border-bottom: 0;
-  }
-  .nav-menu-item li:nth-child(1) {
-    margin-top: 1rem;
-  }
+
   .nav-menu-item a {
     display: flex;
     flex-direction: column;
@@ -222,7 +246,7 @@ a {
   .admin-login-button-mobile {
     display: flex;
     flex-direction: row !important;
-    align-items: center;
+    align-items: center !important;
   }
   .admin-login-button-mobile a {
     display: flex;
@@ -245,20 +269,12 @@ a {
   .navbar-nav .menu-title {
     padding: 0 1rem;
   }
-  .langbutton-pc {
-    display: none !important;
-  }
-  .mobile-button {
-    display: block;
-  }
-  .admin-login-button {
-    display: none !important;
-  }
+
   .langbutton-mobile {
-    display: block;
     display: flex;
     flex-direction: row !important;
   }
+
   .navbar-div {
     display: flex;
     position: fixed;
@@ -272,6 +288,7 @@ a {
     justify-content: left;
     padding: 0;
   }
+
   .navbar-nav ul:nth-child(1) {
     justify-content: space-between;
     margin-top: 1rem;

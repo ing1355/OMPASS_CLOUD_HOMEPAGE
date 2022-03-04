@@ -134,7 +134,7 @@
 }
 .contentsBox2 .contentsSubBox .contents2Box li p {
   font-size: 1.2rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
   height: 50px;
 }
 
@@ -469,9 +469,9 @@
   .contentsBox2 .contentsSubBox .contents2Box li {
     margin: 0.8rem;
   }
-  .contentsBox2 .contents2Box_2 {
+  /* .contentsBox2 .contents2Box_2 {
     margin: 0.8rem;
-  }
+  } */
   .contentsBox3 .contents2Box .contents2Title ul {
     margin-top: 0;
     height: 150px;
@@ -499,6 +499,10 @@
   }
 }
 @media (max-width: 540px) {
+  p {
+    margin-bottom: 0 !important;
+  }
+
   .contentsBox1 {
     width: 100%;
     height: auto;
@@ -557,8 +561,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    background: url(/static/images/passwordBg.png)
-      no-repeat;
+    background: url(/static/images/passwordBg.png) no-repeat;
     background-size: cover;
     background-position: center;
   }
@@ -621,12 +624,12 @@
     background: rgb(249, 250, 251);
     position: relative;
     z-index: 5;
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
   }
   .contentsBox2 .contentsSubBox {
     width: 90%;
     margin: 0 auto;
-    padding: 4rem 0 0 0;
+    padding: 4rem 2rem !important;
   }
   .contentsBox2 .contentsSubBox h2 {
     font-size: 1.2rem;
@@ -650,29 +653,32 @@
     align-items: center;
     background: #ffffff;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
   }
   .contentsBox2 .contentsSubBox .contents2Box li div {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
+    flex: 1;
+    width: 100%;
   }
+  .contents2Box .FontAwesomeIcon-p {
+    width: 100px;
+    margin-top: 0 !important;
+  }
+  .contentsBox2 .contentsSubBox .contents2Box li div p {
+    font-size: 1rem !important;
+  }
+
   .contentsBox2 .contentsSubBox .contents2Box li .contents1FontAwsome {
-    font-size: 2rem !important;
-    height: auto;
-    margin-right: 1rem;
-    margin-left: 0.5rem;
-    text-align: left;
-    width: 12%;
+    font-size: 3rem !important;
+    height: 70px;
   }
   .contentsBox2 .contentsSubBox .contents2Box li p {
-    font-size: 1rem !important;
-    height: auto;
-    width: 100%;
-    margin: 0;
-    text-align: left;
-    width: 88% !important;
+    font-size: 1.2rem;
+    margin-top: 0rem;
+    height: 70px;
+    line-height: 70px;
   }
 
   .contents2Box_2 {
@@ -864,7 +870,7 @@
   .contentsBox5 .contentsSubBox ul li:nth-child(1) {
     flex: 1.5;
     order: 2;
-    margin-top: 3rem;
+    margin-top: -1rem !important;
   }
   .contentsBox5 .contentsSubBox ul li:nth-child(2) {
     flex: 1.5;
@@ -897,6 +903,11 @@
   .contentsBox5 .contentsSubBox .icon {
     width: 1rem !important;
   }
+
+  .contentsBox5 span {
+    font-size: 1rem !important;
+  }
+
   /* ==================================================== */
   .contentsBox6 {
     width: 100%;
@@ -925,7 +936,7 @@
     flex-direction: row;
     background: #c7dbd262 !important;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 2rem;
   }
   .contentsBox6 .videoDiv .iframeVideo {
     width: 100%;
@@ -944,5 +955,52 @@
     background: #f9fafb;
     padding-top: 0rem !important;
     padding-bottom: 1rem !important;
+  }
+}
+
+@media (max-width: 436px) {
+  .contentsBox5 .contentsSubBox {
+    padding: 0 !important;
+  }
+  .contentsBox5 .contentsSubBox ul li h1 {
+    font-size: 1.2rem !important;
+  }
+  .contentsBox5 .contentsSubBox ul li:nth-child(2) p {
+    font-size: 1.2rem !important;
+    margin-bottom: 0;
+  }
+  .contentsBox5 span {
+    font-size: 0.9rem !important;
+  }
+
+  .contents2Box .FontAwesomeIcon-p {
+    width: 50px;
+    margin-top: 0 !important;
+  }
+  .contentsBox2 .contentsSubBox .contents2Box li div p {
+    font-size: 0.9rem !important;
+    margin-right: 10px;
+  }
+
+  .contentsBox2 .contentsSubBox .contents2Box li .contents1FontAwsome {
+    font-size: 2.5rem !important;
+    height: 70px;
+  }
+  .contentsBox3 .contents2Box {
+    padding: 0 1rem !important;
+  }
+}
+@media (max-width: 384px) {
+  .contents2Box .FontAwesomeIcon-p {
+    width: 35px;
+    margin-top: 0 !important;
+  }
+  .contentsBox2 .contentsSubBox .contents2Box li div p {
+    font-size: 0.8rem !important;
+    margin-right: 10px;
+  }
+  .contentsBox2 .contentsSubBox .contents2Box li .contents1FontAwsome {
+    font-size: 2rem !important;
+    height: 70px;
   }
 }

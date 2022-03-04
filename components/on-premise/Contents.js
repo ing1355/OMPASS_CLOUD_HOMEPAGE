@@ -40,7 +40,11 @@ function Contents() {
             <li>
               <img
                 className="OmpassSolutionBox"
-                src={isKr ? "/static/images/OmpassBoxKor.png" : "/static/images/OmpassBoxEng.png"}
+                src={
+                  isKr
+                    ? "/static/images/OmpassBoxKor.png"
+                    : "/static/images/OmpassBoxEng.png"
+                }
                 alt="원모어패스 패키지박스_한글"
               />
             </li>
@@ -77,33 +81,38 @@ function Contents() {
             <ul className="contents2Box">
               <li>
                 <div>
-                  <FontAwesomeIcon
-                    className="contents1FontAwsome"
-                    icon={faUserCircle}
-                    style={{ color: "7aba98" }}
-                  />
+                  <p className="FontAwesomeIcon-p">
+                    <FontAwesomeIcon
+                      className="contents1FontAwsome"
+                      icon={faUserCircle}
+                      style={{ color: "7aba98" }}
+                    />
+                  </p>
+
                   <p>{t("패스워드가 없는 사용자 편의성")}</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <div>
+                  <p className="FontAwesomeIcon-p">
                     <FontAwesomeIcon
                       className="contents1FontAwsome"
                       icon={faShieldAlt}
                       style={{ color: "7aba98" }}
                     />
-                    <p>{t("PKI 기반의 높은 보안성")}</p>
-                  </div>
+                  </p>
+                  <p>{t("PKI 기반의 높은 보안성")}</p>
                 </div>
               </li>
               <li>
                 <div>
-                  <FontAwesomeIcon
-                    className="contents1FontAwsome"
-                    icon={faGripVertical}
-                    style={{ color: "7aba98" }}
-                  />
+                  <p className="FontAwesomeIcon-p">
+                    <FontAwesomeIcon
+                      className="contents1FontAwsome"
+                      icon={faGripVertical}
+                      style={{ color: "7aba98" }}
+                    />
+                  </p>
                   <p>{t("다양한 인증방식 적용한 멀티확장성")}</p>
                 </div>
               </li>
@@ -149,9 +158,9 @@ function Contents() {
                     style={
                       show1 === true
                         ? {
-                          border: "3px solid #41ad95",
-                          background: "rgb(199 219 210)",
-                        }
+                            border: "3px solid #41ad95",
+                            background: "rgb(199 219 210)",
+                          }
                         : null
                     }
                   >
@@ -168,9 +177,9 @@ function Contents() {
                     style={
                       show2 === true
                         ? {
-                          border: "3px solid #41ad95",
-                          background: "rgb(199 219 210)",
-                        }
+                            border: "3px solid #41ad95",
+                            background: "rgb(199 219 210)",
+                          }
                         : null
                     }
                   >
@@ -187,9 +196,9 @@ function Contents() {
                     style={
                       show3 === true
                         ? {
-                          border: "3px solid #41ad95",
-                          background: "rgb(199 219 210)",
-                        }
+                            border: "3px solid #41ad95",
+                            background: "rgb(199 219 210)",
+                          }
                         : null
                     }
                   >
@@ -308,7 +317,11 @@ function Contents() {
           <h2>{t("사양·구성도")}</h2>
           <img
             className="ompass DiagramImg"
-            src={isKr ? "/static/images/OmpassDiagramImg_Kor.png" : "/static/images/OmpassDiagramImg_Eng.png"}
+            src={
+              isKr
+                ? "/static/images/OmpassDiagramImg_Kor.png"
+                : "/static/images/OmpassDiagramImg_Eng.png"
+            }
             alt="원모어패스 사양구성도_한글"
           />{" "}
         </div>
@@ -320,7 +333,11 @@ function Contents() {
             <li>
               <img
                 className="ompassApp"
-                src={isKr ? "/static/images/OmpassAppImg_Kor.png" : "/static/images/OmpassAppImg_Eng.png"}
+                src={
+                  isKr
+                    ? "/static/images/OmpassAppImg_Kor.png"
+                    : "/static/images/OmpassAppImg_Eng.png"
+                }
                 alt="원모어패스 앱_한글"
               />
             </li>
@@ -364,7 +381,11 @@ function Contents() {
           <div className="videoDiv">
             <iframe
               className="iframeVideo"
-              src={isKr ? "https://www.youtube.com/embed/1-0ltemtiPc" : "https://www.youtube.com/embed/LEcciL5JKvs"}
+              src={
+                isKr
+                  ? "https://www.youtube.com/embed/1-0ltemtiPc"
+                  : "https://www.youtube.com/embed/LEcciL5JKvs"
+              }
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
