@@ -36,6 +36,10 @@ module.exports = withCSS(
           config.plugins.push(new webpack.DefinePlugin(env));
           return config;
         },
+        env: {
+          // adminRoute : "https://ompass.kr:4002/login"
+          adminRoute : "https://admin.ompasscloud.com/login"
+        },
         webpack5: false,
         presets,
         plugins,

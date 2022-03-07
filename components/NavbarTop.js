@@ -19,6 +19,8 @@ function NavbarTop() {
   const { t, isKr } = useTranslation();
   const [langbox, setLangbox] = useState(false);
 
+  const getAdminHomePage = locale => process.env.adminRoute + '/' + locale
+
   useEffect(() => {
     $(window)
       .resize(function () {
@@ -90,7 +92,7 @@ function NavbarTop() {
             </LanguageSwitchLink>
           </li>
           <li className="admin-login-button-mobile">
-            <LinkComponent href="https://admin.ompasscloud.com/login" target="_blank">
+            <LinkComponent href={isKr ? getAdminHomePage('ko') : getAdminHomePage('en')} target="_blank">
               <LogoutOutlined />
                 &nbsp;{t("ADMIN LOGIN")}
             </LinkComponent>
@@ -116,7 +118,7 @@ function NavbarTop() {
             )}
           </button>
           <li className="admin-login-button">
-            <LinkComponent href="https://admin.ompasscloud.com/login" target="_blank">
+            <LinkComponent href={isKr ? getAdminHomePage('ko') : getAdminHomePage('en')} target="_blank">
               <LogoutOutlined />
                 &nbsp;ADMIN LOGIN
             </LinkComponent>

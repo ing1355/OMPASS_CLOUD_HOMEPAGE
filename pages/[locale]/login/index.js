@@ -17,6 +17,8 @@ import { message } from "antd";
 import i18nextConfig from '../../../next-i18next.config';
 import LinkComponent from "../../../components/Link";
 
+const getAdminHomePage = locale => process.env.adminRoute + '/' + locale
+
 const getPathSlugs = () => {
   return i18nextConfig.i18n.locales.map(locale => ({
     params: {
@@ -49,7 +51,7 @@ const passwordTest = (value) => {
 };
 
 const LinkToLoginPage = () => {
-  const { t } = useTranslation();
+  const { t, isKr } = useTranslation();
   return <LinkComponent
     style={{
       marginLeft: '4px',
@@ -58,7 +60,7 @@ const LinkToLoginPage = () => {
       fontWeight: "500",
       color: "blue",
     }}
-    href="https://admin.ompasscloud.com/login"
+    href={isKr ? getAdminHomePage('ko') : getAdminHomePage('en')}
     target="_blank"
   >
     {t("로그인 페이지 이동하기")}
