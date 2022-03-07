@@ -1,6 +1,10 @@
 * {
   word-break: keep-all;
 }
+
+.title-img-mobile {
+  display: none !important;
+}
 header {
   width: 95rem;
   height: auto;
@@ -198,6 +202,13 @@ header {
   }
 }
 @media (max-width: 768px) {
+  .title-img-mobile {
+    display: block !important;
+  }
+  .title-img-pc {
+    display: none !important;
+  }
+
   .MainTitle {
     flex-direction: column;
   }
@@ -213,6 +224,7 @@ header {
     width: 100% !important;
   }
   .MainTitle ul li {
+    width: 100%;
     margin-top: 3rem;
   }
   .MainTitle ul img {
@@ -226,6 +238,13 @@ header {
   }
 }
 @media (max-width: 540px) {
+  .MainTitle ul li p {
+    font-size: 1rem !important;
+    line-height: 25px;
+    word-break: keep-all;
+    padding: 0 1rem;
+  }
+
   header {
     width: 100%;
   }
@@ -305,11 +324,13 @@ header {
     font-weight: bold;
     padding: 0;
     color: #fff;
-    padding-left: 1rem !important;
+    padding-left: 0;
   }
   .MainTitle .button {
     width: 100%;
     text-align: center;
+    margin-top: 2rem;
+    height: 50px;
   }
   .MainTitle span {
     padding: 0.8rem 1.8rem;
@@ -319,5 +340,17 @@ header {
     margin-left: 1rem;
     cursor: pointer;
     font-size: 0.8rem;
+  }
+  .MainTitle ul li {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .MainTitle ul li p {
+    font-size: 1rem !important;
+    line-height: 25px;
+    word-break: keep-all;
+    padding: 0 2rem;
   }
 }

@@ -350,8 +350,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: url(/static/images/support_Bg.png)
-      no-repeat;
+    background: url(/static/images/support_Bg.png) no-repeat;
     background-size: cover;
     background-position: right 0px;
   }
@@ -446,7 +445,7 @@
   }
   .supportContents2 p {
     font-size: 0.8rem;
-    line-height: 0.5rem;
+    line-height: 1.5rem;
   }
   .supportContents2Box img {
     width: 100%;

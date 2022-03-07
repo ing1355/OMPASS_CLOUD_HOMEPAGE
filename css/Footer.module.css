@@ -1,3 +1,6 @@
+.footerTextBox-mobile {
+  display: none;
+}
 .footer {
   color: #fff;
 }
@@ -200,5 +203,14 @@
 
   .ant-modal-mask {
     background-color: rgb(0 0 0 / 80%) !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .footerTextBox-pc {
+    display: none;
+  }
+  .footerTextBox-mobile {
+    display: block;
   }
 }

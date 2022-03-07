@@ -230,6 +230,7 @@ header {
   }
   .MainTitle ul li {
     width: 100%;
+    margin-top: 3rem;
   }
   .MainTitle ul:nth-child(1) {
     order: 2;
@@ -271,6 +272,15 @@ header {
   }
 }
 @media (max-width: 540px) {
+  .MainTitle ul li {
+    margin-top: 2rem;
+  }
+  .MainTitle ul li p {
+    font-size: 1rem !important;
+    line-height: 25px;
+    word-break: keep-all;
+    padding: 0 1rem;
+  }
   header {
     width: 100%;
   }
@@ -310,9 +320,6 @@ header {
     height: auto;
     align-items: center;
   }
-  .MainTitle ul li {
-    width: 100%;
-  }
   .MainTitle ul:nth-child(1) {
     order: 2;
     display: flex;
@@ -331,24 +338,52 @@ header {
     text-align: center;
     display: flex;
   }
+  .MainTitle ul:nth-child(2) {
+    text-align: left;
+    line-height: 2rem;
+    padding-left: 0rem;
+    padding-top: 3rem;
+  }
   .MainTitle h1 {
     font-size: 2rem !important;
     font-weight: 900;
     color: #fff;
+    padding-left: 1rem;
   }
   .MainTitle h5 {
     font-size: 1.2rem !important;
     font-weight: bold;
     color: #fff;
+    padding-left: 1rem;
   }
   .MainTitle p {
     font-size: 1rem !important;
     font-weight: bold;
-    padding: 0 2rem 0 0;
+    padding: 0;
     color: #fff;
+    padding-left: 0;
   }
   .MainTitle .button {
     width: 100%;
     text-align: center;
+    margin-top: 2rem;
+    height: 50px;
+  }
+  .MainTitle span {
+    padding: 0.8rem 1.8rem;
+    background: #000;
+    color: #fff;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 360px) {
+  .MainTitle ul li p {
+    font-size: 1rem !important;
+    line-height: 25px;
+    word-break: keep-all;
+    padding: 0 2rem;
   }
 }

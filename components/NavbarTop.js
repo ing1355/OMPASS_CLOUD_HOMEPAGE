@@ -16,7 +16,7 @@ import useTranslation from "../lib/useTranslation";
 
 function NavbarTop() {
   const router = useRouter();
-  const { t, isKr } = useTranslation();
+  const { isKr } = useTranslation();
   const [langbox, setLangbox] = useState(false);
 
   const getAdminHomePage = locale => process.env.adminRoute + '/' + locale
@@ -24,18 +24,14 @@ function NavbarTop() {
   useEffect(() => {
     $(window)
       .resize(function () {
-        var width = $(window).width();
-
-        if (width <= 768) {
-          $(".nav-menu-item").hide();
-          $(".dropDown_bg").hide();
-          $(".nav-menu-item").click(function () {
-            $(".nav-menu-item").hide();
-            $(".dropDown_bg").hide();
+        if (window.outerWidth <= 780) {
+          $(".nav-menu-item, .dropDown_bg").hide();
+          $(".nav-menu-item li").click(function () {
+            $(".nav-menu-item, .dropDown_bg").show();
           });
         } else {
           $(".nav-menu-item").show();
-          $(".dropDown_bg").hide();
+          $(".nav-menu-item li").show();
         }
       })
       .resize();
@@ -46,9 +42,7 @@ function NavbarTop() {
       <nav className="navbar-nav">
         <ul className="menu-title">
           <li className="logo">
-            <LinkComponent href="/">
-              OMPASS
-            </LinkComponent>
+            <LinkComponent href="/">OMPASS</LinkComponent>
           </li>
           <li
             className="mobile-button"
@@ -57,75 +51,80 @@ function NavbarTop() {
               $(".dropDown_bg").slideToggle();
             }}
           >
-            <MenuOutlined />
+            <MenuOutlined className="mobile-menu-icon"/>
           </li>
         </ul>
         <ul className="nav-menu-item">
-          <li>
-            <LinkComponent href="/">
-              Home
-            </LinkComponent>
-          </li>
-          {!router.route.includes('/on-premise') && <><li>
-            <LinkComponent href="/pricing">
-              Pricing
-            </LinkComponent>
-          </li>
+          <div className="nav-menu-item-div">
             <li>
-              <LinkComponent href="/support">
-                Support
-            </LinkComponent>
+              <LinkComponent href="/">Home</LinkComponent>
             </li>
-            <li>
-              <LinkComponent href="/document/u2f-uaf">
-                Document
-            </LinkComponent>
-            </li></>}
-          <li className="langbutton-mobile">
-            <LanguageSwitchLink locale="ko" className="langkobutton">
-              <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
-                &nbsp;&nbsp; KOREA / 한국어
-            </LanguageSwitchLink>
-            <LanguageSwitchLink locale="en" className="langenbutton">
-              <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
-                &nbsp;&nbsp; GLOBAL / ENGLISH
-            </LanguageSwitchLink>
-          </li>
-          <li className="admin-login-button-mobile">
-            <LinkComponent href={isKr ? getAdminHomePage('ko') : getAdminHomePage('en')} target="_blank">
-              <LogoutOutlined />
-                &nbsp;{t("ADMIN LOGIN")}
-            </LinkComponent>
-          </li>
-        </ul>
-        <ul className="nav-menu-item langbutton-pc">
-          <button
-            onClick={() => {
-              setLangbox(!langbox);
-            }}
-            className="lang-button"
-          >
-            <a className="langbutton-pc">
-              <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
-              &nbsp;&nbsp;{isKr ? 'KO' : 'EN'}
-            </a>
-
-            {langbox === true && (
-              <div className="lang-drop-down-box">
-                <LanguageSwitchLink locale="en" />
-                <LanguageSwitchLink locale="ko" />
-              </div>
+            {!router.route.includes("/on-premise") && (
+              <>
+                <li>
+                  <LinkComponent href="/pricing">Pricing</LinkComponent>
+                </li>
+                <li>
+                  <LinkComponent href="/support">Support</LinkComponent>
+                </li>
+                <li>
+                  <LinkComponent href="/document/u2f-uaf">
+                    Document
+                  </LinkComponent>
+                </li>
+              </>
             )}
-          </button>
+          </div>
+
+          <div className="langbutton-mobile-div">
+            <li className="langbutton-mobile">
+              <LanguageSwitchLink
+                locale={isKr ? "en" : "ko"}
+                className={isKr ? "langenbutton" : "langkobutton"}
+              >
+                <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
+                &nbsp;{isKr ? "GLOBAL / 영어" : "KOREA / KOREAN"}
+              </LanguageSwitchLink>
+            </li>
+            <li className="admin-login-button-mobile">
+              <LinkComponent href={isKr ? getAdminHomePage('ko') : getAdminHomePage('en')} target="_blank">
+                <LogoutOutlined className="locale-global-icon" />
+                &nbsp;ADMIN LOGIN
+              </LinkComponent>
+            </li>
+          </div>
+        </ul>
+
+        <ul className="nav-menu-item langbutton-pc">
+          <li>
+            <button
+              onClick={() => {
+                setLangbox(!langbox);
+              }}
+              className="lang-button"
+            >
+              <a>
+                <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
+                &nbsp;&nbsp;{isKr ? "KO" : "EN"}
+              </a>
+
+              {langbox === true && (
+                <div className="lang-drop-down-box">
+                  <LanguageSwitchLink locale="en" />
+                  <LanguageSwitchLink locale="ko" />
+                </div>
+              )}
+            </button>
+          </li>
           <li className="admin-login-button">
             <LinkComponent href={isKr ? getAdminHomePage('ko') : getAdminHomePage('en')} target="_blank">
-              <LogoutOutlined />
-                &nbsp;ADMIN LOGIN
+              <LogoutOutlined className="locale-global-icon"/>
+              &nbsp; ADMIN LOGIN
             </LinkComponent>
           </li>
         </ul>
 
-        <div className="dropDown_bg"></div>
+        {/* <div className="dropDown_bg"></div> */}
       </nav>
     </div>
   );
