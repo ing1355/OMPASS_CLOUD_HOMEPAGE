@@ -1,10 +1,33 @@
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot");
+  src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff")
+      format("woff"),
+    url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf")
+      format("truetype");
+}
+
 * {
   word-break: keep-all;
 }
 
-.title-img-mobile {
-  display: none !important;
-}
 header {
   width: 95rem;
   height: auto;
@@ -15,19 +38,10 @@ header {
 .buildHeader {
   width: 100%;
   height: 750px;
-  background-image: url(/static/images/1bac.png);
+  background-image: url(/static/images/background_build.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-.MainBgBox {
-  width: 95rem;
-  /* position: fixed; */
-  text-align: right;
-  overflow: hidden !important;
-  margin: 0 auto;
-  width: 95rem;
-  z-index: 1;
 }
 
 .MainBgBox img {
@@ -35,96 +49,83 @@ header {
   display: flex;
 }
 .MainTitle {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: row;
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
+  padding-left: 5rem;
 }
-
 .MainTitle ul {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 750px;
-  align-items: center;
-}
-.MainTitle ul img {
-  width: 42rem;
-  display: flex;
-}
-.MainTitle ul:nth-child(1) li {
-  text-align: right;
-  display: flex;
-}
-.MainTitle ul:nth-child(2) {
+  flex-direction: column;
+  align-items: flex-start;
   text-align: left;
-  line-height: 4rem;
+  justify-content: center;
+  color: #fff;
 }
 .MainTitle h1 {
-  font-size: 4rem;
+  font-size: 3rem;
+  line-height: 4.2rem;
   font-weight: 900;
   color: #fff;
+  font-family: "NanumBarunGothic";
 }
-.MainTitle h5 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #fff;
+
+.MainTitle .title-p {
+  font-size: 1.3rem;
+  font-family: "NanumBarunGothic";
 }
-.MainTitle p {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.MainTitle .button {
+
+.MainTitle .Certification-img-li {
   width: 100%;
-  text-align: center;
 }
-.MainTitle span {
-  padding: 1rem 2rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  background: #000;
+
+.MainTitle .Certification-img-li img {
+  width: 10rem;
+}
+.MainTitle .button-li {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+.MainTitle .button-li .button {
+  width: 30%;
+  height: 45px;
+  background-color: #000;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+.MainTitle .button-li .button:hover {
+  background-color: #0084d4;
+}
+
+.MainTitle .button-li .button a:hover {
   color: #fff;
-  cursor: pointer;
 }
-.buildHeader .MainTitle span:hover {
-  background: #fff;
-  color: #02aa3a;
-  font-weight: 900;
-}
-
-.MainBgBox img {
-  animation: driftAcross 150s infinite linear;
+.MainTitle .button-li .button a {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
+.MainTitle .button-li .button a p {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.8rem;
+}
+.MainTitle .button-li .button a p:nth-child(1) {
+  flex: 2;
+}
 @media (max-width: 2560px) {
   header {
     width: 85rem;
-  }
-  .MainTitle ul img {
-    width: 35rem !important;
-  }
-  .MainTitle h1 {
-    font-size: 2.8rem !important;
-  }
-  .MainTitle h5 {
-    font-size: 2.8rem !important;
-  }
-  .MainTitle p {
-    font-size: 1.5rem;
-  }
-  .MainTitle {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    z-index: 2;
-  }
-
-  .MainTitle ul:nth-child(1) {
-    flex: 1;
-  }
-  .MainTitle ul:nth-child(2) {
-    flex: 1;
   }
 }
 @media (max-width: 1200px) {
@@ -137,21 +138,7 @@ header {
   header {
     width: 100% !important;
   }
-  .MainTitle ul img {
-    width: 25rem !important;
-  }
-  .MainTitle h1 {
-    font-size: 2rem !important;
-    padding-left: 2rem !important;
-  }
-  .MainTitle h5 {
-    font-size: 2rem !important;
-    padding-left: 2rem !important;
-  }
-  .MainTitle p {
-    padding-left: 2rem !important;
-    padding: 0;
-  }
+
   .contentsBox1 .contentsSubBox {
     width: 100% !important;
   }
@@ -201,61 +188,60 @@ header {
     padding: 2rem;
   }
 }
-@media (max-width: 768px) {
-  .title-img-mobile {
-    display: block !important;
-  }
-  .title-img-pc {
-    display: none !important;
+
+@media (max-width: 1024px) {
+  .buildHeader {
+    width: 100%;
+    height: 500px;
   }
 
-  .MainTitle {
+  .MainTitle h1 {
+    font-size: 2rem;
+    line-height: 2.7rem;
+  }
+
+  .MainTitle .title-p {
+    font-size: 1rem;
+  }
+
+  .MainTitle .Certification-img-li img {
+    width: 7rem;
+  }
+
+  .MainTitle .button-li {
+    display: flex;
+    width: 100%;
     flex-direction: column;
+    margin-top: 1rem;
   }
+  .MainTitle .button-li .button {
+    width: 55%;
+    height: 35px;
+    background-color: #000;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+  .MainTitle .button-li .button a p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 870px) {
+  .buildHeader {
+    width: 100%;
 
-  .contentsBox7 {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+    background-repeat: no-repeat;
+    background-position: 90%;
+    background-size: cover;
   }
+}
+@media (max-width: 768px) {
   header {
     padding-top: 4rem !important;
   }
-  .MainTitle ul img {
-    width: 100% !important;
-  }
-  .MainTitle ul li {
-    width: 100%;
-    margin-top: 3rem;
-  }
-  .MainTitle ul img {
-    width: 60% !important;
-  }
-  .MainTitle p {
-    font-size: 1.5rem !important;
-  }
-  .MainTitle span {
-    font-size: 1.2rem;
-  }
-}
-@media (max-width: 540px) {
-  .MainTitle ul li p {
-    font-size: 1rem !important;
-    line-height: 25px;
-    word-break: keep-all;
-    padding: 0 1rem;
-  }
 
-  header {
-    width: 100%;
-  }
-  .buildHeader {
-    width: 100%;
-    height: auto;
-    background-image: url(/static/images/1bac.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
   .MainBgBox {
     width: 90%;
     text-align: right;
@@ -268,89 +254,53 @@ header {
     text-align: right;
     display: flex;
   }
-  .MainTitle {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 2;
-    overflow: hidden;
-  }
-
-  .MainTitle ul {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: auto;
-    align-items: center;
-  }
-  .MainTitle ul:nth-child(1) {
-    order: 2;
-    display: flex;
-  }
-  .MainTitle ul:nth-child(2) {
-    order: 1;
-    display: flex;
-  }
-  .MainTitle ul img {
-    width: 80% !important;
-    display: flex;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+}
+@media (max-width: 540px) {
+  .MainTitle .button-li .button {
+    width: 100% !important;
   }
   .MainTitle ul:nth-child(1) li {
-    text-align: center;
-    display: flex;
+    padding-right: 1rem;
   }
-  .MainTitle ul:nth-child(2) {
-    text-align: left;
-    line-height: 2rem;
-    padding-left: 0rem;
-    padding-top: 3rem;
+  .buildHeader {
+    width: 100%;
+    height: 600px;
+    background-image: url(/static/images/background_build_mobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .MainTitle {
+    padding-left: 2.5rem;
+    word-break: keep-all;
   }
   .MainTitle h1 {
-    font-size: 2rem !important;
-    font-weight: 900;
-    color: #fff;
-    padding-left: 1rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    word-break: keep-all;
   }
-  .MainTitle h5 {
-    font-size: 1.2rem !important;
-    font-weight: bold;
-    color: #fff;
-    padding-left: 1rem;
+  .MainTitle .title-p {
+    font-size: 0.9rem;
+    word-break: keep-all;
   }
-  .MainTitle p {
-    font-size: 1rem !important;
-    font-weight: bold;
-    padding: 0;
-    color: #fff;
-    padding-left: 0;
+  .MainTitle .Certification-img-li img {
+    width: 6rem;
   }
-  .MainTitle .button {
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-    height: 50px;
-  }
-  .MainTitle span {
-    padding: 0.8rem 1.8rem;
-    background: #000;
-    color: #fff;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    cursor: pointer;
-    font-size: 0.8rem;
-  }
-  .MainTitle ul li {
-    margin-top: 2rem;
+  .MainTitle .button-li {
+    margin-top: 5rem;
   }
 }
-
-@media (max-width: 360px) {
-  .MainTitle ul li p {
-    font-size: 1rem !important;
-    line-height: 25px;
+@media (max-width: 414px) {
+  .buildHeader {
+    width: 100%;
+    height: 600px;
+    background-position: 90%;
+  }
+  .MainTitle {
+    padding-left: 1.5rem;
     word-break: keep-all;
-    padding: 0 2rem;
+  }
+  .MainTitle .button-li {
+    margin-top: 8rem;
   }
 }

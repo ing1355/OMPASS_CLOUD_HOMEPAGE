@@ -33,6 +33,7 @@
   text-align: left;
   flex: 2;
   margin-left: 2rem;
+  padding-right: 2rem;
 }
 .passWord {
   height: 200px;
@@ -496,6 +497,10 @@
 @media (max-width: 768px) {
   .contentsBox1 .contentsSubBox {
     padding: 3rem;
+  }
+
+  .CloudcontentsBox5 span {
+    font-size: 0.8rem !important;
   }
 }
 @media (max-width: 540px) {

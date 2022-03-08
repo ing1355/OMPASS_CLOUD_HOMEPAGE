@@ -4,8 +4,9 @@
 .langbutton-pc {
   display: flex !important;
 }
+
 .globalIcon {
-  font-size: 15px;
+  width: 2rem !important;
 }
 .navbar-div {
   width: 100%;
@@ -86,7 +87,6 @@ a {
   align-items: center;
   text-align: left;
   width: 4.5rem;
-  font-size: 15px !important;
   border: 0;
   background: none;
 }
@@ -104,7 +104,9 @@ a {
 .lang-drop-down-box li:first-child {
   margin-bottom: 0.5rem;
 }
-
+.lang-drop-down-box li:last-child {
+  margin-bottom: 0rem;
+}
 .lang-drop-down-box li {
   color: #01395a;
   padding-left: 1rem;

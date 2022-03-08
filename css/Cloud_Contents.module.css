@@ -20,6 +20,7 @@
   margin: 0 auto;
   padding: 5rem;
   background: #fff;
+  word-break: keep-all;
 }
 .CloudcontentsBox1 ul {
   /* border: 1px solid red; */
@@ -34,7 +35,7 @@
   flex-direction: column;
 }
 .OmpassSolutionBox {
-  width: 15rem;
+  width: 20rem;
   margin: 0 auto;
   display: flex;
 }
@@ -42,6 +43,7 @@
   text-align: left;
   flex: 2;
   margin-left: 2rem;
+  padding-right: 2rem;
 }
 .passWord {
   height: 200px;
@@ -70,7 +72,9 @@
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
-
+.CloudcontentsBox1 .contentsSubBox ul li {
+  word-break: keep-all;
+}
 .CloudcontentsBox1 .contentsBox1 ul li p {
   font-size: 1.2rem;
 }
@@ -88,6 +92,10 @@
 .CloudcontentsBox1 .contentsSubBox p {
   margin-bottom: 0;
   font-size: 1.1rem;
+}
+.content-div {
+  display: flex;
+  width: 100%;
 }
 /* ==================================================== */
 .CloudcontentsBox2 {
@@ -125,6 +133,7 @@
 }
 .CloudcontentsBox2 .contentsSubBox .contents2Box li div p {
   font-size: 1rem !important;
+  word-break: keep-all;
 }
 .CloudcontentsBox2 .contentsSubBox .contents2Box div {
   font-size: 5rem !important;
@@ -194,6 +203,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  word-break: keep-all;
 }
 .CloudcontentsBox3 .contents2Box .contents2Title ul {
   display: flex;
@@ -255,6 +265,7 @@
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
   visibility: visible !important;
+  word-break: keep-all;
 }
 
 @keyframes fadeIn {
@@ -308,6 +319,7 @@
   width: 100%;
   margin: 0 auto;
   width: 75rem;
+  word-break: keep-all;
 }
 .CloudcontentsBox5 .contentsSubBox ul {
   display: flex;
@@ -435,6 +447,12 @@
 @media (max-width: 768px) {
   .CloudcontentsBox1 .contentsSubBox {
     padding: 0 3rem;
+  }
+  .OmpassSolutionBox {
+    width: 90%;
+  }
+  .CloudcontentsBox5 span {
+    font-size: 0.8rem !important;
   }
 }
 @media (max-width: 540px) {

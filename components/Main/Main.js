@@ -14,6 +14,48 @@ function Main(props) {
         <div className="MainTitle">
           <ul>
             <li>
+              <h1>
+                {t("원모어패스 - 클라우드형")}
+                <br />
+                {t("차세대 통합 인증 솔루션(FIDO 인증)")}
+              </h1>
+
+              <p className="title-p">
+                {t("원모어패스는 FIDO를 기반으로 하는 인증 플랫폼 입니다.")}
+              </p>
+            </li>
+            <li className="Certification-img-li">
+              <div>
+                {isKr ? (
+                  <img src={"/static/images/Certification.png"} />
+                ) : (
+                  <img src={"/static/images/Certification_eng.png"} />
+                )}
+              </div>
+            </li>
+            <li className="button-li">
+              <div className="button">
+                <LinkComponent href="/login">
+                  <p>{t("체험하기")}</p> <p>→</p>
+                </LinkComponent>
+              </div>
+
+              <div className="button">
+                <a
+                  href={
+                    isKr
+                      ? "/static/pdf/원모어패스 클라우드형 브로셔.pdf"
+                      : "/static/pdf/OMPASS_Cloud_Brochure.pdf"
+                  }
+                  download
+                >
+                  <p>{t("브로셔 다운")}</p> <p>→</p>
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          {/* <li>
               <img
                 className="OmpassSolutionBox title-img-pc"
                 src={
@@ -32,9 +74,8 @@ function Main(props) {
                 }
                 alt="원모어패스 타이틀 이미지 - 모바일"
               />
-            </li>
-          </ul>
-          <ul>
+            </li> */}
+          {/*    <ul>
             <li>
               <h1>{t("원모어패스 - 클라우드형")}</h1>
               <h5>{t("차세대 통합 인증 솔루션(FIDO 인증)")}</h5>
@@ -56,8 +97,8 @@ function Main(props) {
                   <span>{t("브로셔 다운")}</span>
                 </a>
               </div>
-            </li>
-          </ul>
+            </li> 
+          </ul>*/}
         </div>
       </div>
       <Contents />

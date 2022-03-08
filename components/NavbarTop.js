@@ -8,7 +8,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 import $ from "jquery";
-import { LogoutOutlined, MenuOutlined } from "@ant-design/icons";
+import {
+  LogoutOutlined,
+  MenuOutlined,
+  GlobalOutlined,
+} from "@ant-design/icons";
 import "antd/dist/antd.css";
 import LinkComponent from "./Link";
 import LanguageSwitchLink from "./LanguageSwitchLink";
@@ -19,7 +23,7 @@ function NavbarTop() {
   const { isKr } = useTranslation();
   const [langbox, setLangbox] = useState(false);
 
-  const getAdminHomePage = locale => process.env.adminRoute + '/' + locale
+  const getAdminHomePage = (locale) => process.env.adminRoute + "/" + locale;
 
   useEffect(() => {
     $(window)
@@ -51,7 +55,7 @@ function NavbarTop() {
               $(".dropDown_bg").slideToggle();
             }}
           >
-            <MenuOutlined className="mobile-menu-icon"/>
+            <MenuOutlined className="mobile-menu-icon" />
           </li>
         </ul>
         <ul className="nav-menu-item">
@@ -82,12 +86,16 @@ function NavbarTop() {
                 locale={isKr ? "en" : "ko"}
                 className={isKr ? "langenbutton" : "langkobutton"}
               >
+                {/* <GlobalOutlined className="globalIcon" /> */}
                 <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
                 &nbsp;{isKr ? "GLOBAL / 영어" : "KOREA / KOREAN"}
               </LanguageSwitchLink>
             </li>
             <li className="admin-login-button-mobile">
-              <LinkComponent href={isKr ? getAdminHomePage('ko') : getAdminHomePage('en')} target="_blank">
+              <LinkComponent
+                href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
+                target="_blank"
+              >
                 <LogoutOutlined className="locale-global-icon" />
                 &nbsp;ADMIN LOGIN
               </LinkComponent>
@@ -103,9 +111,9 @@ function NavbarTop() {
               }}
               className="lang-button"
             >
-              <a>
+              <a className="globalIcon-a">
                 <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
-                &nbsp;&nbsp;{isKr ? "KO" : "EN"}
+                {isKr ? "KO" : "EN"}
               </a>
 
               {langbox === true && (
@@ -117,8 +125,11 @@ function NavbarTop() {
             </button>
           </li>
           <li className="admin-login-button">
-            <LinkComponent href={isKr ? getAdminHomePage('ko') : getAdminHomePage('en')} target="_blank">
-              <LogoutOutlined className="locale-global-icon"/>
+            <LinkComponent
+              href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
+              target="_blank"
+            >
+              <LogoutOutlined className="locale-global-icon" />
               &nbsp; ADMIN LOGIN
             </LinkComponent>
           </li>
