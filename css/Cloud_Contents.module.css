@@ -18,7 +18,7 @@
 .CloudcontentsBox1 .contentsSubBox {
   width: 75rem;
   margin: 0 auto;
-  padding: 5rem;
+  padding: 1rem 5rem;
   background: #fff;
   word-break: keep-all;
 }
@@ -109,7 +109,7 @@
 .CloudcontentsBox2 .contentsSubBox {
   width: 75rem;
   margin: 0 auto;
-  padding: 6rem 0rem;
+  padding: 4rem 0rem;
 }
 .CloudcontentsBox2 .contentsSubBox h2 {
   font-size: 3rem;
@@ -170,7 +170,7 @@
 /* ==================================================== */
 .CloudcontentsBox3 {
   width: 100%;
-  height: 900px;
+  height: 920px;
   background: #fff;
   position: relative;
   z-index: 5;
@@ -178,7 +178,7 @@
 .CloudcontentsBox3 .contentsSubBox {
   width: 100%;
   margin: 0 auto;
-  padding: 6rem 0rem;
+  padding: 4rem 0rem;
 }
 
 .CloudcontentsBox3 h2 {
@@ -310,7 +310,7 @@
   height: auto;
   position: relative;
   z-index: 5;
-  padding: 6rem 0rem;
+  padding: 4rem 0rem;
 }
 .CloudcontentsBox5 {
   background: #4d90c7;
@@ -370,7 +370,7 @@
   background: #fff;
   position: relative;
   z-index: 5;
-  padding: 6rem 0rem;
+  padding: 4rem 0rem;
 }
 .contentsBox6 .contentsSubBox {
   margin: 0 auto;
@@ -443,7 +443,11 @@
     height: 950px;
   }
 }
-
+@media (max-width: 1024px) {
+  .OmpassSolutionBox {
+    width: 17rem !important;
+  }
+}
 @media (max-width: 768px) {
   .CloudcontentsBox1 .contentsSubBox {
     padding: 0 3rem;
@@ -453,6 +457,12 @@
   }
   .CloudcontentsBox5 span {
     font-size: 0.8rem !important;
+  }
+  .CloudcontentsBox3 {
+    height: auto;
+  }
+  .OmpassSolutionBox {
+    width: 14rem;
   }
 }
 @media (max-width: 540px) {

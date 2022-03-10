@@ -9,7 +9,7 @@
 .contentsBox1 .contentsSubBox {
   width: 75rem;
   margin: 0 auto;
-  padding: 5rem;
+  padding: 1rem 5rem;
   background: #fff;
 }
 .contentsBox1 ul {
@@ -25,7 +25,7 @@
   flex-direction: column;
 }
 .OmpassSolutionBox {
-  width: 15rem;
+  width: 20rem;
   margin: 0 auto;
   display: flex;
 }
@@ -101,7 +101,7 @@
 .contentsBox2 .contentsSubBox {
   width: 75rem;
   margin: 0 auto;
-  padding: 6rem 0rem;
+  padding: 4rem 0rem;
 }
 .contentsBox2 .contentsSubBox h2 {
   font-size: 3rem;
@@ -164,7 +164,7 @@
 /* ==================================================== */
 .contentsBox3 {
   width: 100%;
-  height: 950px;
+  height: 920px;
   background: #fff;
   position: relative;
   z-index: 5;
@@ -172,7 +172,7 @@
 .contentsBox3 .contentsSubBox {
   width: 100%;
   margin: 0 auto;
-  padding: 6rem 0rem;
+  padding: 4rem 0rem;
 }
 
 .contentsBox3 h2 {
@@ -303,7 +303,7 @@
   background: #f9fafb;
   position: relative;
   z-index: 5;
-  padding: 6rem 0rem;
+  padding: 4rem 0rem;
 }
 
 .contentsBox4 .contentsSubBox {
@@ -316,7 +316,7 @@
   margin-bottom: 3rem;
 }
 .contentsBox4 img {
-  width: 78rem;
+  width: 74rem;
 }
 /* ==================================================== */
 .contentsBox5 {
@@ -325,7 +325,7 @@
   background: #359c83;
   position: relative;
   z-index: 5;
-  padding: 6rem 0rem;
+  padding: 4rem 0rem;
 }
 .contentsBox5 .contentsSubBox {
   width: 100%;
@@ -383,7 +383,7 @@
   background: #fff;
   position: relative;
   z-index: 5;
-  padding: 6rem 0rem;
+  padding: 4rem 0rem;
 }
 .contentsBox6 .contentsSubBox {
   margin: 0 auto;
@@ -420,37 +420,6 @@
   width: 65rem;
 }
 
-/* @media (max-width: 2560px) {
-  .contentsBox1 .contentsSubBox {
-    width: 75rem;
-  }
-  .contentsBox2 .contentsSubBox {
-    width: 70rem;
-  }
-  .contentsBox3 .contents2Box {
-    width: 70rem;
-  }
-  .contentsBox4 .contentsSubBox {
-    width: 70rem;
-  }
-  .contentsBox4 img {
-    width: 70rem;
-  }
-  .contentsBox5 .contentsSubBox {
-    width: 70rem;
-  }
-  .contentsBox5 .contentsSubBox img {
-    width: 30rem;
-  }
-  .contentsBox5 .contentsSubBox ul li:nth-child(1) {
-    flex: 1;
-  }
-  .contentsBox5 .contentsSubBox {
-    width: 100%;
-    margin: 0 auto;
-    width: 75rem;
-  }
-} */
 @media (max-width: 1200px) {
   .contentsBox7 {
     padding: 0 !important;
@@ -494,13 +463,25 @@
     padding: 0 1rem;
   }
 }
+@media (max-width: 1024px) {
+  .OmpassSolutionBox {
+    width: 17rem !important;
+  }
+}
 @media (max-width: 768px) {
+  .OmpassSolutionBox {
+    width: 14rem;
+  }
   .contentsBox1 .contentsSubBox {
     padding: 3rem;
   }
 
-  .CloudcontentsBox5 span {
+  .contentsBox5 span {
     font-size: 0.8rem !important;
+  }
+
+  .contentsBox3 {
+    height: auto;
   }
 }
 @media (max-width: 540px) {
@@ -959,7 +940,7 @@
   .contentsBox7 {
     background: #f9fafb;
     padding-top: 0rem !important;
-    padding-bottom: 1rem !important;
+    padding-bottom: 0rem !important;
   }
 }
 

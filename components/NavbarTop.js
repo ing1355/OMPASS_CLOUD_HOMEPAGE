@@ -113,7 +113,7 @@ function NavbarTop() {
               className="lang-button"
             >
               <a className="globalIcon-a">
-                <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
+                <FontAwesomeIcon className="globalIcon" icon={faGlobe} /> &nbsp;
                 {isKr ? "KO" : "EN"}
               </a>
 

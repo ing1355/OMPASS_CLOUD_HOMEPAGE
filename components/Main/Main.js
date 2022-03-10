@@ -4,6 +4,8 @@ import "../../css/Cloud_Contents.module.css";
 import Contents from "./Main_Contents";
 import LinkComponent from "../Link";
 import useTranslation from "../../lib/useTranslation";
+import { DownloadOutlined, SelectOutlined } from "@ant-design/icons";
+import "antd/dist/antd.css";
 
 function Main(props) {
   const { t, isKr } = useTranslation();
@@ -34,24 +36,21 @@ function Main(props) {
               </div>
             </li>
             <li className="button-li">
-              <div className="button">
-                <LinkComponent href="/login">
-                  <p>{t("체험하기")}</p> <p>→</p>
-                </LinkComponent>
-              </div>
+              <LinkComponent href="/login">
+                <SelectOutlined />
+                &nbsp;&nbsp; <p>{t("체험하기")}</p>
+              </LinkComponent>
 
-              <div className="button">
-                <a
-                  href={
-                    isKr
-                      ? "/static/pdf/원모어패스 클라우드형 브로셔.pdf"
-                      : "/static/pdf/OMPASS_Cloud_Brochure.pdf"
-                  }
-                  download
-                >
-                  <p>{t("브로셔 다운")}</p> <p>→</p>
-                </a>
-              </div>
+              <a
+                href={
+                  isKr
+                    ? "/static/pdf/원모어패스 클라우드형 브로셔.pdf"
+                    : "/static/pdf/OMPASS_Cloud_Brochure.pdf"
+                }
+                download
+              >
+                <DownloadOutlined /> &nbsp;&nbsp; <p>{t("브로셔 다운")}</p>
+              </a>
             </li>
           </ul>
 

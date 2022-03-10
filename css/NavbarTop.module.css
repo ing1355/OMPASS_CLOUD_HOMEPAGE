@@ -5,9 +5,8 @@
   display: flex !important;
 }
 
-.globalIcon-a > .globalIcon {
-  width: 2rem;
-  height: 1em
+.globalIcon {
+  width: 1rem !important;
 }
 
 .globalIcon-a {

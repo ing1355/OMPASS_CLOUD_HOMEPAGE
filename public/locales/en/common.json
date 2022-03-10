@@ -83,6 +83,8 @@
   "FIDO2 Admin 서버 접근 시 IP 접근통제 정책 적용": "Applied IP access control policy whenever accessing FIDO2 Admin server",
   "Phishing 공격 등에 강력 대응 가능": "Against to prespond strongly againt phishing attack",
   "사용자 접근 기기(브라우저) 검증 기능 적용": "Application of verifying function from user access device (browser)",
+  "모바일 인증장치 보안성 강화": "Reinforcement of mobile authentication device security",
+  "모바일 인증장치 탈옥, 위변조 및 최신버전 여부 검증 기능 적용": "Mobile authentication device jailbreak, forgery and latest version verification function application verification",
 
   "사양·구성도": "Specification Diagram",
   "원모어패스는": "OMPASS",
