@@ -466,6 +466,12 @@
   }
 }
 @media (max-width: 540px) {
+  .CloudcontentsBox1 ul:first-child li:first-child {
+    padding-right: 0rem !important;
+  }
+  .CloudcontentsBox1 .contentsSubBox ul li h1 {
+    text-align: center;
+  }
   .CloudcontentsBox1 {
     width: 100%;
     height: auto;

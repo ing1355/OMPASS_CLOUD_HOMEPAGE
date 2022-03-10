@@ -35,6 +35,17 @@ function Main(props) {
                 )}
               </div>
             </li>
+
+            {/* <li className="Certification-img-li-mobile">
+              <div>
+                {isKr ? (
+                  <img src={"/static/images/Certification_mobile.png"} />
+                ) : (
+                  <img src={"/static/images/Certification_eng_mobile.png"} />
+                )}
+              </div>
+            </li> */}
+
             <li className="button-li">
               <LinkComponent href="/login">
                 <SelectOutlined />
