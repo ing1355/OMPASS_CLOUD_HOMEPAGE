@@ -5,9 +5,15 @@
   display: flex !important;
 }
 
-.globalIcon {
-  width: 2rem !important;
+.globalIcon-a > .globalIcon {
+  width: 2rem;
+  height: 1em
 }
+
+.globalIcon-a {
+  width: 100%;
+}
+
 .navbar-div {
   width: 100%;
   background: #fff;
@@ -84,8 +90,7 @@ a {
   border-color: #0ca6ff !important;
 }
 .navbar-div .navbar-nav .lang-button {
-  align-items: center;
-  text-align: left;
+  /* text-align: left; */
   width: 4.5rem;
   border: 0;
   background: none;
@@ -95,6 +100,7 @@ a {
   height: auto;
   padding: 1rem 0;
   position: absolute;
+  
   /* background: #f1f1f1; */
   background: #fff;
   top: 4rem;

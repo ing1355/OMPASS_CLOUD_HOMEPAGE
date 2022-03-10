@@ -109,6 +109,7 @@ function NavbarTop() {
               onClick={() => {
                 setLangbox(!langbox);
               }}
+              style={{textAlign:'left'}}
               className="lang-button"
             >
               <a className="globalIcon-a">
