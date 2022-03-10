@@ -1,7 +1,7 @@
 import React from "react";
 import "../../css/Document.module.css";
 import useTranslation from "../../lib/useTranslation";
-import { dracula, CopyBlock } from "react-code-blocks";
+import { dracula, CopyBlock, CodeBlock } from "react-code-blocks";
 import { Table } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -29,16 +29,9 @@ function userresetompass(props) {
               fontWeight: "bold",
               textAlign: "right",
             }}
-          >
-            <img
-              width="11%"
-              src={"/static/images/CopyButton.png"}
-              alt="copy버튼"
-            />
-            {t("(버튼 클릭 시 Copy 가능) ↓")}　
-          </h6>
+          ></h6>
         </div>
-        <CopyBlock
+        <CodeBlock
           className="first codeBox"
           style={{ background: "#002c50" }}
           text={`

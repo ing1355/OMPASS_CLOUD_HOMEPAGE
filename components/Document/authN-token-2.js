@@ -1,10 +1,9 @@
 import React from "react";
 import "../../css/Document.module.css";
 import useTranslation from "../../lib/useTranslation";
-import { dracula, CopyBlock } from "react-code-blocks";
+import { dracula, CopyBlock, CodeBlock } from "react-code-blocks";
 import { Table } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 
 function authNtoken2(props) {
   const { t } = useTranslation();
@@ -35,16 +34,9 @@ function authNtoken2(props) {
               fontWeight: "bold",
               textAlign: "right",
             }}
-          >
-            <img
-              width="11%"
-              src={"/static/images/CopyButton.png"}
-              alt="copy버튼"
-            />
-            {t("(버튼 클릭 시 Copy 가능) ↓")}　
-          </h6>
+          ></h6>
         </div>
-        <CopyBlock
+        <CodeBlock
           className="first codeBox"
           style={{ background: "#002c50" }}
           text={`
@@ -66,12 +58,12 @@ function authNtoken2(props) {
                 <th>Description</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="adff">
               <tr>
-                <td style={{ paddingTop: "2rem" }} rowSpan="3">
+                <td className="adf" rowSpan="3">
                   Authorization
                 </td>
-                <td style={{ paddingTop: "2rem" }} rowSpan="3">
+                <td className="adf" rowSpan="3">
                   Bearer
                 </td>
                 <td>{t("어플리케이션에 할당된 Secret Key")}</td>

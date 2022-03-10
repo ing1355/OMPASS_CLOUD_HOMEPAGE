@@ -4,6 +4,8 @@ import "../../../css/Main.module.css";
 import Contents from "../../../components/on-premise/Contents";
 import useTranslation from "../../../lib/useTranslation";
 import i18nextConfig from "../../../next-i18next.config";
+import { DownloadOutlined } from "@ant-design/icons";
+import "antd/dist/antd.css";
 
 const getPathSlugs = () => {
   return i18nextConfig.i18n.locales.map((locale) => ({
@@ -58,18 +60,16 @@ function onpremise() {
               </div>
             </li>
             <li className="button-li">
-              <div className="button">
-                <a
-                  href={
-                    isKr
-                      ? "/static/pdf/원모어패스 클라우드형 브로셔.pdf"
-                      : "/static/pdf/OMPASS_Cloud_Brochure.pdf"
-                  }
-                  download
-                >
-                  <p>{t("브로셔 다운")}</p> <p>→</p>
-                </a>
-              </div>
+              <a
+                href={
+                  isKr
+                    ? "/static/pdf/원모어패스 클라우드형 브로셔.pdf"
+                    : "/static/pdf/OMPASS_Cloud_Brochure.pdf"
+                }
+                download
+              >
+                <DownloadOutlined /> &nbsp;&nbsp; <p>{t("브로셔 다운")}</p>
+              </a>
             </li>
           </ul>
         </div>

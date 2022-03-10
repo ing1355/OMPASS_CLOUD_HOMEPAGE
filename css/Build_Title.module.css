@@ -77,52 +77,43 @@ header {
 
 .MainTitle .Certification-img-li {
   width: 100%;
+  margin-top: 1rem;
 }
 
 .MainTitle .Certification-img-li img {
-  width: 10rem;
+  width: 15rem;
 }
+
 .MainTitle .button-li {
   display: flex;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
   margin-top: 3rem;
 }
-.MainTitle .button-li .button {
-  width: 30%;
-  height: 45px;
+.MainTitle a {
+  width: 25%;
+  height: 55px;
   background-color: #000;
-  margin-top: 1rem;
   display: flex;
   align-items: center;
   font-size: 1rem;
   display: flex;
   flex-direction: row;
-}
-.MainTitle .button-li .button:hover {
-  background-color: #0084d4;
-}
-
-.MainTitle .button-li .button a:hover {
+  justify-content: center;
+  margin: 1rem;
   color: #fff;
+  margin-left: 0 !important;
 }
-.MainTitle .button-li .button a {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.MainTitle .button-li .button a p {
-  margin-bottom: 0;
+.MainTitle .button-li a p {
   font-size: 1.1rem;
   display: flex;
   justify-content: space-between;
-  padding: 0 0.8rem;
 }
-.MainTitle .button-li .button a p:nth-child(1) {
-  flex: 2;
+.MainTitle .button-li a:hover {
+  background-color: #2fa7fd;
+  color: #fff;
 }
+
 @media (max-width: 2560px) {
   header {
     width: 85rem;
@@ -205,36 +196,47 @@ header {
   }
 
   .MainTitle .Certification-img-li img {
-    width: 7rem;
+    width: 10rem;
   }
 
-  .MainTitle .button-li {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    margin-top: 1rem;
+  .MainTitle a {
+    width: 25%;
+    height: 45px;
+    font-size: 1rem;
   }
-  .MainTitle .button-li .button {
-    width: 55%;
-    height: 35px;
-    background-color: #000;
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-  }
-  .MainTitle .button-li .button a p {
-    font-size: 0.9rem;
+  :lang(en) .MainTitle a {
+    width: 32%;
+    height: 45px;
+    font-size: 1rem;
   }
 }
 @media (max-width: 870px) {
+  .MainTitle a {
+    width: 25% !important;
+    height: 40px;
+  }
+  :lang(en) .MainTitle a {
+    width: 27% !important;
+    height: 40px;
+  }
+  .MainTitle .button-li a p {
+    font-size: 0.9rem !important;
+  }
+
   .buildHeader {
     width: 100%;
-
     background-repeat: no-repeat;
     background-position: 90%;
     background-size: cover;
+  }
+  :lang(en) .MainTitle .Certification-img-li img {
+    width: 12rem !important;
+  }
+  .MainTitle a {
+    margin-left: 0 !important;
+  }
+  .MainTitle .button-li {
+    margin-top: 1rem;
   }
 }
 @media (max-width: 768px) {
@@ -256,9 +258,6 @@ header {
   }
 }
 @media (max-width: 540px) {
-  .MainTitle .button-li .button {
-    width: 100% !important;
-  }
   .MainTitle ul:nth-child(1) li {
     padding-right: 1rem;
   }
@@ -284,10 +283,24 @@ header {
     word-break: keep-all;
   }
   .MainTitle .Certification-img-li img {
-    width: 6rem;
+    width: 12rem;
   }
   .MainTitle .button-li {
-    margin-top: 5rem;
+    margin-top: 2rem;
+    padding-left: 0;
+    flex-direction: column !important;
+  }
+  .MainTitle a {
+    margin-left: 0 !important;
+    width: 170px !important;
+    height: 40px !important;
+  }
+  :lang(en) .MainTitle a {
+    margin-left: 0 !important;
+    width: 170px !important;
+  }
+  .MainTitle .button-li a p {
+    font-size: 0.8rem !important;
   }
 }
 @media (max-width: 414px) {
@@ -301,6 +314,39 @@ header {
     word-break: keep-all;
   }
   .MainTitle .button-li {
-    margin-top: 8rem;
+    margin-top: 1.5rem;
+  }
+  .MainTitle .Certification-img-li img {
+    width: 10rem;
+  }
+
+  :lang(en) .MainTitle .Certification-img-li img {
+    width: 13rem !important;
+  }
+  .MainTitle a {
+    margin: 0.5rem !important;
+  }
+  .MainTitle h1 {
+    font-size: 1.9rem !important;
+    line-height: 2.7rem !important;
+  }
+}
+@media (max-width: 360px) {
+  .MainTitle h1 {
+    font-size: 1.8rem !important;
+    line-height: 2.6rem !important;
+  }
+}
+@media (max-width: 290px) {
+  .MainTitle h1 {
+    font-size: 1.4rem !important;
+    line-height: 2.2rem !important;
+  }
+  .MainTitle .Certification-img-li img {
+    width: 8rem !important;
+  }
+
+  :lang(en) .MainTitle .Certification-img-li img {
+    width: 11rem !important;
   }
 }

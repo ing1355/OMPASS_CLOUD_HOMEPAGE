@@ -1,12 +1,13 @@
 import React from "react";
+
 import "../../css/Document.module.css";
-import useTranslation from "../../lib/useTranslation";
-import { dracula, CopyBlock } from "react-code-blocks";
+import { dracula, CopyBlock, CodeBlock } from "react-code-blocks";
 import { Table } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import useTranslation from "../../lib/useTranslation";
 
 function ompass(props) {
-  const { t } = useTranslation();
+  const { t, isKr } = useTranslation();
   const language = "jsx";
 
   return (
@@ -30,16 +31,9 @@ function ompass(props) {
               fontWeight: "bold",
               textAlign: "right",
             }}
-          >
-            <img
-              width="11%"
-              src={"/static/images/CopyButton.png"}
-              alt="copy버튼"
-            />
-            {t("(버튼 클릭 시 Copy 가능) ↓")}　
-          </h6>
+          ></h6>
         </div>
-        <CopyBlock
+        <CodeBlock
           className="first codeBox"
           style={{ background: "#002c50" }}
           text={`
@@ -133,35 +127,37 @@ function ompass(props) {
           </h6>
         </div>
 
-        <div className="document-ko">
-          <CopyBlock
-            className="first codeBox"
-            style={{ background: "#002c50" }}
-            text={`
-            {
-             "user_id" : "omsecurity",
-             "lang_init" : "KR"
-            }
-          `}
-            language={language}
-            theme={dracula}
-          />
-        </div>
-
-        <div className="document-en">
-          <CopyBlock
-            className="first codeBox"
-            style={{ background: "#002c50" }}
-            text={`
+        {isKr ? (
+          <div>
+            <CopyBlock
+              className="first codeBox"
+              style={{ background: "#002c50" }}
+              text={`
+              {
+               "user_id" : "omsecurity",
+               "lang_init" : "KR"
+              }
+            `}
+              language={language}
+              theme={dracula}
+            />
+          </div>
+        ) : (
+          <div>
+            <CopyBlock
+              className="first codeBox"
+              style={{ background: "#002c50" }}
+              text={`
             {
              "user_id" : "omsecurity",
              "lang_init" : "EN"
             }
           `}
-            language={language}
-            theme={dracula}
-          />
-        </div>
+              language={language}
+              theme={dracula}
+            />
+          </div>
+        )}
 
         <br />
         <h6 className="codeH6">■ Response (JSON)</h6>
