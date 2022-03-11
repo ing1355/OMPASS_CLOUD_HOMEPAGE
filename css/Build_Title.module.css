@@ -314,7 +314,8 @@ header {
     word-break: keep-all;
   }
   .MainTitle .button-li {
-    margin-top: 1.5rem;
+    margin-top: -1rem !important;
+    flex-direction: row !important;
   }
   .MainTitle .Certification-img-li img {
     width: 10rem;
@@ -334,19 +335,12 @@ header {
 @media (max-width: 360px) {
   .MainTitle h1 {
     font-size: 1.8rem !important;
-    line-height: 2.6rem !important;
+    line-height: 2rem !important;
   }
 }
 @media (max-width: 290px) {
   .MainTitle h1 {
-    font-size: 1.4rem !important;
-    line-height: 2.2rem !important;
-  }
-  .MainTitle .Certification-img-li img {
-    width: 8rem !important;
-  }
-
-  :lang(en) .MainTitle .Certification-img-li img {
-    width: 11rem !important;
+    font-size: 1rem !important;
+    line-height: 2rem !important;
   }
 }
