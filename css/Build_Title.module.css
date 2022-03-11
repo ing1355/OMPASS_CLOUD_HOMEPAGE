@@ -113,6 +113,9 @@ header {
   background-color: #2fa7fd;
   color: #fff;
 }
+.Certification-img-li-mobile {
+  display: none;
+}
 
 @media (max-width: 2560px) {
   header {
@@ -304,25 +307,44 @@ header {
   }
 }
 @media (max-width: 414px) {
+  .Certification-img-li-mobile {
+    display: block;
+    order: 2;
+    position: absolute;
+    margin-left: 1rem;
+    bottom: 2rem;
+  }
+  .Certification-img-li-mobile img {
+    width: 4rem;
+  }
+  .Certification-img-li {
+    display: none;
+  }
+  :lang(en) .Certification-img-li-mobile img {
+    width: 9rem;
+  }
+
   .buildHeader {
     width: 100%;
-    height: 600px;
     background-position: 90%;
+    position: relative;
   }
   .MainTitle {
-    padding-left: 1.5rem;
+    padding-left: 0rem !important;
     word-break: keep-all;
   }
   .MainTitle .button-li {
+    padding-top: 0;
     margin-top: -1rem !important;
     flex-direction: row !important;
-  }
-  .MainTitle .Certification-img-li img {
-    width: 10rem;
+    justify-content: space-around;
   }
 
-  :lang(en) .MainTitle .Certification-img-li img {
-    width: 13rem !important;
+  .MainTitle .button-li a:nth-child(2) {
+    padding-right: 0 !important;
+  }
+  .MainTitle .title-p {
+    text-align: center;
   }
   .MainTitle a {
     margin: 0.5rem !important;
@@ -330,17 +352,37 @@ header {
   .MainTitle h1 {
     font-size: 1.9rem !important;
     line-height: 2.7rem !important;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .MainTitle ul {
+    justify-content: unset !important;
   }
 }
 @media (max-width: 360px) {
   .MainTitle h1 {
     font-size: 1.8rem !important;
-    line-height: 2rem !important;
+    line-height: 2.6rem !important;
+  }
+  .MainTitle .button-li {
+    margin-top: 4rem;
   }
 }
 @media (max-width: 290px) {
   .MainTitle h1 {
     font-size: 1rem !important;
     line-height: 2rem !important;
+  }
+  .Certification-img-li-mobile {
+    display: none;
+  }
+  .Certification-img-li img {
+    width: 8rem !important;
+  }
+  .Certification-img-li {
+    display: block;
+    order: 2;
+    margin-top: -1rem !important;
+    text-align: center;
   }
 }

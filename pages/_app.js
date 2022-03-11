@@ -9,11 +9,15 @@ import languageDetector from "../lib/languageDetector";
 
 function App(props) {
   const { t } = useTranslation();
-  const { Component, pageProps } = props;
+  const { Component, pageProps, router } = props;
+  const { query } = router;
 
   useEffect(() => {
-    document.documentElement.setAttribute('lang', languageDetector.detect())
-  },[])
+    document.documentElement.setAttribute(
+      "lang",
+      query.locale || languageDetector.detect()
+    );
+  }, []);
 
   return (
     <>
@@ -59,11 +63,11 @@ function App(props) {
         `}
       </style>
 
-        <Layout>
-          <NavbarTop />
-          <Component {...pageProps} />
-          <Footer />
-        </Layout>
+      <Layout>
+        <NavbarTop />
+        <Component {...pageProps} />
+        <Footer />
+      </Layout>
     </>
   );
 }
