@@ -36,7 +36,7 @@ function Main(props) {
               </div>
             </li>
 
-            {/* <li className="Certification-img-li-mobile">
+            <li className="Certification-img-li-mobile">
               <div>
                 {isKr ? (
                   <img src={"/static/images/Certification_mobile.png"} />
@@ -44,7 +44,7 @@ function Main(props) {
                   <img src={"/static/images/Certification_eng_mobile.png"} />
                 )}
               </div>
-            </li> */}
+            </li>
 
             <li className="button-li">
               <LinkComponent href="/login">
