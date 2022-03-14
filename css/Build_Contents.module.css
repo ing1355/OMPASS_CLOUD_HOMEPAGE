@@ -124,11 +124,11 @@
   border-radius: 2rem;
 }
 .contentsBox2 .contentsSubBox .contents2Box li div {
-  /* max-width: 5rem !important;
-  max-height: 5rem !important; */
-  /* font-size: 5rem !important;
-  /* background-color: red; */
   font-size: 5rem !important;
+}
+.contentsBox2 .contentsSubBox .contents2Box li div p {
+  font-size: 1rem !important;
+  word-break: keep-all;
 }
 .contentsBox2 .contentsSubBox .contents2Box .contents1FontAwsome {
   font-size: 5rem !important;
@@ -150,7 +150,7 @@
   background: #c7dbd262;
   border: 1px solid #44ca8b !important;
   border-radius: 10px;
-  /* border: 1px solid #02aa3a8f; */
+
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
@@ -649,22 +649,30 @@
     width: 100%;
   }
   .contents2Box .FontAwesomeIcon-p {
-    width: 100px;
+    width: 80px;
     margin-top: 0 !important;
+    margin-left: 10px;
   }
   .contentsBox2 .contentsSubBox .contents2Box li div p {
     font-size: 1rem !important;
+  }
+  .contentsBox2 .contentsSubBox .contents2Box li div p:nth-child(2) {
+    width: 90%;
   }
 
   .contentsBox2 .contentsSubBox .contents2Box li .contents1FontAwsome {
     font-size: 3rem !important;
     height: 70px;
+    width: 40px;
   }
   .contentsBox2 .contentsSubBox .contents2Box li p {
     font-size: 1.2rem;
     margin-top: 0rem;
     height: 70px;
-    line-height: 70px;
+    display: flex;
+    margin-bottom: 0;
+    align-items: center;
+    text-align: left;
   }
 
   .contents2Box_2 {
@@ -975,6 +983,13 @@
   .contentsBox3 .contents2Box {
     padding: 0 1rem !important;
   }
+  .contentsBox2 .contentsSubBox .contents2Box li div p {
+    font-size: 0.9rem !important;
+    margin-left: 10px;
+  }
+  .contentsBox2 .contentsSubBox .contents2Box li div p:nth-child(2) {
+    margin-left: 20px;
+  }
 }
 @media (max-width: 384px) {
   .contents2Box .FontAwesomeIcon-p {
@@ -988,5 +1003,10 @@
   .contentsBox2 .contentsSubBox .contents2Box li .contents1FontAwsome {
     font-size: 2rem !important;
     height: 70px;
+  }
+}
+@media (max-width: 280px) {
+  .contentsBox2 .contentsSubBox .contents2Box li div p {
+    margin-left: 0px;
   }
 }

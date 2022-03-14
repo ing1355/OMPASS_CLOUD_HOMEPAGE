@@ -48,7 +48,6 @@ function NavbarTop() {
           <li className="logo">
             <LinkComponent href="/">OMPASS</LinkComponent>
           </li>
-
           <li className="mobile-button">
             <div>
               <LanguageSwitchLink
@@ -56,16 +55,11 @@ function NavbarTop() {
                 className={isKr ? "langenbutton" : "langkobutton"}
               >
                 <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
-                &nbsp;
-                {isKr ? (
-                  <LanguageSwitchLink locale="en" />
-                ) : (
-                  <LanguageSwitchLink locale="ko" />
-                )}
+                &nbsp;{isKr ? "EN" : "KO"}
               </LanguageSwitchLink>
             </div>
+
             <div
-              style={{ display: "flex" }}
               onClick={() => {
                 $(".nav-menu-item").slideToggle();
                 $(".scrollBar").hide();
@@ -75,7 +69,6 @@ function NavbarTop() {
             </div>
           </li>
         </ul>
-
         <ul className="nav-menu-item">
           <div className="nav-menu-item-div">
             <li>
@@ -99,15 +92,6 @@ function NavbarTop() {
           </div>
 
           <div className="langbutton-mobile-div">
-            {/* <li className="langbutton-mobile">
-              <LanguageSwitchLink
-                locale={isKr ? "en" : "ko"}
-                className={isKr ? "langenbutton" : "langkobutton"}
-              >
-                <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
-                &nbsp;{isKr ? "GLOBAL / 영어" : "KOREA / KOREAN"}
-              </LanguageSwitchLink>
-            </li> */}
             <li className="admin-login-button-mobile">
               <LinkComponent
                 href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
@@ -121,15 +105,14 @@ function NavbarTop() {
         </ul>
 
         <ul className="nav-menu-item langbutton-pc">
-          <li className="lang-button">
-            <a className="globalIcon-a">
-              <FontAwesomeIcon className="globalIcon" icon={faGlobe} /> &nbsp;
-              {isKr ? (
-                <LanguageSwitchLink locale="en" />
-              ) : (
-                <LanguageSwitchLink locale="ko" />
-              )}
-            </a>
+          <li style={{ marginRight: "1rem" }}>
+            <LanguageSwitchLink
+              locale={isKr ? "en" : "ko"}
+              className={isKr ? "langenbutton" : "langkobutton"}
+            >
+              <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
+              &nbsp;{isKr ? "EN" : "KO"}
+            </LanguageSwitchLink>
           </li>
           <li className="admin-login-button">
             <LinkComponent

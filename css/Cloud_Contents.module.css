@@ -645,6 +645,9 @@
   .CloudcontentsBox2 .contentsSubBox .contents2Box li div p {
     font-size: 1rem !important;
   }
+  .CloudcontentsBox2 .contentsSubBox .contents2Box li div p:nth-child(2) {
+    width: 90%;
+  }
 
   .CloudcontentsBox2 .contentsSubBox .contents2Box li .contents1FontAwsome {
     font-size: 3rem !important;
@@ -926,6 +929,9 @@
     font-size: 0.9rem !important;
     margin-left: 10px;
   }
+  .CloudcontentsBox2 .contentsSubBox .contents2Box li div p:nth-child(2) {
+    margin-left: 20px;
+  }
 }
 @media (max-width: 384px) {
   .CloudcontentsBox2 .FontAwesomeIcon-p {
@@ -938,5 +944,10 @@
   .CloudcontentsBox2 .contentsSubBox .contents2Box li .contents1FontAwsome {
     font-size: 2rem !important;
     height: 70px;
+  }
+}
+@media (max-width: 280px) {
+  .CloudcontentsBox2 .contentsSubBox .contents2Box li div p {
+    margin-left: 0px;
   }
 }

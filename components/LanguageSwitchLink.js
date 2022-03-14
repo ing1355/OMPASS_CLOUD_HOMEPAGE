@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import languageDetector from "../lib/languageDetector";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const LanguageSwitchLink = ({ children, locale, className, ...rest }) => {
   const router = useRouter();
@@ -25,6 +27,8 @@ const LanguageSwitchLink = ({ children, locale, className, ...rest }) => {
   return (
     <Link href={href} passHref>
       <a className={className} onClick={changeLanguage}>
+        {/* <FontAwesomeIcon className="globalIcon" icon={faGlobe} /> */}
+        &nbsp;
         {children ? children : <li>{locale === "ko" ? "KO" : "EN"}</li>}
       </a>
     </Link>

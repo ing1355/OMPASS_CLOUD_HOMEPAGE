@@ -244,6 +244,7 @@ a {
 }
 .sidebar .gnb .sub {
   color: #212529;
+  margin-left: 1.5rem;
   line-height: 40px;
   font-weight: 500;
   flex-direction: column;

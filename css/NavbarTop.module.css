@@ -49,9 +49,7 @@ a {
   font-size: 0.95rem;
   align-items: center;
 }
-.navbar-div .navbar-nav ul li {
-  cursor: pointer;
-}
+
 .navbar-div .navbar-nav ul:nth-child(2) li {
   padding-right: 2rem;
 }
@@ -337,11 +335,7 @@ a {
     top: 4rem;
     z-index: -55;
   }
-  .langenbutton {
-    display: flex;
-    flex-direction: row !important;
-    align-items: center;
-  }
+
   .nav-menu-item {
     height: auto;
     display: flex;
