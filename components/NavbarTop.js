@@ -48,16 +48,34 @@ function NavbarTop() {
           <li className="logo">
             <LinkComponent href="/">OMPASS</LinkComponent>
           </li>
-          <li
-            className="mobile-button"
-            onClick={() => {
-              $(".nav-menu-item").slideToggle();
-              $(".dropDown_bg").slideToggle();
-            }}
-          >
-            <MenuOutlined className="mobile-menu-icon" />
+
+          <li className="mobile-button">
+            <div>
+              <LanguageSwitchLink
+                locale={isKr ? "en" : "ko"}
+                className={isKr ? "langenbutton" : "langkobutton"}
+              >
+                <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
+                &nbsp;
+                {isKr ? (
+                  <LanguageSwitchLink locale="en" />
+                ) : (
+                  <LanguageSwitchLink locale="ko" />
+                )}
+              </LanguageSwitchLink>
+            </div>
+            <div
+              style={{ display: "flex" }}
+              onClick={() => {
+                $(".nav-menu-item").slideToggle();
+                $(".scrollBar").hide();
+              }}
+            >
+              <MenuOutlined className="mobile-menu-icon" />
+            </div>
           </li>
         </ul>
+
         <ul className="nav-menu-item">
           <div className="nav-menu-item-div">
             <li>
@@ -81,16 +99,15 @@ function NavbarTop() {
           </div>
 
           <div className="langbutton-mobile-div">
-            <li className="langbutton-mobile">
+            {/* <li className="langbutton-mobile">
               <LanguageSwitchLink
                 locale={isKr ? "en" : "ko"}
                 className={isKr ? "langenbutton" : "langkobutton"}
               >
-                {/* <GlobalOutlined className="globalIcon" /> */}
                 <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
                 &nbsp;{isKr ? "GLOBAL / 영어" : "KOREA / KOREAN"}
               </LanguageSwitchLink>
-            </li>
+            </li> */}
             <li className="admin-login-button-mobile">
               <LinkComponent
                 href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
@@ -104,25 +121,15 @@ function NavbarTop() {
         </ul>
 
         <ul className="nav-menu-item langbutton-pc">
-          <li>
-            <button
-              onClick={() => {
-                setLangbox(!langbox);
-              }}
-              className="lang-button"
-            >
-              <a className="globalIcon-a">
-                <FontAwesomeIcon className="globalIcon" icon={faGlobe} /> &nbsp;
-                {isKr ? "KO" : "EN"}
-              </a>
-
-              {langbox === true && (
-                <div className="lang-drop-down-box">
-                  <LanguageSwitchLink locale="en" />
-                  <LanguageSwitchLink locale="ko" />
-                </div>
+          <li className="lang-button">
+            <a className="globalIcon-a">
+              <FontAwesomeIcon className="globalIcon" icon={faGlobe} /> &nbsp;
+              {isKr ? (
+                <LanguageSwitchLink locale="en" />
+              ) : (
+                <LanguageSwitchLink locale="ko" />
               )}
-            </button>
+            </a>
           </li>
           <li className="admin-login-button">
             <LinkComponent
@@ -134,8 +141,6 @@ function NavbarTop() {
             </LinkComponent>
           </li>
         </ul>
-
-        {/* <div className="dropDown_bg"></div> */}
       </nav>
     </div>
   );

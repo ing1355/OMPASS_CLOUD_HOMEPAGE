@@ -3,30 +3,30 @@ import React from "react";
 import "../../../css/Document.module.css";
 import Document from "../../../components/Document";
 import useTranslation from "../../../lib/useTranslation";
-import i18nextConfig from '../../../next-i18next.config';
+import i18nextConfig from "../../../next-i18next.config";
 
 const getPathSlugs = () => {
-  return i18nextConfig.i18n.locales.map(locale => ({
+  return i18nextConfig.i18n.locales.map((locale) => ({
     params: {
-      locale
-    }
-  }))
-}
+      locale,
+    },
+  }));
+};
 
 export async function getStaticPaths(...args) {
   const pathsWithLocale = getPathSlugs();
   return {
     paths: pathsWithLocale,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   return {
     props: {
-      ...params
-    }
-  }
+      ...params,
+    },
+  };
 }
 
 function users() {
@@ -50,7 +50,11 @@ function users() {
                     <div className="document-img">
                       <img
                         width="100%"
-                        src={isKr ? "/static/images/document_users_1.png" : "/static/images/document_users_1_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/document_users_1.png"
+                            : "/static/images/document_users_1_eng.png"
+                        }
                         alt="user 페이지"
                       />
                     </div>
@@ -117,25 +121,33 @@ function users() {
                     <div className="document-img" style={{ marginTop: "1rem" }}>
                       <img
                         width="50%"
-                        style={{ margin: isKr ? '' : "1rem 0" }}
-                        src={isKr ? "/static/images/document_users_1_3.png" : "/static/images/document_users_1_3_eng.png"}
+                        style={{ margin: isKr ? "" : "1rem 0" }}
+                        src={
+                          isKr
+                            ? "/static/images/document_users_1_3.png"
+                            : "/static/images/document_users_1_3_eng.png"
+                        }
                         alt="user 페이지"
                       />
                     </div>
                     <div className="document-label">
-                      <label className="number">❺-⑴&nbsp;</label>
+                      <label className="number number-2">❺-⑴&nbsp;</label>
                       <p>{t("다운로드할 어플리케이션을 선택합니다.")}</p>
                     </div>
 
                     <div className="document-img">
                       <img
                         width="100%"
-                        src={isKr ? "/static/images/document_users_1_2.png" : "/static/images/document_users_1_2_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/document_users_1_2.png"
+                            : "/static/images/document_users_1_2_eng.png"
+                        }
                         alt="user 페이지"
                       />
                     </div>
                     <div className="document-label">
-                      <label className="number">❺-⑵&nbsp;</label>
+                      <label className="number number-2">❺-⑵&nbsp;</label>
                       <p>
                         {t(
                           "사용자 목록이 있는 .CSV 파일을 다운로드 할 수 있습니다."
@@ -161,12 +173,16 @@ function users() {
                     <div className="document-img" style={{ marginTop: "1rem" }}>
                       <img
                         width="50%"
-                        src={isKr ? "/static/images/document_users_1_1.png" : "/static/images/document_users_1_1_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/document_users_1_1.png"
+                            : "/static/images/document_users_1_1_eng.png"
+                        }
                         alt="user 페이지"
                       />
                     </div>
                     <div className="document-label">
-                      <label className="number">❻-⑴&nbsp;</label>
+                      <label className="number number-2">❻-⑴&nbsp;</label>
                       <p>
                         {t("사용자 목록을 .CSV 파일로 업로드 하여")}
                         {/* <br className="document-en" /> */}
@@ -196,7 +212,11 @@ function users() {
                     <div className="document-img">
                       <img
                         width="100%"
-                        src={isKr ? "/static/images/document_users_2.png" : "/static/images/document_users_2_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/document_users_2.png"
+                            : "/static/images/document_users_2_eng.png"
+                        }
                         alt="user 페이지"
                       />
                     </div>

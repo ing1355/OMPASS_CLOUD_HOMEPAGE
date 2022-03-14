@@ -86,9 +86,17 @@ a {
 .navbar-div .navbar-nav .lang-button {
   align-items: center;
   text-align: left;
-  width: 4.5rem;
+  width: 3.8rem;
   border: 0;
   background: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-div .navbar-nav .lang-button a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
 .lang-drop-down-box {
   width: 12rem;
@@ -168,15 +176,36 @@ a {
   }
   .mobile-button {
     display: block;
+    display: flex;
+    align-items: center !important;
+    height: 100%;
   }
-
+  .mobile-button .mobile-menu-icon {
+    border: 1px solid black;
+    padding: 0.3rem;
+    margin-left: 1rem;
+    border-radius: 2.5px;
+  }
+  .mobile-button div {
+    display: flex;
+    flex-direction: row;
+  }
+  .mobile-button div a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
   .navbar-nav .menu-title {
     padding: 0 1rem;
+    align-items: center !important;
   }
 
   .navbar-div .navbar-nav ul:nth-child(2) li {
-    padding-left: 1rem;
+    padding: 0rem;
     width: 100%;
+  }
+  .navbar-div .navbar-nav ul:nth-child(2) li a {
+    padding: 0 1rem;
   }
   .navbar-div .navbar-nav ul {
     align-items: flex-start !important;
@@ -186,6 +215,7 @@ a {
     display: flex;
     flex-direction: row !important;
   }
+
   .navbar-div {
     display: flex;
     position: fixed;
@@ -200,8 +230,10 @@ a {
     padding: 0rem;
   }
   .navbar-nav ul:nth-child(1) {
+    display: flex;
     justify-content: space-between;
     margin-top: 1rem;
+    align-items: center !important;
   }
 
   .dropDown_bg {
@@ -255,17 +287,14 @@ a {
   }
   .admin-login-button-mobile a {
     display: flex;
+    width: 100%;
     flex-direction: row;
     align-items: center;
   }
 
   .langbutton-mobile .langkobutton {
     display: flex;
-    flex-direction: row !important;
-    align-items: center;
-  }
-  .langbutton-mobile .langenbutton {
-    display: flex;
+    width: 100%;
     flex-direction: row !important;
     align-items: center;
   }

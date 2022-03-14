@@ -9,7 +9,8 @@ import {
   FileTextOutlined,
   SettingOutlined,
   AppstoreOutlined,
-  MoreOutlined,
+  DownOutlined,
+  UpOutlined,
 } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import useTranslation from "../../lib/useTranslation";
@@ -17,7 +18,7 @@ import LinkComponent from "../Link";
 
 function Document(props) {
   const { t } = useTranslation();
-
+  const { icon, setIcon } = true;
   useEffect(() => {
     $(window)
       .resize(function () {
@@ -25,8 +26,6 @@ function Document(props) {
         if (width <= 1024) {
           $(".mobile-menu-button").show();
           $(".scrollBar").hide();
-
-          // $(".down").hide();
         } else {
           $(".scrollBar").show();
           $(".mobile-menu-button").hide();
@@ -42,14 +41,14 @@ function Document(props) {
       <h2
         className="mobile-title"
         onClick={() => {
+          setIcon(false);
           $(".scrollBar").slideToggle();
-          // setUpdown(false);
-          // setmobileMenuBar(false);
+          $(".nav-menu-item").hide();
         }}
       >
         OMPASS Developers
         <b className="mobile-title-p">
-          <MoreOutlined />
+          {icon === true ? <UpOutlined /> : <DownOutlined />}
         </b>
       </h2>
       <div className="scrollBar">

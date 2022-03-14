@@ -253,8 +253,6 @@ select {
   display: flex;
   width: 100%;
   flex-direction: column;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .agree-column .agree-text p h5 {
   font-weight: bold;

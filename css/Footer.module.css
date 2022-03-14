@@ -83,7 +83,9 @@
   width: 100%;
   text-align: right;
 }
-
+.footerTextBox {
+  word-break: keep-all;
+}
 .footerTextBox2 {
   display: flex;
   flex-direction: column;
@@ -212,5 +214,6 @@
   }
   .footerTextBox-mobile {
     display: block;
+    word-break: keep-all;
   }
 }
