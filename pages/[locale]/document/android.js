@@ -105,15 +105,30 @@ function android(props) {
                             ? "/static/images/app_1.png"
                             : "/static/images/app_1_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="안드로이드 이미지"
                       />
                     </div>
                     <div className="documnet-box">
                       <div className="document-label">
-                        <label className="number">❶&nbsp;</label>
+                        <label className="number">❶-⑴&nbsp;</label>
                         <p>
-                          최신 업데이트 알림이 팝업으로 나타납니다. (이미지,
-                          문장 수정 예정)
+                          {t(
+                            "해당 앱이 최신이 아닐 경우 업데이트 팝업창이 표시됩니다."
+                          )}
+                        </p>
+                      </div>
+
+                      <div className="document-label">
+                        <label className="number">→&nbsp;</label>
+                        <p>
+                          {t("최신 업데이트를 진행하고 앱을 실행해주세요.")}
+                        </p>
+                      </div>
+
+                      <div className="document-label">
+                        <label className="number">❶-⑵&nbsp;</label>
+                        <p>
+                          {t("해당 앱을 다운로드시 최초 설정이 진행됩니다.")}
                         </p>
                       </div>
                     </div>
@@ -129,7 +144,7 @@ function android(props) {
                             ? "/static/images/app_2.png"
                             : "/static/images/app_2_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="안드로이드 이미지"
                       />
                     </div>
                     <div className="documnet-box">
@@ -159,7 +174,7 @@ function android(props) {
                             ? "/static/images/mobileApp_1.png"
                             : "/static/images/mobileApp_1_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="안드로이드 이미지"
                       />
                     </div>
                     <div className="documnet-box">
@@ -219,7 +234,7 @@ function android(props) {
                             ? "/static/images/mobileApp_2.png"
                             : "/static/images/mobileApp_2_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="안드로이드 이미지"
                       />
                     </div>
                     <div className="documnet-box">
@@ -263,7 +278,7 @@ function android(props) {
                             ? "/static/images/mobileApp_3.png"
                             : "/static/images/mobileApp_3_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="안드로이드 이미지"
                       />
                     </div>
                     <div className="documnet-box">

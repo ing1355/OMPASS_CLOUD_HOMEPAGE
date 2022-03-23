@@ -2,34 +2,32 @@ import React from "react";
 import "../../../css/Support.module.css";
 import useTranslation from "../../../lib/useTranslation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import LinkComponent from "../../../components/Link";
-import i18nextConfig from '../../../next-i18next.config';
+import i18nextConfig from "../../../next-i18next.config";
 
 const getPathSlugs = () => {
-  return i18nextConfig.i18n.locales.map(locale => ({
+  return i18nextConfig.i18n.locales.map((locale) => ({
     params: {
-      locale
-    }
-  }))
-}
+      locale,
+    },
+  }));
+};
 
 export async function getStaticPaths(...args) {
   const pathsWithLocale = getPathSlugs();
   return {
     paths: pathsWithLocale,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   return {
     props: {
-      ...params
-    }
-  }
+      ...params,
+    },
+  };
 }
 
 function support() {
@@ -57,7 +55,7 @@ function support() {
             <h1>{t("모바일 앱")}</h1>
             <p>{t("원모어패스는 FIDO를 기반으로 하는 인증 플랫폼 입니다.")}</p>
             <p>{t("1. PKI 기반의 높은 보안성")}</p>
-            <p>{t("1. PKI 기반의 높은 보안성-eng")}</p>
+            <p className="support-en">{t("1. PKI 기반의 높은 보안성-eng")}</p>
             <p>{t("2. 패스워드가 없는 사용자 편의성을 추구")}</p>
             <p>{t("3. 사용자 선택형 인증 방식을 제공")}</p>
 
@@ -69,7 +67,7 @@ function support() {
                   alt="안드로이드 앱 QR코드"
                 />
                 <a
-                  href=" https://play.google.com/store/apps/details?id=kr.omsecurity.ompass"
+                  href="https://play.google.com/store/apps/details?id=kr.omsecurity.ompass"
                   target="_blank"
                   className="app-down-link-button"
                 >
@@ -77,8 +75,7 @@ function support() {
                     className="app-img"
                     src={"/static/images/googleplay.png"}
                   />
-                  &nbsp;
-                  Google Play
+                  &nbsp; Google Play
                 </a>
               </div>
 
@@ -97,8 +94,7 @@ function support() {
                     className="app-img"
                     src={"/static/images/appstore.png"}
                   />
-                  &nbsp;
-                  App Store
+                  &nbsp; App Store
                 </a>
               </div>
             </div>
@@ -106,7 +102,11 @@ function support() {
           <ul>
             <div>
               <img
-                src={isKr ? "/static/images/OmpassAppImg_Kor.png" : "/static/images/OmpassAppImg_Eng.png"}
+                src={
+                  isKr
+                    ? "/static/images/OmpassAppImg_Kor.png"
+                    : "/static/images/OmpassAppImg_Eng.png"
+                }
                 alt={isKr ? "원모어패스 앱_한글" : "원모어패스 앱_영어"}
               />
             </div>

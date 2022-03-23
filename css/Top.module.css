@@ -13,7 +13,7 @@
   z-index: 30;
 }
 #TopButton:hover {
-  background: #fff;
+  background-color: #fff;
   color: #0ca6ff;
 }
 @media (max-width: 1920px) {
@@ -26,5 +26,9 @@
     width: 3.2rem;
     height: 2.2rem;
     font-size: 0.6rem;
+  }
+  #TopButton:hover {
+    background-color: #000;
+    color: #fff;
   }
 }

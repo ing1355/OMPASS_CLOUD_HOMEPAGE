@@ -16,30 +16,30 @@ import { DownloadOutlined } from "@ant-design/icons";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import useTranslation from "../../../lib/useTranslation";
-import i18nextConfig from '../../../next-i18next.config';
+import i18nextConfig from "../../../next-i18next.config";
 
 const getPathSlugs = () => {
-  return i18nextConfig.i18n.locales.map(locale => ({
+  return i18nextConfig.i18n.locales.map((locale) => ({
     params: {
-      locale
-    }
-  }))
-}
+      locale,
+    },
+  }));
+};
 
 export async function getStaticPaths(...args) {
   const pathsWithLocale = getPathSlugs();
   return {
     paths: pathsWithLocale,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   return {
     props: {
-      ...params
-    }
-  }
+      ...params,
+    },
+  };
 }
 
 function restapi(props) {
@@ -60,7 +60,14 @@ function restapi(props) {
                 <div className="code">
                   <h4>▶ U2F</h4>
                   <div className="pdf-download">
-                    <a href={isKr ? "/static/pdf/REST API_U2F.pdf" : "/static/pdf/REST API_U2F_eng.pdf"} download>
+                    <a
+                      href={
+                        isKr
+                          ? "/static/pdf/REST API_U2F.pdf"
+                          : "/static/pdf/REST API_U2F_eng.pdf"
+                      }
+                      download
+                    >
                       <DownloadOutlined /> &nbsp; {t("PDF 다운받기")}
                     </a>
                   </div>
@@ -145,7 +152,7 @@ function restapi(props) {
           </p>
           <p
             onClick={() => {
-              var offset = $(".7st").offset();
+              var offset = $(".77st").offset();
               $("html,body").animate({ scrollTop: offset.top - 120 }, "linear");
             }}
           >
@@ -153,7 +160,7 @@ function restapi(props) {
           </p>
           <p
             onClick={() => {
-              var offset = $(".8st").offset();
+              var offset = $(".9st").offset();
               $("html,body").animate({ scrollTop: offset.top - 120 }, "linear");
             }}
           >

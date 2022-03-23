@@ -82,6 +82,9 @@ header {
   width: 15rem;
 }
 
+:lang(en) .MainTitle .Certification-img-li img {
+  width: 19rem;
+}
 .MainTitle .button-li {
   display: flex;
   width: 100%;
@@ -192,7 +195,9 @@ header {
   .MainTitle .Certification-img-li img {
     width: 10rem;
   }
-
+  :lang(en) .MainTitle .Certification-img-li img {
+    width: 12rem;
+  }
   .MainTitle a {
     width: 25%;
     height: 45px;
@@ -306,11 +311,12 @@ header {
   .Certification-img-li-mobile img {
     width: 4rem;
   }
+
   .Certification-img-li {
     display: none;
   }
   :lang(en) .Certification-img-li-mobile img {
-    width: 9rem;
+    width: 6rem !important;
   }
   .cloudHeader {
     width: 100%;
@@ -369,7 +375,10 @@ header {
     display: none;
   }
   .Certification-img-li img {
-    width: 8rem !important;
+    width: 6rem !important;
+  }
+  :lang(en) .Certification-img-li img {
+    width: 9rem !important;
   }
   .Certification-img-li {
     display: block;

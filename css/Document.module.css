@@ -305,7 +305,7 @@ a {
 }
 .sidebar .subback {
   font-size: 0.9rem;
-  margin-left: 2.2rem !important;
+  margin-left: 2rem !important;
 }
 /* =============== */
 /* 내일 수정 할 곳 */
@@ -532,6 +532,10 @@ a {
 }
 /* ---------------------- 1024 ----------------------- */
 @media (max-width: 1024px) {
+  .sidebar .subback {
+    margin-left: 2.2rem !important;
+  }
+
   .main .code p {
     width: 100%;
   }
@@ -565,13 +569,14 @@ a {
 
   .scrollBar {
     width: auto;
-    height: 700px;
+    height: 70px;
     overflow-x: hidden !important;
     overflow: scroll;
     padding-bottom: 0;
-    background: #f8f7f8 !important;
+    background: #f4f4f4 !important;
     position: relative;
     z-index: 10000;
+    padding-bottom: 1rem;
   }
 
   .sidebar {
@@ -792,6 +797,19 @@ a {
   .rightContentsBox {
     width: 100%;
   }
+  .scrollBar {
+    display: none;
+  }
+  .scrollBar {
+    width: auto;
+    height: 500px;
+    overflow-x: hidden !important;
+    overflow: scroll;
+    padding-bottom: 0;
+    background: #f8f7f8;
+    position: relative;
+    z-index: 100000;
+  }
 }
 /* ---------------------- 768 ----------------------- */
 @media (max-width: 768px) {
@@ -802,14 +820,7 @@ a {
     padding-bottom: 0 !important;
   }
   .scrollBar {
-    width: auto;
     height: 600px;
-    overflow-x: hidden !important;
-    overflow: scroll;
-    padding-bottom: 0;
-    background: #f8f7f8;
-    position: relative;
-    z-index: 100000;
   }
   .mobile-title-p .anticon svg {
     font-size: 1.3rem;

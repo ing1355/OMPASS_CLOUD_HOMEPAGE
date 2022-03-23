@@ -3,30 +3,30 @@ import "../../../css/Footer.module.css";
 import "../../../css/agree.module.css";
 import $ from "jquery";
 import useTranslation from "../../../lib/useTranslation";
-import i18nextConfig from '../../../next-i18next.config';
+import i18nextConfig from "../../../next-i18next.config";
 
 const getPathSlugs = () => {
-  return i18nextConfig.i18n.locales.map(locale => ({
+  return i18nextConfig.i18n.locales.map((locale) => ({
     params: {
-      locale
-    }
-  }))
-}
+      locale,
+    },
+  }));
+};
 
 export async function getStaticPaths(...args) {
   const pathsWithLocale = getPathSlugs();
   return {
     paths: pathsWithLocale,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   return {
     props: {
-      ...params
-    }
-  }
+      ...params,
+    },
+  };
 }
 
 function privacypolicy() {
@@ -48,7 +48,7 @@ function privacypolicy() {
         )}
       </h4>
       <div className="agree-title">
-        <h5>{t("이 개인정보취급방침의 내용은 다음과 같습니다.")}</h5>
+        <h4>{t("이 개인정보취급방침의 내용은 다음과 같습니다.")}</h4>
         <div>
           <label>1.</label>
           <p
@@ -172,45 +172,45 @@ function privacypolicy() {
 
       <p className="2st">
         <h5> {t("2. 수집하는 개인정보의 항목")} </h5>
-        <ul className="enter2" style={{ marginTop: "1.5rem" }}>
-          <li>{t("제2조 ❶")}</li>
+        <ul>
+          <li>❶</li>
           <li>{t("사이트 이용 과정에서 동의 하에 수집되는 관리자 정보")}</li>
         </ul>
-        <ul className="agree-text-ko enter">
+        <ul className="agree-text-ko in">
           <li>-</li>
           <li>{t("성, 이름, 이메일, 국가코드, 전화번호, 회사/조직명")}</li>
         </ul>
-        <ul className="enter2">
-          <li>{t("제2조 ❷")}</li>
+        <ul>
+          <li>❷</li>
           <li>
             {t("사이트 이용 과정에서 관리자에 의해 수집되는 서브 관리자 정보")}
           </li>
         </ul>
-        <ul className="agree-text-ko enter">
+        <ul className="agree-text-ko in">
           <li>-</li>
           <li>{t("성, 이름, 이메일, 국가번호, 전화번호")}</li>
         </ul>
 
-        <ul className="enter2">
-          <li>{t("제2조 ❸")}</li>
+        <ul>
+          <li>❸</li>
           <li>
             {t(
               "서비스 및 사이트 이용 처리 과정에서 자동생성되어 수집되는 관리자 및 서브 관리자 정보"
             )}
           </li>
         </ul>
-        <ul className="agree-text-ko enter">
+        <ul className="agree-text-ko in">
           <li>-</li>
           <li>{t("OMPASS 로그, 정책 로그, 쿠키, 접속 IP정보, 방문 시간")}</li>
         </ul>
 
         <ul>
-          <li>{t("제2조 ❹")}</li>
+          <li>❹</li>
           <li>
             {t("서비스 이용 처리 과정에서 자동생성되어 수집되는 사용자 정보")}
           </li>
         </ul>
-        <ul className="agree-text-ko enter">
+        <ul className="agree-text-ko in">
           <li>-</li>
           <li>
             {t(
@@ -218,15 +218,15 @@ function privacypolicy() {
             )}
           </li>
         </ul>
-        <ul>
-          <li className="agree-text-ko">{t("제2조 ❺")}</li>
+        <ul className="agree-text-ko">
+          <li>❺</li>
           <li>{t("신원확인과정에서 수집되는 사용자 정보")}</li>
         </ul>
-        <ul>
-          <li className="agree-text-ko">-</li>
+        <ul className="agree-text-ko in">
+          <li>-</li>
           <li>{t("내용：서비스 처음 사용 시 휴대폰 본인 인증을 진행")}</li>
         </ul>
-        <ul className="agree-text-ko">
+        <ul className="agree-text-ko in">
           <li>-</li>
           <li>{t("비고：진위 확인 후 고유식별정보 등은 저장되지 않음")}</li>
         </ul>
@@ -243,20 +243,20 @@ function privacypolicy() {
       </p>
       <p className="5st">
         <h5>{t("5. 개인정보의 보유 및 이용 기간")} </h5>
-        <ul style={{ marginTop: "1.5rem" }}>
-          <li>{t("제5조 ❶")}</li>
+        <ul>
+          <li>❶</li>
           <li>{t("회사 정책 따른 정보 보유")}</li>
         </ul>
-        <ul>
-          <li>{t("제10조 ❷_1")}</li>
+        <ul className="in">
+          <li>-</li>
           <li>
             {t(
               "회원제 서비스 이용하는 이용자가 제공한 정보는 회원 가입 시점부터 탈회 시까지 보관됩니다."
             )}
           </li>
         </ul>
-        <ul className="enter">
-          <li>{t("제10조 ❷_2")}</li>
+        <ul className="in">
+          <li>-</li>
           <li>
             {t(
               "회원제 서비스 이외의 서비스의 경우, 개인정보 이용 목적이 달성되면 즉시 삭제되며 서비스 별 안내된 보관기간에 따라 보유할 수도 있습니다."
@@ -264,37 +264,37 @@ function privacypolicy() {
           </li>
         </ul>
         <ul>
-          <li>{t("제5조 ❷")}</li>
+          <li>❷</li>
           <li>
             {t(
               "관련 법령에 따른 정보 보유 상법 등 관련 법령의 규정에 의하여 보존할 필요성이 있는 경우에는 법령이 정하는 바에 따라 보존합니다."
             )}
           </li>
         </ul>
-        <ul>
-          <li>{t("제10조 ❷_1")}</li>
+        <ul className="in">
+          <li>-</li>
           <li> {t("계약 또는 청약철회 등에 관한 기록：5년")}</li>
         </ul>
 
-        <ul>
-          <li>{t("제10조 ❷_2")}</li>
+        <ul className="in">
+          <li>-</li>
           <li>{t("대금결제 및 재화 등의 공급에 관한 기록：5년")}</li>
         </ul>
-        <ul>
-          <li>{t("제10조 ❷_3")}</li>
+        <ul className="in">
+          <li>-</li>
           <li>{t("소비자의 불만 또는 분쟁처리에 관한 기록：3년")}</li>
         </ul>
       </p>
       <p className="6st">
         <h5> {t("6. 개인정보의 파기절차 및 파기방법")} </h5>
+        <li className="enter">
+          {t(
+            "개인정보 수집 및 이용목적을 달성하거나 그 보유기간이 경과된 후에는 해당 정보를 지체 없이 파기합니다. 파기절차 및 방법은 다음과 같습니다."
+          )}
+        </li>
 
-        {t(
-          "개인정보 수집 및 이용목적을 달성하거나 그 보유기간이 경과된 후에는 해당 정보를 지체 없이 파기합니다. 파기절차 및 방법은 다음과 같습니다."
-        )}
-
-        <br />
-        <ul className="enter" style={{ marginTop: "1.5rem" }}>
-          <li>{t("제6조 ❶")}</li>
+        <ul>
+          <li>❶</li>
           <li>
             {t("〈개인정보 파기 절차〉")} <br />
             {t(
@@ -304,7 +304,7 @@ function privacypolicy() {
         </ul>
 
         <ul>
-          <li>{t("제6조 ❷")}</li>
+          <li>❷</li>
           <li>
             {t("〈개인정보 파기 방법〉")} <br />
             {t(
@@ -313,20 +313,18 @@ function privacypolicy() {
           </li>
         </ul>
 
-        <ul>
-          <li>{t("제10조 ❷_1")}</li>
+        <ul className="in">
+          <li>-</li>
           <li>{t("종이에 출력된 개인정보는 분쇄기로 분쇄하여 파기합니다.")}</li>
         </ul>
-        <ul>
-          <li>{t("제10조 ❷_2")}</li>
+        <ul className="in">
+          <li>-</li>
           <li>
             {t(
               "전자적 파일 형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다."
             )}
           </li>
         </ul>
-
-        <br />
       </p>
       <p className="7st">
         <h5> {t("7. 이용자 및 법정대리인의 권리와 그 행사방법")} </h5>
@@ -336,13 +334,14 @@ function privacypolicy() {
       </p>
       <p className="8st">
         <h5>{t("8. 개인정보의 안전성 확보조치에 관한 사항")} </h5>
-        {t(
-          "회사는 개인정보를 처리함에 있어 다음과 같이 안전성 확보에 필요한 관리적, 기술적, 물리적 조치를 취하고 있습니다."
-        )}
-        <br />
+        <li className="enter">
+          {t(
+            "회사는 개인정보를 처리함에 있어 다음과 같이 안전성 확보에 필요한 관리적, 기술적, 물리적 조치를 취하고 있습니다."
+          )}
+        </li>
 
         <ul>
-          <li>{t("제10조 ❷_1")}</li>
+          <li>-</li>
           <li>
             {t(
               "관리적 대책：내부관리계획 수립 및 시행, 임직원에 대한 개인정보보호 정기 교육 등"
@@ -350,7 +349,7 @@ function privacypolicy() {
           </li>
         </ul>
         <ul>
-          <li>{t("제10조 ❷_2")}</li>
+          <li>-</li>
           <li>
             {t(
               "기술적 대책：개인정보처리시스템에 대한 접근권한 관리, 암호화 및 보안프로그램 설치 등"
@@ -358,7 +357,7 @@ function privacypolicy() {
           </li>
         </ul>
         <ul>
-          <li>{t("제10조 ❷_3")}</li>
+          <li>-</li>
           <li>
             {t(
               "물리적 대책：서버실, 자료보관실 등의 개인정보 보관장소에 대한 접근통제"
@@ -376,7 +375,7 @@ function privacypolicy() {
           "‘회사’는 이용자에게 개인화된 서비스를 제공하기 위하여 '쿠키(cookie)'를 사용합니다. '쿠키(cookie)'는 HTTP 서버에서 이용자의 브라우저에게 보내는 데이터파일로써 이용자의 기기에 저장됩니다. 쿠키(cookie)에는 사용한 웹사이트의 정보 및 이용자의 개인정보가 담길 수 있습니다. 이용자는 웹브라우저의 옵션을 조정하여 모든 쿠키를 다 받아들이거나, 쿠키가 설치될 때 통지를 보내도록 하거나, 아니면 모든 쿠키를 거부할 수 있습니다."
         )}
       </p>
-      <p className="10st">
+      <p className="10st bottom">
         <h5>{t("10. 개인정보보호 책임자")} </h5>
         {t("개인정보보호책임자：강누리 과장")}
         <br />
@@ -391,7 +390,7 @@ function privacypolicy() {
         )}
         <br />
         <ul>
-          <li>{t("제10조 ❷_1")}</li>
+          <li>-</li>
           <li>
             {t(
               "- 경찰청사이버수사국 https：//cyberbureau.police.go.kr/ / 국번없이 182"
@@ -399,7 +398,7 @@ function privacypolicy() {
           </li>
         </ul>
         <ul>
-          <li>{t("제10조 ❷_2")}</li>
+          <li>-</li>
           <li>
             {t(
               "- 대검찰청사이버수사과 https：//www.spo.go.kr/ / 국번없이 1301"
@@ -407,7 +406,7 @@ function privacypolicy() {
           </li>
         </ul>
         <ul>
-          <li>{t("제10조 ❷_3")}</li>
+          <li>-</li>
           <li>
             {t(
               "- 개인정보침해신고센터 (한국인터넷진흥원 운영) https：//privacy.kisa.or.kr/ / 국번없이 118"
@@ -415,7 +414,7 @@ function privacypolicy() {
           </li>
         </ul>
         <ul>
-          <li>{t("제10조 ❷_4")}</li>
+          <li>-</li>
           <li>
             {t(
               "- 개인정보분쟁조정위원회 (한국인터넷진흥원 운영)  https：//www.kopico.go.kr/ / 1833-6972"

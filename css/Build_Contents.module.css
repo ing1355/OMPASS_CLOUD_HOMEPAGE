@@ -495,10 +495,12 @@
     background: #fff;
     position: relative;
     z-index: 5;
-    padding-bottom: 3rem;
-    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 0rem;
   }
-
+  .contentsBox1 .contentsSubBox ul li h1 {
+    text-align: center;
+  }
   .contentsBox1 .contentsSubBox {
     width: 100%;
     margin: 0 auto;
@@ -516,7 +518,14 @@
     flex: 1;
     flex-direction: column;
   }
-
+  .contentsBox1 ul:first-child li:first-child {
+    padding-left: 0 !important;
+    padding-right: 0;
+  }
+  .content-div {
+    display: flex;
+    width: 100%;
+  }
   .OmpassSolutionBox {
     width: 60%;
     margin: 0 auto;
@@ -533,7 +542,7 @@
   .contentsBox1 ul:nth-child(1) li:nth-child(1) {
     text-align: left;
     flex: 2;
-    margin-left: 0rem;
+    margin-left: 0.5rem;
     width: 90%;
     margin-top: 2rem;
   }
@@ -615,7 +624,7 @@
   .contentsBox2 .contentsSubBox {
     width: 90%;
     margin: 0 auto;
-    padding: 4rem 2rem !important;
+    padding: 2rem 2rem 1.5rem 2rem !important;
   }
   .contentsBox2 .contentsSubBox h2 {
     font-size: 1.2rem;
@@ -624,7 +633,7 @@
   }
   .contentsBox2 .contentsSubBox .contents2Box {
     display: flex;
-    padding-top: 2rem;
+    padding-top: 1rem;
     flex-direction: column;
   }
   .contentsBox2 .contentsSubBox .contents2Box li {
@@ -713,13 +722,13 @@
   .contentsBox3 .contentsSubBox {
     width: 100%;
     margin: 0 auto;
-    padding: 4rem 0 0 0;
+    padding: 2rem 0 0 0;
   }
 
   .contentsBox3 h2 {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
   }
   .contentsBox3 li {
     text-align: center;
@@ -943,6 +952,7 @@
   .contentsBox7 .supportContents3 {
     margin: 0 auto;
     width: 90% !important;
+    padding: 2rem;
   }
 
   .contentsBox7 {
@@ -990,8 +1000,21 @@
   .contentsBox2 .contentsSubBox .contents2Box li div p:nth-child(2) {
     margin-left: 20px;
   }
+  .contentsBox7 .supportContents3 {
+    padding: 1rem;
+    width: 100%;
+  }
 }
 @media (max-width: 384px) {
+  .contentsBox7 .supportContents3 {
+    padding: 1rem;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .contentsBox7 .supportContents3 ul div {
+    flex-direction: column;
+  }
   .contents2Box .FontAwesomeIcon-p {
     width: 35px;
     margin-top: 0 !important;

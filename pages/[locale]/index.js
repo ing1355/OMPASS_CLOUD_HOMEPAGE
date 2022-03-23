@@ -1,36 +1,38 @@
 import Main from "../../components/Main/Main";
 import "../../css/Main.module.css";
 import React from "react";
-import i18nextConfig from '../../next-i18next.config'
+import i18nextConfig from "../../next-i18next.config";
 
 const getPathSlugs = () => {
-  return i18nextConfig.i18n.locales.map(locale => ({
+  return i18nextConfig.i18n.locales.map((locale) => ({
     params: {
-      locale
-    }
-  }))
-}
+      locale,
+    },
+  }));
+};
 
 export async function getStaticPaths(...args) {
   const pathsWithLocale = getPathSlugs();
   return {
     paths: pathsWithLocale,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   return {
     props: {
-      ...params
-    }
-  }
+      ...params,
+    },
+  };
 }
 
-const Index = (props) => {
-  return <div>
-    <Main />
-  </div>
+const Index = () => {
+  return (
+    <>
+      <Main />
+    </>
+  );
 };
 
 export default Index;

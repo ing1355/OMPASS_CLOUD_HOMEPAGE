@@ -11,7 +11,7 @@ function authNtoken2(props) {
   const language = "jsx";
 
   return (
-    <div className="7st 8st">
+    <div className="7st 8st 77st">
       <div className="guide restapi-div">
         <h5 style={{ margin: "0" }}>{t("인증 토큰 검증")}</h5>
         <h6 className="sub-title">{t("server-side")}</h6>
@@ -42,7 +42,7 @@ function authNtoken2(props) {
           text={`
             POST 
             URL /v1/ompass/token-verification
-            URL EXAMPLE – https://www.ompass.kr:8889/v1/ompass/token-verification
+            URL EXAMPLE – https://interface-api.ompasscloud.com/v1/ompass/token-verification
           `}
           language={language}
           theme={dracula}

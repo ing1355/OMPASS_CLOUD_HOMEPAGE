@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import $ from "jquery";
 
 import "../../css/Document.module.css";
@@ -19,6 +19,7 @@ import LinkComponent from "../Link";
 
 function Document(props) {
   const { t } = useTranslation();
+  const [icon, setIcon] = useState(true);
 
   useEffect(() => {
     $(window)
@@ -26,7 +27,7 @@ function Document(props) {
         var width = $(window).width();
         if (width <= 1024) {
           $(".mobile-menu-button").show();
-          $(".scrollBar").hide();
+          // $(".scrollBar").hide();
         } else {
           $(".scrollBar").show();
           $(".mobile-menu-button").hide();
@@ -42,15 +43,17 @@ function Document(props) {
       <h2
         className="mobile-title"
         onClick={() => {
-          $(".scrollBar").slideToggle();
+          $("#scrollBar").slideToggle();
+          setIcon(!icon);
         }}
       >
         OMPASS Developers
         <b className="mobile-title-p">
-          <DownOutlined />
+          {icon === false ? <UpOutlined /> : <DownOutlined />}
         </b>
       </h2>
-      <div className="scrollBar">
+
+      <div className="scrollBar" id="scrollBar">
         <li className="title gnb">
           <span>
             <p>

@@ -7,6 +7,8 @@ import "react-intl-tel-input/dist/main.css";
 
 import Agree1 from "../../../components/Agree1";
 import Agree2 from "../../../components/Agree2";
+import Privacypolicy from "../privacy-policy";
+import Termsofservice from "../terms-of-Service";
 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -14,33 +16,33 @@ import "react-phone-input-2/lib/style.css";
 import axios from "axios";
 import useTranslation from "../../../lib/useTranslation";
 import { message } from "antd";
-import i18nextConfig from '../../../next-i18next.config';
+import i18nextConfig from "../../../next-i18next.config";
 import LinkComponent from "../../../components/Link";
 
-const getAdminHomePage = locale => process.env.adminRoute + '/' + locale
+const getAdminHomePage = (locale) => process.env.adminRoute + "/" + locale;
 
 const getPathSlugs = () => {
-  return i18nextConfig.i18n.locales.map(locale => ({
+  return i18nextConfig.i18n.locales.map((locale) => ({
     params: {
-      locale
-    }
-  }))
-}
+      locale,
+    },
+  }));
+};
 
 export async function getStaticPaths(...args) {
   const pathsWithLocale = getPathSlugs();
   return {
     paths: pathsWithLocale,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params }) {
   return {
     props: {
-      ...params
-    }
-  }
+      ...params,
+    },
+  };
 }
 
 const passwordTest = (value) => {
@@ -52,20 +54,22 @@ const passwordTest = (value) => {
 
 const LinkToLoginPage = () => {
   const { t, isKr } = useTranslation();
-  return <LinkComponent
-    style={{
-      marginLeft: '4px',
-      textDecoration: "underline",
-      cursor: "pointer",
-      fontWeight: "500",
-      color: "blue",
-    }}
-    href={isKr ? getAdminHomePage('ko') : getAdminHomePage('en')}
-    target="_blank"
-  >
-    {t("로그인 페이지 이동하기")}
-  </LinkComponent>
-}
+  return (
+    <LinkComponent
+      style={{
+        marginLeft: "4px",
+        textDecoration: "underline",
+        cursor: "pointer",
+        fontWeight: "500",
+        color: "blue",
+      }}
+      href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
+      target="_blank"
+    >
+      {t("로그인 페이지 이동하기")}
+    </LinkComponent>
+  );
+};
 
 function login() {
   const { t } = useTranslation();
@@ -98,18 +102,22 @@ function login() {
   const isExistCheckTrigger = () => {
     if (!emailTest(inputEmail))
       return message.error(`${t("이메일 형식이 잘못되었습니다.")}`);
-    axios.get(`https://admin-api.ompasscloud.com/v1/admins/existence/${inputEmail}`).then(({ data }) => {
-      const { duplicate } = data.data;
-      if (duplicate) {
-        // 중복 존재
-        setIsExist(false);
-        message.error(`${t("중복되는 이메일이 존재합니다.")}`);
-      } else {
-        // 중복 없음
-        setIsExist(true);
-        message.success(`${t("사용 가능한 이메일입니다.")}`);
-      }
-    });
+    axios
+      .get(
+        `https://admin-api.ompasscloud.com/v1/admins/existence/${inputEmail}`
+      )
+      .then(({ data }) => {
+        const { duplicate } = data.data;
+        if (duplicate) {
+          // 중복 존재
+          setIsExist(false);
+          message.error(`${t("중복되는 이메일이 존재합니다.")}`);
+        } else {
+          // 중복 없음
+          setIsExist(true);
+          message.success(`${t("사용 가능한 이메일입니다.")}`);
+        }
+      });
   };
 
   function allCheck(e) {
@@ -159,7 +167,7 @@ function login() {
         <div className="agree-box">
           <h3>OMPASS</h3>
           <ul className="agree-column-all">
-            <li>
+            <li className="column-box">
               <div>
                 <input
                   type="checkbox"
@@ -180,7 +188,7 @@ function login() {
             </li>
           </ul>
           <ul className="agree-column">
-            <li>
+            <li className="column-box">
               <div>
                 <input
                   className="check_all_list"
@@ -203,7 +211,7 @@ function login() {
             </li>
           </ul>
           <ul className="agree-column">
-            <li>
+            <li className="column-box">
               <div>
                 <input
                   className="check_all_list"
@@ -398,7 +406,7 @@ function login() {
       ) : null}
 
       {joinEmail === true ? (
-        <div className="loginInputBox joinBox">
+        <div className="loginInputBox joinBox emailBox">
           <img width="20%" src={"/static/images/joinemail.png"} />
           <br />
           <br />

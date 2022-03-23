@@ -151,6 +151,12 @@
 }
 
 @media (max-width: 1024px) {
+  #__next .footerBox {
+    display: block !important;
+  }
+  .footerBox {
+    display: none !important;
+  }
   .footerBox {
     width: 100%;
     height: auto;
@@ -200,6 +206,7 @@
   }
   .footerSubBox .copyRight {
     font-size: 0.8rem;
+    text-align: left;
   }
   /* ==========팝업============ */
   .ant-modal-content {

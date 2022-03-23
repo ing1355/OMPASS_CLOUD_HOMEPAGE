@@ -27,12 +27,12 @@ function App(props) {
         <title>{t("원모어패스 클라우드")}</title>
         <meta name="description" content="원모어패스 클라우드 서비스입니다." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="원모어패스 클라우드 서비스" />
+        <meta property="og:title" content="원모어패스 클라우드" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/static/images/background.jpg" />
         <meta
           property="og:description"
-          content="원모어패스 클라우드 서비스입니다."
+          content="FIDO를 기반으로 하는 원모어패스 클라우드 서비스입니다."
         ></meta>
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

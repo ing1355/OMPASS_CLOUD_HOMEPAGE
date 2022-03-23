@@ -478,8 +478,8 @@
     background: #fff;
     position: relative;
     z-index: 5;
-    padding-bottom: 3rem;
-    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    padding-top: 0rem;
   }
 
   .CloudcontentsBox1 .contentsSubBox {
@@ -513,18 +513,11 @@
   .contentsSubBox p {
     font-size: 0.8rem !important;
   }
-  .CloudcontentsBox1 ul:nth-child(1) li:nth-child(1) {
-    text-align: left;
-    flex: 2;
-    margin-left: 0rem;
-    width: 90%;
-    margin-top: 2rem;
-  }
 
   .CloudcontentsBox1 ul:nth-child(1) li:nth-child(1) {
     text-align: left;
     flex: 2;
-    margin-left: 0rem;
+    margin-left: 0.5rem;
     width: 90%;
     margin-top: 2rem;
   }
@@ -604,7 +597,7 @@
   .CloudcontentsBox2 .contentsSubBox {
     width: 90%;
     margin: 0 auto;
-    padding: 4rem 2rem !important;
+    padding: 2rem 2rem 1.5rem 2rem !important;
   }
   .CloudcontentsBox2 .contentsSubBox h2 {
     font-size: 1.2rem;
@@ -613,7 +606,7 @@
   }
   .CloudcontentsBox2 .contentsSubBox .contents2Box {
     display: flex;
-    padding-top: 2rem;
+    padding-top: 1rem;
     flex-direction: column;
   }
   .CloudcontentsBox2 .contentsSubBox .contents2Box li {
@@ -700,13 +693,13 @@
   .CloudcontentsBox3 .contentsSubBox {
     width: 100%;
     margin: 0 auto;
-    padding: 4rem 0 0 0;
+    padding: 2rem 0 0 0;
   }
 
   .CloudcontentsBox3 h2 {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
   }
   .CloudcontentsBox3 li {
     text-align: center;
@@ -868,7 +861,7 @@
     background: #fff;
     position: relative;
     z-index: 5;
-    padding: 3rem 0 5rem 0;
+    padding: 2rem 0;
   }
   .cloudVideo .contentsSubBox {
     margin: 0 auto;

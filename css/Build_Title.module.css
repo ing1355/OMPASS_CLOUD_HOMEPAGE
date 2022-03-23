@@ -320,9 +320,6 @@ header {
   .Certification-img-li {
     display: none;
   }
-  :lang(en) .Certification-img-li-mobile img {
-    width: 9rem;
-  }
 
   .buildHeader {
     width: 100%;

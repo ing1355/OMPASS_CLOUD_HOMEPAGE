@@ -73,8 +73,8 @@ function onpremise() {
               <a
                 href={
                   isKr
-                    ? "/static/pdf/원모어패스 클라우드형 브로셔.pdf"
-                    : "/static/pdf/OMPASS_Cloud_Brochure.pdf"
+                    ? "/static/pdf/원모어패스 구축형 브로셔.pdf"
+                    : "/static/pdf/OMPASS_OnPremise_Brochure.pdf"
                 }
                 download
               >

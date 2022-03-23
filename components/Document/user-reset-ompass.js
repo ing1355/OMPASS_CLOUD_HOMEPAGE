@@ -37,7 +37,7 @@ function userresetompass(props) {
           text={`
             DELETE 
             URL /v1/ompass/users/{userId}
-            URL EXAMPLE – https://www.ompass.kr:8889/v1/ompass/uaf
+            URL EXAMPLE – https://interface-api.ompasscloud.com/v1/ompass/users/{userId}
           `}
           language={language}
           theme={dracula}

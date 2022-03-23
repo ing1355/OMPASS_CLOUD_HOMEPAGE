@@ -100,19 +100,26 @@ function ios(props) {
                         width="100%"
                         src={
                           isKr
-                            ? "/static/images/app_1.png"
-                            : "/static/images/app_1_eng.png"
+                            ? "/static/images/app_1_ios.png"
+                            : "/static/images/app_1_eng_ios.png"
                         }
-                        alt="user 페이지"
+                        alt="ios 이미지"
                       />
                     </div>
                     <div className="documnet-box">
                       <div className="document-label">
                         <label className="number">❶&nbsp;</label>
                         <p>
-                          {" "}
-                          최신 업데이트 알림이 팝업으로 나타납니다. (이미지,
-                          문장 수정 예정)
+                          {t(
+                            "해당 앱이 최신이 아닐 경우 업데이트 팝업창이 표시됩니다."
+                          )}
+                        </p>
+                      </div>
+
+                      <div className="document-label">
+                        <label className="number">→&nbsp;</label>
+                        <p>
+                          {t("최신 업데이트를 진행하고 앱을 실행해주세요.")}
                         </p>
                       </div>
                     </div>
@@ -128,7 +135,7 @@ function ios(props) {
                             ? "/static/images/app_2_ios.png"
                             : "/static/images/app_2_ios_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="ios 이미지"
                       />
                     </div>
                     <div className="documnet-box">
@@ -158,12 +165,12 @@ function ios(props) {
                             ? "/static/images/mobileApp_1.png"
                             : "/static/images/mobileApp_1_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="ios 이미지"
                       />
                     </div>
                     <div className="documnet-box">
                       <div className="document-label">
-                        <label className="number number-2">❷-⑴&nbsp;</label>
+                        <label className="number number-2">❸-⑴&nbsp;</label>
                         <p>
                           {t(
                             "OMPASS 인증을 적용하고 있는 웹페이지에서 ID/PW 입력 후 인터페이스 팝업 창이 뜨면 ‘2차인증 등록하기’ 버튼을 선택합니다."
@@ -218,7 +225,7 @@ function ios(props) {
                             ? "/static/images/mobileApp_2.png"
                             : "/static/images/mobileApp_2_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="ios 이미지"
                       />
                     </div>
                     <div className="documnet-box">
@@ -261,7 +268,7 @@ function ios(props) {
                             ? "/static/images/mobileApp_3.png"
                             : "/static/images/mobileApp_3_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="ios 이미지"
                       />
                     </div>
                     <div className="documnet-box">
