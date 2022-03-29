@@ -53,12 +53,12 @@ function userresetompass(props) {
                 <th>Description</th>
               </tr>
             </thead>
-            <tbody className="adff">
+            <tbody>
               <tr>
-                <td className="adf" rowSpan="3">
+                <td style={{ paddingTop: "2rem" }} rowSpan="3">
                   Authorization
                 </td>
-                <td className="adf" rowSpan="3">
+                <td style={{ paddingTop: "2rem" }} rowSpan="3">
                   Bearer
                 </td>
                 <td>{t("어플리케이션에 할당된 Secret Key")}</td>

@@ -441,6 +441,84 @@ function billing(props) {
                     </div>
                   </div>
                   {/* =================================================================== */}
+
+                  <div className="document-text-box">
+                    <div
+                      className="document-label"
+                      style={{
+                        fontSize: "1rem",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      <label>■&nbsp;</label>
+                      <p>{t("청약 철회")}</p>
+                    </div>
+                    <div className="document-img">
+                      <img
+                        width="100%"
+                        src={
+                          isKr
+                            ? "/static/images/billing_14.png"
+                            : "/static/images/billing_14_eng.png"
+                        }
+                        alt="대시보드 사용자 정보"
+                      />
+                    </div>
+                    <div className="documnet-box">
+                      <div className="document-label">
+                        <label className="number">❶&nbsp;</label>
+                        <p>
+                          {t(
+                            "페이지의 상단의 “청약 철회” 버튼을 선택합니다. (청약 철회 버튼은 환불 기능으로 결제 후 7일 동안 보여집니다.)"
+                          )}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="document-img">
+                      <img
+                        width="75%"
+                        src={
+                          isKr
+                            ? "/static/images/billing_15.png"
+                            : "/static/images/billing_15_eng.png"
+                        }
+                        alt="대시보드 사용자 정보"
+                      />
+                    </div>
+                    <div className="documnet-box">
+                      <div className="document-label">
+                        <label className="number">❷&nbsp;</label>
+                        <p>
+                          {t(
+                            "청약 철회 정보를 확인 하신 후 OK 버튼을 누르시면 청약 철회가 완료 됩니다."
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="document-img">
+                      <img
+                        width="100%"
+                        src={
+                          isKr
+                            ? "/static/images/billing_16.png"
+                            : "/static/images/billing_16_eng.png"
+                        }
+                        alt="대시보드 사용자 정보"
+                      />
+                    </div>
+                    <div className="documnet-box">
+                      <div className="document-label">
+                        <label className="number">❸&nbsp;</label>
+                        <p>
+                          {t(
+                            "청약 철회 후 결제 내역에 환불 처리가 표시됩니다."
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* =================================================================== */}
                 </div>
               </div>
             </li>

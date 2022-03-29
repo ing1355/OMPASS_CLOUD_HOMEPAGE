@@ -12,7 +12,7 @@
   "TEL ː +82 70 4298 3070　|　E-Mail ː master@omsecurity.kr": "TEL ː +82 70 4298 3070　|　E-Mail ː master@omsecurity.kr",
 
   "문서": "Document",
-  "시작하기": "start",
+  "시작하기": "Start",
 
   "원모어패스에 오신걸 환영합니다.": "Welecome To OMPASS",
   "차세대 통합 인증 솔루션을 이용하시겠습니까?": "Are you looking for next-generation integrated authentication?",
@@ -30,7 +30,7 @@
 
   "차세대 통합 인증 솔루션의 도입 필요성": "Why OMPASS?",
   "·강력한 보안성과 사용자 편의성을 보장하는 사용자 인증기술에 대한 요구가 증가": "",
-  "·공개키 기반의 FIDO 표준 인증방식 준용에 따라 패스워드 인증의 위험요소를 해결": "Perfectly solves the risk factors of password authentication according to FIDO standard authentication method based on public key",
+  "·공개키 기반의 FIDO 표준 인증방식 준용에 따라 패스워드 인증의 위험요소를 해결": "Perfectly solves the risk factors of password authentication according to FIDO standard authentication method based on the secured public key",
 
   "패스워드 인증의": " of password authentication",
   "위험 요소_영어": "Several Risks",
@@ -44,12 +44,12 @@
   "원모어패스의 특장점": "Advantages",
   "패스워드가 없는 사용자 편의성": "User Convenience with No Passwords",
   "PKI 기반의 높은 보안성": "High Security based on PKI",
-  "다양한 인증방식 적용한 멀티확장성": "Multi-Scalability to applicate various AuthN methods",
+  "다양한 인증방식 적용한 멀티확장성": "Multi-Scalability to Applicate Various AuthN Methods",
 
   "사용자 편의성": "User convenience",
-  "원모어패스(모바일 인증장치) 하나로 다양한 인증수단 적용 및 통합된 인증라이프 사이클 관리": "With one 'OMPASS' (mobile authentication device) applies various authentication methods and manages life cycle with integrated authentication",
+  "원모어패스(모바일 인증장치) 하나로 다양한 인증수단 적용 및 통합된 인증라이프 사이클 관리": "With one “OMPASS” (mobile authentication device) applies various authentication methods and manages life cycle with integrated authentication",
   "보안 취약점 완벽 제거": "Completely eliminate security vulnerabilities",
-  "Password-Less를 통해 비밀번호 사용·관리에 따른 보안 취약점 완벽 제거 및 보안 컴플라이언스 충족": "Through 'Password-Less', complete removal of security vulnerabilities due to password use and management and also satisfy one's security compliance",
+  "Password-Less를 통해 비밀번호 사용·관리에 따른 보안 취약점 완벽 제거 및 보안 컴플라이언스 충족": "Through “Passwordless Login”, complete removal of security vulnerabilities due to password use and management and also satisfy one's security compliance",
   "국제 표준 준수": "Compliance with international standards",
   "공개키 기반의 FIDO Alliance 국제 표준 준수": "Observing the FIDO Alliance international standard based on public key",
 
@@ -58,7 +58,7 @@
   "고객 중심의 유연성": "Customer-Centric Flexibility",
   "시스템 보안성 강화": "Enhance System Security",
   "다양한 인증방식 확장 가능": "Various authentication methods can be expanded",
-  "안전한 공개키 기반으로 다양한 최신 사용자 인증기술을 적용합니다.": "Application of the latest various user authentication technologies based on secure public",
+  "안전한 공개키 기반으로 다양한 최신 사용자 인증기술을 적용합니다.": "Application of the latest various user authentication technologies based on public Key",
   "사용자 선택형 인증": "User-selectable authentication",
   "얼굴인식, 지문인식, PIN, 패턴, Windows Hello 로그인 등 다양한 인증을 지원합니다.": "Supports various authentications such as Face Recog, Fingerprint Recog, PIN, Pattern, Windows Hello login, and more",
   "원모어페이스 모듈적용, 한국인터넷진흥원 K-NBTC 인증, 99.96%": "OMFACE module is applied, accuracy rate of 99.96% based on the test of K-NBTC from KISA",
@@ -80,8 +80,8 @@
   "관리자 인증 강화": "Enhanced administrator authentication",
   "FIDO2 Admin 서버 접근 시 OMPASS 2차 인증 적용": "Applied OMPASS secondary authentication whenever accessing the FIDO2 Admin server",
   "비인가 접근 IP 차단": "IP address block from unauthorized access",
-  "FIDO2 Admin 서버 접근 시 IP 접근통제 정책 적용": "Access control for service is possible based on user access IP (country)",
-  "Phishing 공격 등에 강력 대응 가능": "Against to prespond strongly againt phishing attack",
+  "FIDO2 Admin 서버 접근 시 IP 접근통제 정책 적용": "Service access control possible based on user access IP (access country)",
+  "Phishing 공격 등에 강력 대응 가능": "Prespond strongly againt phishing attack",
   "사용자 접근 기기(브라우저) 검증 기능 적용": "Application of verifying function from user access device (browser)",
   "모바일 인증장치 보안성 강화": "Reinforcement of mobile authentication device security",
   "모바일 인증장치 탈옥, 위변조 및 최신버전 여부 검증 기능 적용": "Mobile authentication device jailbreak, forgery and latest version verification function application verification",
@@ -118,7 +118,7 @@
   "2,200원": "",
   "(부가세 포함)": "",
   "· 매월 유저당-m": "$2",
-  "2,200원-m": "per user per month",
+  "2,200원-m": "per user per month(30 days)",
   "1달 무료 서비스로 시작해보세요.": "Try OMPASS for a month.",
   "무료 서비스 받기": "Start Your Free Trial",
 
@@ -369,6 +369,10 @@
   "구독 취소 완료 후 화면 변경 상태입니다.": "The status of your account will be changed once you cancel it.",
   "구독 취소 완료시 관리자 이메일로 구독 취소 이메일이 발송됩니다.": "Once you cancel auto-renewal, a notice for cancelling the recurring payment will be sent to your email address.",
   "구독 취소 후 사용 만료일까지 OMPASS 서비스 사용이 가능하며 재결제 시 구독이 다시 활성화 됩니다.": "You can keep use OMPASS service until the expiration date, however your subscription for auto payment will be reactivated upon repayment and the expiration date will be changed as 30 days behind from the date of your new payment.",
+  "청약 철회": "Refund",
+  "페이지의 상단의 “청약 철회” 버튼을 선택합니다. (청약 철회 버튼은 환불 기능으로 결제 후 7일 동안 보여집니다.)": "Select the [Refund] button at the top of the page. (The button will be displayed for 7 days after payment.)",
+  "청약 철회 정보를 확인 하신 후 OK 버튼을 누르시면 청약 철회가 완료 됩니다.": "After checking out the information for refund, click the [OK] button to get a refund.",
+  "청약 철회 후 결제 내역에 환불 처리가 표시됩니다.": "Once you request a refund, “refund” will be displayed in the payment history.",
 
   "OMPASS 로그": "OMPASS Logs",
   "테이블 필드명으로 검색기능을 제공합니다.": "You can enter the text to search.",
@@ -449,7 +453,8 @@
   "OMPASS 앱에서 인증장치 등록을 선택합니다.": "Select the [Register Authentication] button from your OMPASS app.",
   "QR 코드를 스캔합니다.": "Scan a QR code.",
   "QR 코드를 인식한 결과 화면으로 ‘확인’ 버튼을 누른 후 사용자 인증 과정을 거쳐 등록을 완료하시면 됩니다.": "After recognizing a QR code, tap on [Ok] on your phone and then complete the registration by athentication process.",
-  "스마트폰을 교체하거나 OMPASS 앱을 재설치 시, OMPASS 인증장치를 서버에 재등록 후 사용하시기 바랍니다.": "Whenever changing the cell phone or reinstalling the OMPASS app, please use the OMPASS authentication device after re-registering it.",
+  "스마트폰을 교체하거나 OMPASS 앱을 재설치 시, OMPASS 인증장치를 서버에 재등록 후 사용하시기 바랍니다.": "Whenever changing the cell phone or reinstalling the OMPASS app, the corresponding user should use the OMPASS authentication device after re-registerating the device.",
+  "(사용자 관리 → 사용자 정보 삭제 시 OMPASS 인증 장치 재 등록이 가능 합니다.)": "(Administrator needs to delete the corresponding user information seperately from “Users Management” everytime the user replaces the smartphone or reinstalls the OMPASS app.)",
   "OMPASS 인증을 적용하고 있는 웹페이지에서 ID/PW 입력 후 인터페이스 팝업 창이 뜨면 “2차 인증하기” 버튼을 선택합니다.": "Click the [2nd AuthN] button when the pop-up window appears after entering a user ID and password.",
   "OMPASS QR코드 인증창이 열립니다.": "New window containing a QR code will appear and you can either authenticate via OMPASS app or QR code.",
   "스마트폰에서 OMPASS 인증 알림을 확인합니다.": "Tap on the notification of OMPASS to launch the app from your phone.",
@@ -461,6 +466,9 @@
   "iOS 전용 앱 스토어에서 원모어패스(OMPASS) v1.0을 다운로드하여 설치해야 합니다.": "Users need to download and install OMPASS v1.0 from the app store.",
   "얼굴인식, PIN CODE, 패턴 3가지 인증방식 중 2가지 이상 등록해야 합니다.": "Register at least two authentication methods from face, pin code, and pattern.",
   "삭제 버튼을 누르면 해당 사용자의 정보 (OMPASS 등록 정보 및 사용자의 모든 정보)가 삭제됩니다.": "If you click the [Delete] button, the user's all information will be deleted including OMPASS app.",
+  "(사용자가 스마트폰을 교체하거나 OMPASS 앱을 재 설치 시 사용자 정보를 삭제 해 줍니다.)": "(Needs to delete user information seperately when the user replaces the smartphone or reinstalls the OMPASS app.)",
+
+  "사용자 디바이스 정보를 제공합니다.": "Provides user authentication device information.",
 
   "OMPASS 등록 초기화 성공 시": "In case of success for initializing OMPASS registration",
   "OMPASS 등록 초기화 API": "API for Initializing OMPASS Registration",
@@ -657,9 +665,9 @@
   "제4조 ❾": "4.9",
 
   "제5조 청약 철회(환불 규정)": "5. CANCELLATION",
-  "회원이 서비스 및 사이트와의 이용계약을 해지하고자 하는 경우에는 회원 본인이 관리자 관리 페이지의 회원탈퇴를 통하여 청약 철회신청을 하여야 합니다.": "If the Customer wants to cancel (withdraw) the Service contract, the Customers should click the [Cancel Membership] button from the Admins Management page.",
-  "구독 취소는 청약 철회가 아닌 정기결제를 취소하는 것을 말하며 구독 취소 후에는 사용 만료일까지 사용이 가능합니다.": "If the Customer wants to get refund, It is required to contact the Company by phone or email within 7 days from the date of payment (payment date) and 100% of the payment amount will be refunded before the end of the next month.",
-  "해당 결제일(결제 날짜)로부터 7일 이내에 청약 철회를 신청하면 신청일로 부터 익월 말일까지 결제금액의 100% 가 환불됩니다.": "Cancel Auto-Renewal refers to canceling the current recurring payment (subscription) which is not withdrawing the membership.",
+  "회원이 서비스 및 사이트와의 이용계약을 해지하고자 하는 경우에는 회원 본인이 관리자 관리 페이지의 회원탈퇴를 통하여 청약 철회신청을 하여야 합니다.": "If the Customer wants to cancel (withdraw) the Service contract, the Customer should click the [Cancel Membership] button from the “Admins Management” page.",
+  "구독 취소는 청약 철회가 아닌 정기결제를 취소하는 것을 말하며 구독 취소 후에는 사용 만료일까지 사용이 가능합니다.": "“Cancel Auto-Renewal” refers to canceling the current recurring payment (subscription) which is not withdrawing the membership.",
+  "해당 결제일(결제 날짜)로부터 7일 이내에 청약 철회를 신청하면 신청일로 부터 익월 말일까지 결제금액의 100% 가 환불됩니다.": "If the Customer wants to get a refund, It is required to click the [Refund] button from the “Billing” page within 7 days from the date of payment and 100% of the recent payment for a month will be refunded.",
   "제5조 ❶": "5.1",
   "제5조 ❷": "5.2",
   "제5조 ❸": "5.3",

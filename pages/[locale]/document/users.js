@@ -222,7 +222,11 @@ function users() {
                     </div>
                     <div className="documnet-box">
                       <div className="document-label">
-                        <label>❶&nbsp;</label>
+                        <label className="number">❶&nbsp;</label>
+                        <p>{t("사용자 디바이스 정보를 제공합니다.")}</p>
+                      </div>
+                      <div className="document-label">
+                        <label className="number">❷&nbsp;</label>
                         <p>
                           {t(
                             "OMPASS 인증 바이패스의 활성화를 위해서는 이메일 입력이 필수입니다."
@@ -235,10 +239,14 @@ function users() {
                         </p>
                       </div>
                       <div className="document-label">
-                        <label>❷&nbsp;</label>
+                        <label className="number">❸&nbsp;</label>
                         <p>
                           {t(
                             "삭제 버튼을 누르면 해당 사용자의 정보 (OMPASS 등록 정보 및 사용자의 모든 정보)가 삭제됩니다."
+                          )}
+                          <br />
+                          {t(
+                            "(사용자가 스마트폰을 교체하거나 OMPASS 앱을 재 설치 시 사용자 정보를 삭제 해 줍니다.)"
                           )}
                         </p>
                       </div>
