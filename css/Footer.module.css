@@ -83,7 +83,9 @@
   width: 100%;
   text-align: right;
 }
-
+.footerTextBox {
+  word-break: keep-all;
+}
 .footerTextBox2 {
   display: flex;
   flex-direction: column;
@@ -140,9 +142,21 @@
   .footerSubBox li {
     justify-content: center;
   }
+  .footerBox li:nth-child(1) {
+    flex: 0.5;
+  }
+  .footerBox li:nth-child(4) {
+    flex: 0.7;
+  }
 }
 
 @media (max-width: 1024px) {
+  #__next .footerBox {
+    display: block !important;
+  }
+  .footerBox {
+    display: none !important;
+  }
   .footerBox {
     width: 100%;
     height: auto;
@@ -192,6 +206,7 @@
   }
   .footerSubBox .copyRight {
     font-size: 0.8rem;
+    text-align: left;
   }
   /* ==========팝업============ */
   .ant-modal-content {
@@ -212,5 +227,6 @@
   }
   .footerTextBox-mobile {
     display: block;
+    word-break: keep-all;
   }
 }

@@ -28,7 +28,7 @@ export async function getStaticProps({params}) {
   }
 }
 
-function login(props) {
+function regisitration(props) {
   const { t, isKr } = useTranslation();
   const document_AdminLogin = true;
   return (
@@ -178,4 +178,4 @@ function login(props) {
     </div>
   );
 }
-export default login;
+export default regisitration;

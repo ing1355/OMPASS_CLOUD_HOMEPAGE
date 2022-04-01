@@ -244,7 +244,7 @@ a {
 }
 .sidebar .gnb .sub {
   color: #212529;
-  margin-left: 1.7rem;
+  margin-left: 1.5rem;
   line-height: 40px;
   font-weight: 500;
   flex-direction: column;
@@ -305,7 +305,7 @@ a {
 }
 .sidebar .subback {
   font-size: 0.9rem;
-  margin-left: 2.2rem !important;
+  margin-left: 2rem !important;
 }
 /* =============== */
 /* 내일 수정 할 곳 */
@@ -532,6 +532,10 @@ a {
 }
 /* ---------------------- 1024 ----------------------- */
 @media (max-width: 1024px) {
+  .sidebar .subback {
+    margin-left: 2.2rem !important;
+  }
+
   .main .code p {
     width: 100%;
   }
@@ -565,13 +569,14 @@ a {
 
   .scrollBar {
     width: auto;
-    height: 700px;
+    height: 70px;
     overflow-x: hidden !important;
     overflow: scroll;
     padding-bottom: 0;
-    background: #f8f7f8 !important;
+    background: #f4f4f4 !important;
     position: relative;
     z-index: 10000;
+    padding-bottom: 1rem;
   }
 
   .sidebar {
@@ -727,7 +732,7 @@ a {
     flex-direction: row;
   }
   .sidebar .gnb .sub {
-    margin-left: 1.2rem;
+    margin-left: 1.7rem;
     line-height: 35px;
     font-size: 0.8rem;
   }
@@ -780,6 +785,9 @@ a {
   }
 }
 @media (max-width: 1024px) {
+  .document-text-box .document-label .number-2 {
+    width: 3.5rem;
+  }
   .document {
     width: 100% !important;
   }
@@ -789,21 +797,30 @@ a {
   .rightContentsBox {
     width: 100%;
   }
-}
-/* ---------------------- 768 ----------------------- */
-@media (max-width: 768px) {
-  .document {
-    padding-bottom: 0 !important;
+  .scrollBar {
+    display: none;
   }
   .scrollBar {
     width: auto;
-    height: 600px;
+    height: 500px;
     overflow-x: hidden !important;
     overflow: scroll;
     padding-bottom: 0;
     background: #f8f7f8;
     position: relative;
     z-index: 100000;
+  }
+}
+/* ---------------------- 768 ----------------------- */
+@media (max-width: 768px) {
+  .document-img img {
+    width: 100%;
+  }
+  .document {
+    padding-bottom: 0 !important;
+  }
+  .scrollBar {
+    height: 600px;
   }
   .mobile-title-p .anticon svg {
     font-size: 1.3rem;
@@ -823,7 +840,6 @@ a {
     font-size: 1rem;
   }
   .sidebar .gnb .sub {
-    margin-left: 1.7rem;
     line-height: 50px;
     /* display: none; */
     font-weight: 500;
@@ -841,12 +857,16 @@ a {
 }
 
 @media (max-width: 540px) {
+  .document-text-box .document-label .number-2 {
+    width: 2.5rem;
+  }
   .document-text-box {
     padding-bottom: 1rem;
   }
   .document-text-box .document-label .number {
     font-size: 0.9rem;
   }
+
   .mobile-bottom {
     margin-bottom: 0.5rem;
   }
@@ -918,7 +938,6 @@ a {
     padding-bottom: 0;
   }
   .sidebar .gnb .sub {
-    margin-left: 1rem;
     line-height: 45px;
     /* display: none; */
     font-weight: 500;
@@ -931,12 +950,7 @@ a {
     padding-left: 1rem;
     margin: 0;
   }
-  /* .sidebar .gnb .sub.select {
-    margin-bottom: 1rem;
-  } */
-  /* .sidebar .gnb .sub.select:hover {
-    margin-bottom: 1rem;
-  } */
+
   .mobile-title-p {
     float: right;
     padding-right: 1rem;
@@ -1185,10 +1199,19 @@ a {
     font-size: 0.8rem !important;
   }
 }
-
+@media (max-width: 420px) {
+  .document-text-box .document-label .number-2 {
+    width: 2.7rem;
+  }
+}
 @media (max-width: 414px) {
   .main .code p {
     font-size: 0.7rem !important;
+    line-height: 1rem;
+    width: 100%;
+  }
+  .document-text-box .document-label p {
+    font-size: 0.7rem;
     line-height: 1rem;
     width: 100%;
   }

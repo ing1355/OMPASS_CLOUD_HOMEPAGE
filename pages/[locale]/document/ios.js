@@ -100,19 +100,26 @@ function ios(props) {
                         width="100%"
                         src={
                           isKr
-                            ? "/static/images/app_1.png"
-                            : "/static/images/app_1_eng.png"
+                            ? "/static/images/app_1_ios.png"
+                            : "/static/images/app_1_eng_ios.png"
                         }
-                        alt="user 페이지"
+                        alt="ios 이미지"
                       />
                     </div>
                     <div className="documnet-box">
                       <div className="document-label">
                         <label className="number">❶&nbsp;</label>
                         <p>
-                          {" "}
-                          최신 업데이트 알림이 팝업으로 나타납니다. (이미지,
-                          문장 수정 예정)
+                          {t(
+                            "해당 앱이 최신이 아닐 경우 업데이트 팝업창이 표시됩니다."
+                          )}
+                        </p>
+                      </div>
+
+                      <div className="document-label">
+                        <label className="number">→&nbsp;</label>
+                        <p>
+                          {t("최신 업데이트를 진행하고 앱을 실행해주세요.")}
                         </p>
                       </div>
                     </div>
@@ -128,7 +135,7 @@ function ios(props) {
                             ? "/static/images/app_2_ios.png"
                             : "/static/images/app_2_ios_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="ios 이미지"
                       />
                     </div>
                     <div className="documnet-box">
@@ -158,12 +165,12 @@ function ios(props) {
                             ? "/static/images/mobileApp_1.png"
                             : "/static/images/mobileApp_1_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="ios 이미지"
                       />
                     </div>
                     <div className="documnet-box">
                       <div className="document-label">
-                        <label className="number">❷-⑴&nbsp;</label>
+                        <label className="number number-2">❸-⑴&nbsp;</label>
                         <p>
                           {t(
                             "OMPASS 인증을 적용하고 있는 웹페이지에서 ID/PW 입력 후 인터페이스 팝업 창이 뜨면 ‘2차인증 등록하기’ 버튼을 선택합니다."
@@ -171,19 +178,19 @@ function ios(props) {
                         </p>
                       </div>
                       <div className="document-label">
-                        <label className="number">❸-⑵&nbsp;</label>
+                        <label className="number number-2">❸-⑵&nbsp;</label>
                         <p>{t("OMPASS 인증장치 등록 QR코드 창이 열립니다.")}</p>
                       </div>
                       <div className="document-label">
-                        <label className="number">❸-⑶&nbsp;</label>
+                        <label className="number number-2">❸-⑶&nbsp;</label>
                         <p>{t("OMPASS 앱에서 인증장치 등록을 선택합니다.")}</p>
                       </div>
                       <div className="document-label">
-                        <label className="number">❸-⑷&nbsp;</label>
+                        <label className="number number-2">❸-⑷&nbsp;</label>
                         <p> {t("QR 코드를 스캔합니다.")}</p>
                       </div>
                       <div className="document-label">
-                        <label className="number">❸-⑸&nbsp;</label>
+                        <label className="number number-2">❸-⑸&nbsp;</label>
                         <p>
                           {t(
                             "QR 코드를 인식한 결과 화면으로 ‘확인’ 버튼을 누른 후 사용자 인증 과정을 거쳐 등록을 완료하시면 됩니다."
@@ -200,6 +207,10 @@ function ios(props) {
                           <p>
                             {t(
                               "스마트폰을 교체하거나 OMPASS 앱을 재설치 시, OMPASS 인증장치를 서버에 재등록 후 사용하시기 바랍니다."
+                            )}
+                            <br />
+                            {t(
+                              "(사용자 관리 → 사용자 정보 삭제 시 OMPASS 인증 장치 재 등록이 가능 합니다.)"
                             )}
                           </p>
                         </div>
@@ -218,12 +229,12 @@ function ios(props) {
                             ? "/static/images/mobileApp_2.png"
                             : "/static/images/mobileApp_2_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="ios 이미지"
                       />
                     </div>
                     <div className="documnet-box">
                       <div className="document-label">
-                        <label className="number">❹-⑴&nbsp;</label>
+                        <label className="number number-2">❹-⑴&nbsp;</label>
                         <p>
                           {t(
                             "OMPASS 인증을 적용하고 있는 웹페이지에서 ID/PW 입력 후 인터페이스 팝업 창이 뜨면 “2차 인증하기” 버튼을 선택합니다."
@@ -231,17 +242,17 @@ function ios(props) {
                         </p>
                       </div>
                       <div className="document-label">
-                        <label className="number">❹-⑵&nbsp;</label>
+                        <label className="number number-2">❹-⑵&nbsp;</label>
                         <p>{t("OMPASS QR코드 인증창이 열립니다.")}</p>
                       </div>
                       <div className="document-label">
-                        <label className="number">❹-⑶&nbsp;</label>
+                        <label className="number number-2">❹-⑶&nbsp;</label>
                         <p>
                           {t("스마트폰에서 OMPASS 인증 알림을 확인합니다.")}
                         </p>
                       </div>
                       <div className="document-label">
-                        <label className="number">❹-⑷&nbsp;</label>
+                        <label className="number number-2">❹-⑷&nbsp;</label>
                         <p>
                           {t("설정한 인증방식으로 사용자 인증을 완료합니다.")}
                         </p>
@@ -261,7 +272,7 @@ function ios(props) {
                             ? "/static/images/mobileApp_3.png"
                             : "/static/images/mobileApp_3_eng.png"
                         }
-                        alt="user 페이지"
+                        alt="ios 이미지"
                       />
                     </div>
                     <div className="documnet-box">

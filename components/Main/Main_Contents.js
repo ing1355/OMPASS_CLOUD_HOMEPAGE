@@ -266,10 +266,6 @@ function Main_Contents() {
                           )}
                         </p>
                       </li>
-                      <li className="engNo">
-                        <h5>{t("통신사 보인인증 서비스 연계 지원")}</h5>
-                        <p>{t("사용자 본인인증 서비스 제공")}</p>
-                      </li>
                     </ul>
                   </ul>
                 ) : null}

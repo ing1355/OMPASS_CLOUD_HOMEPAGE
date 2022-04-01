@@ -13,7 +13,7 @@
     "deployPages": "scp -r ./pages oms@192.168.182.140:/usr/local/ompass_homepage",
     "deployResources": "scp -r ./static/ oms@192.168.182.140:/usr/local/resources",
     "awsInvalidation": "aws cloudfront create-invalidation --distribution-id EVT1Q8TUYRWWD --paths \"/*\" --no-cli-pager",
-    "awsDeploy": "aws s3 sync ./out s3://ompass-homepage&&aws cloudfront create-invalidation --distribution-id EVT1Q8TUYRWWD --paths \"/*\" --no-cli-pager"
+    "awsDeploy": "next build&&next export&&aws s3 sync ./out s3://ompass-homepage&&aws cloudfront create-invalidation --distribution-id EVT1Q8TUYRWWD --paths \"/*\" --no-cli-pager"
   },
   "keywords": [],
   "author": "",
@@ -50,7 +50,6 @@
     "react-prism": "^4.3.2",
     "react-responsive": "^9.0.0-beta.4",
     "react-router-dom": "^6.2.1",
-    "styled-components": "^5.3.3",
     "webpack": "^4.46.0"
   },
   "devDependencies": {

@@ -37,7 +37,7 @@ function uafompass(props) {
           text={`
             POST 
             URL /v1/ompass/uaf
-            URL EXAMPLE – https://www.ompass.kr:8889/v1/ompass/uaf
+            URL EXAMPLE – https://interface-api.ompasscloud.com/v1/ompass/uaf
           `}
           language={language}
           theme={dracula}
@@ -197,7 +197,7 @@ function uafompass(props) {
               "code":200,
               "message" : "ok",
               "data" : {            
-                "ompass_uri" : "https://www.ompass.kr:8889/register/did/14?do..."
+                "ompass_uri" : "https://interface-api.ompasscloud.com/register/did/14?do..."
                }
             }
           `}

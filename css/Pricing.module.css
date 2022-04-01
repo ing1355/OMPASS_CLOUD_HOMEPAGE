@@ -60,7 +60,6 @@
   margin-top: 0;
 }
 .pricingContentsBox1 ul li:nth-child(2) {
-  /* flex: 2.5; */
   align-items: center;
   padding-left: 5rem;
 }
@@ -169,8 +168,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(/static/images/pricing_Bg.png)
-      no-repeat;
+    background: url(/static/images/pricing_Bg.png) no-repeat;
     background-size: cover;
     background-position: right 0px;
   }
@@ -221,7 +219,7 @@
     margin-top: 0;
   }
   .pricingContentsBox1 ul li:nth-child(2) {
-    flex: 2;
+    flex: 2.3;
     align-items: center;
     padding-left: 1rem;
   }

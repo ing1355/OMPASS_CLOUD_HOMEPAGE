@@ -478,8 +478,8 @@
     background: #fff;
     position: relative;
     z-index: 5;
-    padding-bottom: 3rem;
-    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    padding-top: 0rem;
   }
 
   .CloudcontentsBox1 .contentsSubBox {
@@ -513,18 +513,11 @@
   .contentsSubBox p {
     font-size: 0.8rem !important;
   }
-  .CloudcontentsBox1 ul:nth-child(1) li:nth-child(1) {
-    text-align: left;
-    flex: 2;
-    margin-left: 0rem;
-    width: 90%;
-    margin-top: 2rem;
-  }
 
   .CloudcontentsBox1 ul:nth-child(1) li:nth-child(1) {
     text-align: left;
     flex: 2;
-    margin-left: 0rem;
+    margin-left: 0.5rem;
     width: 90%;
     margin-top: 2rem;
   }
@@ -604,7 +597,7 @@
   .CloudcontentsBox2 .contentsSubBox {
     width: 90%;
     margin: 0 auto;
-    padding: 4rem 2rem !important;
+    padding: 2rem 2rem 1.5rem 2rem !important;
   }
   .CloudcontentsBox2 .contentsSubBox h2 {
     font-size: 1.2rem;
@@ -613,7 +606,7 @@
   }
   .CloudcontentsBox2 .contentsSubBox .contents2Box {
     display: flex;
-    padding-top: 2rem;
+    padding-top: 1rem;
     flex-direction: column;
   }
   .CloudcontentsBox2 .contentsSubBox .contents2Box li {
@@ -638,22 +631,30 @@
     width: 100%;
   }
   .CloudcontentsBox2 .FontAwesomeIcon-p {
-    width: 100px;
+    width: 80px;
     margin-top: 0 !important;
+    margin-left: 10px;
   }
   .CloudcontentsBox2 .contentsSubBox .contents2Box li div p {
     font-size: 1rem !important;
+  }
+  .CloudcontentsBox2 .contentsSubBox .contents2Box li div p:nth-child(2) {
+    width: 90%;
   }
 
   .CloudcontentsBox2 .contentsSubBox .contents2Box li .contents1FontAwsome {
     font-size: 3rem !important;
     height: 70px;
+    width: 40px;
   }
   .CloudcontentsBox2 .contentsSubBox .contents2Box li p {
     font-size: 1.2rem;
     margin-top: 0rem;
     height: 70px;
-    line-height: 70px;
+    display: flex;
+    margin-bottom: 0;
+    align-items: center;
+    text-align: left;
   }
 
   .CloudcontentsBox2 .contents2Box_2 {
@@ -692,13 +693,13 @@
   .CloudcontentsBox3 .contentsSubBox {
     width: 100%;
     margin: 0 auto;
-    padding: 4rem 0 0 0;
+    padding: 2rem 0 0 0;
   }
 
   .CloudcontentsBox3 h2 {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
   }
   .CloudcontentsBox3 li {
     text-align: center;
@@ -860,7 +861,7 @@
     background: #fff;
     position: relative;
     z-index: 5;
-    padding: 3rem 0 5rem 0;
+    padding: 2rem 0;
   }
   .cloudVideo .contentsSubBox {
     margin: 0 auto;
@@ -907,20 +908,22 @@
     font-size: 0.9rem !important;
   }
   .CloudcontentsBox2 .FontAwesomeIcon-p {
-    width: 50px;
+    width: 35px;
     margin-top: 0 !important;
+  }
+
+  .CloudcontentsBox3 .contents2Box {
+    padding: 0 1rem !important;
+  }
+  .CloudcontentsBox2 .contentsSubBox .contents2Box li .contents1FontAwsome {
+    width: 30px;
   }
   .CloudcontentsBox2 .contentsSubBox .contents2Box li div p {
     font-size: 0.9rem !important;
-    margin-right: 10px;
+    margin-left: 10px;
   }
-
-  .CloudcontentsBox2 .contentsSubBox .contents2Box li .contents1FontAwsome {
-    font-size: 2.5rem !important;
-    height: 70px;
-  }
-  .CloudcontentsBox3 .contents2Box {
-    padding: 0 1rem !important;
+  .CloudcontentsBox2 .contentsSubBox .contents2Box li div p:nth-child(2) {
+    margin-left: 20px;
   }
 }
 @media (max-width: 384px) {
@@ -930,10 +933,14 @@
   }
   .CloudcontentsBox2 .contentsSubBox .contents2Box li div p {
     font-size: 0.8rem !important;
-    margin-right: 10px;
   }
   .CloudcontentsBox2 .contentsSubBox .contents2Box li .contents1FontAwsome {
     font-size: 2rem !important;
     height: 70px;
+  }
+}
+@media (max-width: 280px) {
+  .CloudcontentsBox2 .contentsSubBox .contents2Box li div p {
+    margin-left: 0px;
   }
 }

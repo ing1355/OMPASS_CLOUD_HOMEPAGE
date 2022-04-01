@@ -37,7 +37,7 @@ function userresetompass(props) {
           text={`
             DELETE 
             URL /v1/ompass/users/{userId}
-            URL EXAMPLE – https://www.ompass.kr:8889/v1/ompass/uaf
+            URL EXAMPLE – https://interface-api.ompasscloud.com/v1/ompass/users/{userId}
           `}
           language={language}
           theme={dracula}
@@ -53,12 +53,12 @@ function userresetompass(props) {
                 <th>Description</th>
               </tr>
             </thead>
-            <tbody className="adff">
+            <tbody>
               <tr>
-                <td className="adf" rowSpan="3">
+                <td style={{ paddingTop: "2rem" }} rowSpan="3">
                   Authorization
                 </td>
-                <td className="adf" rowSpan="3">
+                <td style={{ paddingTop: "2rem" }} rowSpan="3">
                   Bearer
                 </td>
                 <td>{t("어플리케이션에 할당된 Secret Key")}</td>

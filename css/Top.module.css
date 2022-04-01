@@ -5,7 +5,6 @@
   text-align: center;
   outline: 0;
   border: 0;
-  border-radius: 7px 7px 0 0;
   font-weight: 900;
   color: #fff;
   position: fixed;
@@ -14,23 +13,22 @@
   z-index: 30;
 }
 #TopButton:hover {
-  background: #fff;
+  background-color: #fff;
   color: #0ca6ff;
 }
 @media (max-width: 1920px) {
   #TopButton {
-    width: 5rem;
-    height: 3rem;
-    background: #000;
-    text-align: center;
-    outline: 0;
-    border: 0;
-    border-radius: 7px 7px 0 0;
-    font-weight: 900;
-    color: #fff;
-    position: fixed;
     right: 0rem;
-    bottom: 0;
-    z-index: 30;
+  }
+}
+@media (max-width: 540px) {
+  #TopButton {
+    width: 3.2rem;
+    height: 2.2rem;
+    font-size: 0.6rem;
+  }
+  #TopButton:hover {
+    background-color: #000;
+    color: #fff;
   }
 }

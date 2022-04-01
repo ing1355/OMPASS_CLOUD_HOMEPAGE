@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import "../css/NavbarTop.module.css";
@@ -11,9 +11,7 @@ import $ from "jquery";
 import {
   LogoutOutlined,
   MenuOutlined,
-  GlobalOutlined,
 } from "@ant-design/icons";
-import "antd/dist/antd.css";
 import LinkComponent from "./Link";
 import LanguageSwitchLink from "./LanguageSwitchLink";
 import useTranslation from "../lib/useTranslation";
@@ -21,7 +19,6 @@ import useTranslation from "../lib/useTranslation";
 function NavbarTop() {
   const router = useRouter();
   const { isKr } = useTranslation();
-  const [langbox, setLangbox] = useState(false);
 
   const getAdminHomePage = (locale) => process.env.adminRoute + "/" + locale;
 
@@ -48,14 +45,25 @@ function NavbarTop() {
           <li className="logo">
             <LinkComponent href="/">OMPASS</LinkComponent>
           </li>
-          <li
-            className="mobile-button"
-            onClick={() => {
-              $(".nav-menu-item").slideToggle();
-              $(".dropDown_bg").slideToggle();
-            }}
-          >
-            <MenuOutlined className="mobile-menu-icon" />
+          <li className="mobile-button">
+            <div>
+              <LanguageSwitchLink
+                locale={isKr ? "en" : "ko"}
+                className={isKr ? "langenbutton" : "langkobutton"}
+              >
+                <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
+                &nbsp;{isKr ? "EN" : "KO"}
+              </LanguageSwitchLink>
+            </div>
+
+            <div
+              onClick={() => {
+                $(".nav-menu-item").slideToggle();
+                $(".scrollBar").hide();
+              }}
+            >
+              <MenuOutlined className="mobile-menu-icon" />
+            </div>
           </li>
         </ul>
         <ul className="nav-menu-item">
@@ -81,16 +89,6 @@ function NavbarTop() {
           </div>
 
           <div className="langbutton-mobile-div">
-            <li className="langbutton-mobile">
-              <LanguageSwitchLink
-                locale={isKr ? "en" : "ko"}
-                className={isKr ? "langenbutton" : "langkobutton"}
-              >
-                {/* <GlobalOutlined className="globalIcon" /> */}
-                <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
-                &nbsp;{isKr ? "GLOBAL / 영어" : "KOREA / KOREAN"}
-              </LanguageSwitchLink>
-            </li>
             <li className="admin-login-button-mobile">
               <LinkComponent
                 href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
@@ -104,26 +102,14 @@ function NavbarTop() {
         </ul>
 
         <ul className="nav-menu-item langbutton-pc">
-          <li>
-            <button
-              onClick={() => {
-                setLangbox(!langbox);
-              }}
-              style={{textAlign:'left'}}
-              className="lang-button"
+          <li style={{ marginRight: "1rem" }}>
+            <LanguageSwitchLink
+              locale={isKr ? "en" : "ko"}
+              className={isKr ? "langenbutton" : "langkobutton"}
             >
-              <a className="globalIcon-a">
-                <FontAwesomeIcon className="globalIcon" icon={faGlobe} /> &nbsp;
-                {isKr ? "KO" : "EN"}
-              </a>
-
-              {langbox === true && (
-                <div className="lang-drop-down-box">
-                  <LanguageSwitchLink locale="en" />
-                  <LanguageSwitchLink locale="ko" />
-                </div>
-              )}
-            </button>
+              <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
+              &nbsp;{isKr ? "EN" : "KO"}
+            </LanguageSwitchLink>
           </li>
           <li className="admin-login-button">
             <LinkComponent
@@ -135,8 +121,6 @@ function NavbarTop() {
             </LinkComponent>
           </li>
         </ul>
-
-        {/* <div className="dropDown_bg"></div> */}
       </nav>
     </div>
   );

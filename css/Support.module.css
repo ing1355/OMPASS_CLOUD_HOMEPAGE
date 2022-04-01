@@ -1,3 +1,7 @@
+:lang(ko) .support-en {
+  display: none;
+}
+
 .supportBox {
   width: 85rem !important;
   height: auto;

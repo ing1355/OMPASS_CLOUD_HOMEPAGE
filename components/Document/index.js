@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import $ from "jquery";
 
 import "../../css/Document.module.css";
@@ -9,7 +9,8 @@ import {
   FileTextOutlined,
   SettingOutlined,
   AppstoreOutlined,
-  MoreOutlined,
+  DownOutlined,
+  UpOutlined,
 } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import useTranslation from "../../lib/useTranslation";
@@ -17,6 +18,7 @@ import LinkComponent from "../Link";
 
 function Document(props) {
   const { t } = useTranslation();
+  const [icon, setIcon] = useState(true);
 
   useEffect(() => {
     $(window)
@@ -24,9 +26,7 @@ function Document(props) {
         var width = $(window).width();
         if (width <= 1024) {
           $(".mobile-menu-button").show();
-          $(".scrollBar").hide();
-
-          // $(".down").hide();
+          // $(".scrollBar").hide();
         } else {
           $(".scrollBar").show();
           $(".mobile-menu-button").hide();
@@ -42,17 +42,17 @@ function Document(props) {
       <h2
         className="mobile-title"
         onClick={() => {
-          $(".scrollBar").slideToggle();
-          // setUpdown(false);
-          // setmobileMenuBar(false);
+          $("#scrollBar").slideToggle();
+          setIcon(!icon);
         }}
       >
         OMPASS Developers
         <b className="mobile-title-p">
-          <MoreOutlined />
+          {icon === false ? <UpOutlined /> : <DownOutlined />}
         </b>
       </h2>
-      <div className="scrollBar">
+
+      <div className="scrollBar" id="scrollBar">
         <li className="title gnb">
           <span>
             <p>
@@ -99,7 +99,7 @@ function Document(props) {
               )}
             </LinkComponent>
 
-            <LinkComponent href="/document/login">
+            <LinkComponent href="/document/registration">
               {props.document_AdminLogin === true ? (
                 <li
                   className="sub backcolor select mobile-bottom"

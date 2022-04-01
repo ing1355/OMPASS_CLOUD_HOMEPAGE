@@ -3,30 +3,30 @@ import React from "react";
 import "../../../css/Document.module.css";
 import Document from "../../../components/Document";
 import useTranslation from "../../../lib/useTranslation";
-import i18nextConfig from '../../../next-i18next.config';
+import i18nextConfig from "../../../next-i18next.config";
 
 const getPathSlugs = () => {
-  return i18nextConfig.i18n.locales.map(locale => ({
+  return i18nextConfig.i18n.locales.map((locale) => ({
     params: {
-      locale
-    }
-  }))
-}
+      locale,
+    },
+  }));
+};
 
 export async function getStaticPaths(...args) {
   const pathsWithLocale = getPathSlugs();
   return {
     paths: pathsWithLocale,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   return {
     props: {
-      ...params
-    }
-  }
+      ...params,
+    },
+  };
 }
 
 function billing(props) {
@@ -74,7 +74,11 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="100%"
-                        src={isKr ? "/static/images/billing_1.png" : "/static/images/billing_1_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_1.png"
+                            : "/static/images/billing_1_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
@@ -105,7 +109,11 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="100%"
-                        src={isKr ? "/static/images/billing_2.png" : "/static/images/billing_2_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_2.png"
+                            : "/static/images/billing_2_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
@@ -136,7 +144,11 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="100%"
-                        src={isKr ? "/static/images/billing_3.png" : "/static/images/billing_3_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_3.png"
+                            : "/static/images/billing_3_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
@@ -168,7 +180,11 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="75%"
-                        src={isKr ? "/static/images/billing_4.png" : "/static/images/billing_4_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_4.png"
+                            : "/static/images/billing_4_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
@@ -203,7 +219,11 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="75%"
-                        src={isKr ? "/static/images/billing_5.png" : "/static/images/billing_5_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_5.png"
+                            : "/static/images/billing_5_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
@@ -221,7 +241,11 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="100%"
-                        src={isKr ? "/static/images/billing_6.png" : "/static/images/billing_6_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_6.png"
+                            : "/static/images/billing_6_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
@@ -248,7 +272,11 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="75%"
-                        src={isKr ? "/static/images/billing_10.png" : "/static/images/billing_10_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_10.png"
+                            : "/static/images/billing_10_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
@@ -267,7 +295,11 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="75%"
-                        src={isKr ? "/static/images/billing_11.png" : "/static/images/billing_11_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_11.png"
+                            : "/static/images/billing_11_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
@@ -285,13 +317,17 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="100%"
-                        src={isKr ? "/static/images/billing_13.png" : "/static/images/billing_13_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_13.png"
+                            : "/static/images/billing_13_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
                     <div className="documnet-box">
                       <div className="document-label">
-                        <label className="number">❹-⑴&nbsp;</label>
+                        <label className="number number-2">❹-⑴&nbsp;</label>
                         <p>{t("사용 가능한 인원이 변경 됩니다.")}</p>
                       </div>
                     </div>
@@ -299,13 +335,17 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="75%"
-                        src={isKr ? "/static/images/billing_12.png" : "/static/images/billing_12_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_12.png"
+                            : "/static/images/billing_12_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
                     <div className="documnet-box">
                       <div className="document-label">
-                        <label className="number">❹-⑵&nbsp;</label>
+                        <label className="number number-2">❹-⑵&nbsp;</label>
                         <p>
                           {t("다음 결제일에 결제 할 예정 금액이 표시됩니다.")}
                         </p>
@@ -328,7 +368,11 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="100%"
-                        src={isKr ? "/static/images/billing_7.png" : "/static/images/billing_7_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_7.png"
+                            : "/static/images/billing_7_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
@@ -344,7 +388,11 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="100%"
-                        src={isKr ? "/static/images/billing_8.png" : "/static/images/billing_8_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_8.png"
+                            : "/static/images/billing_8_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
@@ -365,7 +413,11 @@ function billing(props) {
                     <div className="document-img">
                       <img
                         width="100%"
-                        src={isKr ? "/static/images/billing_9.png" : "/static/images/billing_9_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/billing_9.png"
+                            : "/static/images/billing_9_eng.png"
+                        }
                         alt="대시보드 사용자 정보"
                       />
                     </div>
@@ -383,6 +435,84 @@ function billing(props) {
                         <p>
                           {t(
                             "구독 취소 후 사용 만료일까지 OMPASS 서비스 사용이 가능하며 재결제 시 구독이 다시 활성화 됩니다."
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* =================================================================== */}
+
+                  <div className="document-text-box">
+                    <div
+                      className="document-label"
+                      style={{
+                        fontSize: "1rem",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      <label>■&nbsp;</label>
+                      <p>{t("청약 철회")}</p>
+                    </div>
+                    <div className="document-img">
+                      <img
+                        width="100%"
+                        src={
+                          isKr
+                            ? "/static/images/billing_14.png"
+                            : "/static/images/billing_14_eng.png"
+                        }
+                        alt="대시보드 사용자 정보"
+                      />
+                    </div>
+                    <div className="documnet-box">
+                      <div className="document-label">
+                        <label className="number">❶&nbsp;</label>
+                        <p>
+                          {t(
+                            "페이지의 상단의 “청약 철회” 버튼을 선택합니다. (청약 철회 버튼은 환불 기능으로 결제 후 7일 동안 보여집니다.)"
+                          )}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="document-img">
+                      <img
+                        width="75%"
+                        src={
+                          isKr
+                            ? "/static/images/billing_15.png"
+                            : "/static/images/billing_15_eng.png"
+                        }
+                        alt="대시보드 사용자 정보"
+                      />
+                    </div>
+                    <div className="documnet-box">
+                      <div className="document-label">
+                        <label className="number">❷&nbsp;</label>
+                        <p>
+                          {t(
+                            "청약 철회 정보를 확인 하신 후 OK 버튼을 누르시면 청약 철회가 완료 됩니다."
+                          )}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="document-img">
+                      <img
+                        width="100%"
+                        src={
+                          isKr
+                            ? "/static/images/billing_16.png"
+                            : "/static/images/billing_16_eng.png"
+                        }
+                        alt="대시보드 사용자 정보"
+                      />
+                    </div>
+                    <div className="documnet-box">
+                      <div className="document-label">
+                        <label className="number">❸&nbsp;</label>
+                        <p>
+                          {t(
+                            "청약 철회 후 결제 내역에 환불 처리가 표시됩니다."
                           )}
                         </p>
                       </div>

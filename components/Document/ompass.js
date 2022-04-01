@@ -39,7 +39,7 @@ function ompass(props) {
           text={`
             POST 
             URL /v1/ompass/u2f
-            URL EXAMPLE – https://www.ompass.kr:8889/v1/ompass/u2f
+            URL EXAMPLE – https://interface-api.ompasscloud.com/v1/ompass/u2f
           `}
           language={language}
           theme={dracula}
@@ -231,7 +231,7 @@ function ompass(props) {
               "data" : {
                 "user_id" : "omsecurity",
                 "is_register" : false,
-                "ompass_uri" : "https://www.ompass.kr:8889/register/did/14?do..."
+                "ompass_uri" : "https://interface-api.ompasscloud.com/register/did/14?do..."
               }
             }
           `}

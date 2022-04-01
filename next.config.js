@@ -43,6 +43,9 @@ module.exports = withCSS(
         webpack5: false,
         presets,
         plugins,
+        compiler: {
+          styledComponents: true
+        }
       })
     )
   )

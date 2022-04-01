@@ -3,30 +3,30 @@ import React from "react";
 import "../../../css/Document.module.css";
 import Document from "../../../components/Document";
 import useTranslation from "../../../lib/useTranslation";
-import i18nextConfig from '../../../next-i18next.config';
+import i18nextConfig from "../../../next-i18next.config";
 
 const getPathSlugs = () => {
-  return i18nextConfig.i18n.locales.map(locale => ({
+  return i18nextConfig.i18n.locales.map((locale) => ({
     params: {
-      locale
-    }
-  }))
-}
+      locale,
+    },
+  }));
+};
 
 export async function getStaticPaths(...args) {
   const pathsWithLocale = getPathSlugs();
   return {
     paths: pathsWithLocale,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   return {
     props: {
-      ...params
-    }
-  }
+      ...params,
+    },
+  };
 }
 
 function policy() {
@@ -50,7 +50,11 @@ function policy() {
                     <div className="document-img">
                       <img
                         width="100%"
-                        src={isKr ? "/static/images/document_defalutpolicy_1.png" : "/static/images/document_defalutpolicy_1_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/document_defalutpolicy_1.png"
+                            : "/static/images/document_defalutpolicy_1_eng.png"
+                        }
                         alt="user 페이지"
                       />
                     </div>
@@ -99,7 +103,11 @@ function policy() {
                     <div className="document-img">
                       <img
                         width="75%"
-                        src={isKr ? "/static/images/document_defalutpolicy_2.png" : "/static/images/document_defalutpolicy_2_eng.png"}
+                        src={
+                          isKr
+                            ? "/static/images/document_defalutpolicy_2.png"
+                            : "/static/images/document_defalutpolicy_2_eng.png"
+                        }
                         alt="정책 페이지"
                       />
                     </div>
@@ -154,7 +162,11 @@ function policy() {
                   <div className="document-img">
                     <img
                       width="75%"
-                      src={isKr ? "/static/images/document_defalutpolicy_3.png" : "/static/images/document_defalutpolicy_3_eng.png"}
+                      src={
+                        isKr
+                          ? "/static/images/document_defalutpolicy_3.png"
+                          : "/static/images/document_defalutpolicy_3_eng.png"
+                      }
                       alt="정책 페이지"
                     />
                   </div>
@@ -200,7 +212,11 @@ function policy() {
                   <div className="document-img">
                     <img
                       width="75%"
-                      src={isKr ? "/static/images/document_defalutpolicy_4.png" : "/static/images/document_defalutpolicy_4_eng.png"}
+                      src={
+                        isKr
+                          ? "/static/images/document_defalutpolicy_4.png"
+                          : "/static/images/document_defalutpolicy_4_eng.png"
+                      }
                       alt="정책 페이지"
                     />
                   </div>
