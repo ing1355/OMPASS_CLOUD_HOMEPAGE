@@ -49,7 +49,8 @@ function AgretermsofService() {
       </h4>
 
       <div className="agree-title">
-        <h5>{t("이 개인정보취급방침의 내용은 다음과 같습니다.")}</h5>
+        <h4>{t("이 이용약관의 내용은 다음과 같습니다.")}</h4>
+        <br />
         <div>
           <label>1.</label>
           <p

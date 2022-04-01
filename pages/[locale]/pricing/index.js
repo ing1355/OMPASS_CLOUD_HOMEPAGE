@@ -2,30 +2,30 @@ import React from "react";
 import "../../../css/Pricing.module.css";
 import useTranslation from "../../../lib/useTranslation";
 import LinkComponent from "../../../components/Link";
-import i18nextConfig from '../../../next-i18next.config';
+import i18nextConfig from "../../../next-i18next.config";
 
 const getPathSlugs = () => {
-  return i18nextConfig.i18n.locales.map(locale => ({
+  return i18nextConfig.i18n.locales.map((locale) => ({
     params: {
-      locale
-    }
-  }))
-}
+      locale,
+    },
+  }));
+};
 
 export async function getStaticPaths(...args) {
   const pathsWithLocale = getPathSlugs();
   return {
     paths: pathsWithLocale,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({ params }) {
   return {
     props: {
-      ...params
-    }
-  }
+      ...params,
+    },
+  };
 }
 
 function pricing() {
@@ -39,7 +39,7 @@ function pricing() {
         <ul>
           <li className="country">
             <h4>{t("클라우드 형")}</h4>
-            <p className="en-p">{t("가격/사용자/월")}</p>
+            <p>{t("가격/사용자/월")}</p>
           </li>
           <li>
             <div>

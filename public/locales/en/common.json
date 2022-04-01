@@ -47,11 +47,11 @@
   "다양한 인증방식 적용한 멀티확장성": "Multi-Scalability to Applicate Various AuthN Methods",
 
   "사용자 편의성": "User convenience",
-  "원모어패스(모바일 인증장치) 하나로 다양한 인증수단 적용 및 통합된 인증라이프 사이클 관리": "With one “OMPASS” (mobile authentication device) applies various authentication methods and manages life cycle with integrated authentication",
+  "원모어패스(모바일 인증장치) 하나로 다양한 인증수단 적용 및 통합된 인증라이프 사이클 관리": " Apply various authentication methods and manage integrated authentication lifecycle with this one OMPASS (mobile authentication device).",
   "보안 취약점 완벽 제거": "Completely eliminate security vulnerabilities",
-  "Password-Less를 통해 비밀번호 사용·관리에 따른 보안 취약점 완벽 제거 및 보안 컴플라이언스 충족": "Through “Passwordless Login”, complete removal of security vulnerabilities due to password use and management and also satisfy one's security compliance",
+  "Password-Less를 통해 비밀번호 사용·관리에 따른 보안 취약점 완벽 제거 및 보안 컴플라이언스 충족": "Through the “passwordless login”, complete removal of security vulnerabilities due to password use and management and also satisfy one's security compliance.",
   "국제 표준 준수": "Compliance with international standards",
-  "공개키 기반의 FIDO Alliance 국제 표준 준수": "Observing the FIDO Alliance international standard based on public key",
+  "공개키 기반의 FIDO Alliance 국제 표준 준수": "Comply with FIDO Alliance international standard based on public key.",
 
   "주요기능 (경쟁력)": "Key Features",
   "다양한 인증 수단 제공": "Provide Various AuthN Methods",
@@ -111,7 +111,7 @@
   "구축 형": "On-Premise",
   "· master@omsecurity.kr 또는 partner@omsecurity.kr로 문의 바랍니다.": "· Contact us via email either master@omsecurity.kr or partner@omsecurity.kr",
   "클라우드 형": "Cloud",
-  "가격/사용자/월": "USD/user/month",
+  "가격/사용자/월": "USD/user/month(30 days)",
   "· 1달 무료 서비스": "· 1 Month free trial",
   "· 매월 유저당": "",
   "-m": "·",
@@ -525,9 +525,10 @@
   "를 눌러주세요.": "",
 
   "시행일 | 2022／03／01": "Effective date | March 01, 2022",
-  "'원모어패스'(이하 “OMPASS”) 서비스를 제공하는 ‘원모어시큐리티’(이하 “회사”)는 이용자의 개인정보를 보호하기 위하여 노력하며, ‘정보통신망 이용촉진 및 정보보호’에 관한 법률 및 ‘개인정보보호법’ 등 관련 법률을 준수하고 있습니다. 회사는 회사가 이용자의 개인정보를 어떻게 처리하는지 쉽게 확인할 수 있도록 관련법에 따라 본 개인정보 처리방침을 공개합니다.": "'OneMoreSecurity Inc.' (hereinafter referred to as “Company”), which provides the 'OMPASS' service, strives to protect users’ personal information and complies with the relevant laws such as Act on promotion of Information and Communications Network Utilization and Information Protection, Etc. and the Personal Information Protection Act. The Company discloses this Privacy Policy pursuant to the relevant laws so that users can easily check how the Company handles their personal information.",
+  "'원모어패스'(이하 “OMPASS”) 서비스를 제공하는 ‘원모어시큐리티’(이하 “회사”)는 이용자의 개인정보를 보호하기 위하여 노력하며, ‘정보통신망 이용촉진 및 정보보호’에 관한 법률 및 ‘개인정보보호법’ 등 관련 법률을 준수하고 있습니다. 회사는 회사가 이용자의 개인정보를 어떻게 처리하는지 쉽게 확인할 수 있도록 관련법에 따라 본 개인정보 처리방침을 공개합니다.": "'OneMoreSecurity Inc' (hereinafter referred to as “Company”), which provides the 'OMPASS' service, strives to protect users’ personal information and complies with the relevant laws such as Act on promotion of Information and Communications Network Utilization and Information Protection, Etc. and the Personal Information Protection Act. The Company discloses this Privacy Policy pursuant to the relevant laws so that users can easily check how the Company handles their personal information.",
+  "이 이용약관의 내용은 다음과 같습니다.": "The contents of this Terms of Service are as follows:",
+  "이 개인정보취급방침의 내용은 다음과 같습니다.": "The contents of this Privacy Policy are as follows:",
 
-  "이 개인정보취급방침의 내용은 다음과 같습니다.": "The contents of this privacy policy are as follows:",
   "개인정보의 수집 · 이용 목적": "Purpose of collecting and using personal information",
   "수집하는 개인정보의 항목": "Types of personal information collected",
   "개인정보의 수집방법": "Method of collecting personal information",
