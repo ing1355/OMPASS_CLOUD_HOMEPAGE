@@ -387,6 +387,25 @@ function AgretermsofService() {
             )}
           </li>
         </ul>
+        {isKr ? null : (
+          <>
+            <ul>
+              <li>❹</li>
+              <li>
+                Refund fee will be affected among the paypal policy below.
+              </li>
+            </ul>
+            <img
+              style={{
+                marginLeft: "10px",
+                border: "3px solid #e5e5e5",
+                padding: "10px",
+              }}
+              width="50%"
+              src={"/static/images/refunded_img.png"}
+            />
+          </>
+        )}
       </p>
       <p className="6st">
         <h5>{t("제6조 서비스 이용 신청")}</h5>

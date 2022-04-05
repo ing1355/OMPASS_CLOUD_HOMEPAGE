@@ -3,7 +3,7 @@ import "../css/agree.module.css";
 import useTranslation from "../lib/useTranslation";
 
 function Agree1() {
-  const { t } = useTranslation();
+  const { t, isKr } = useTranslation();
   return (
     <div className="agree-text-box">
       <p>
@@ -194,6 +194,27 @@ function Agree1() {
             )}
           </li>
         </ul>
+
+        {isKr ? null : (
+          <>
+            <ul>
+              <li>❹</li>
+              <li>
+                Refund fee will be affected among the paypal policy below.
+              </li>
+            </ul>
+            <img
+              style={{
+                marginLeft: "10px",
+                marginTop: "5px",
+                border: "2px solid #e5e5e5",
+                padding: "10px",
+              }}
+              width="100%"
+              src={"/static/images/refunded_img.png"}
+            />
+          </>
+        )}
       </p>
       <p>
         <h5>{t("제6조 서비스 이용 신청")}</h5>
