@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import Head from "next/head";
 import "prismjs/themes/prism-tomorrow.css";
@@ -9,6 +9,7 @@ import languageDetector from "../lib/languageDetector";
 
 function App(props) {
   const { t } = useTranslation();
+  const [isChecked, setIsChecked] = useState(false);
   const { Component, pageProps, router } = props;
   const { query } = router;
 
@@ -50,8 +51,8 @@ function App(props) {
           }
           @font-face {
             font-family: "Pretendard-Regular";
-            src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-              format("woff");
+            src: url("/static/font/Pretendard-Regular.woff2")
+              format("woff2");
             font-weight: 400;
             font-style: normal;
           }
@@ -72,7 +73,7 @@ function App(props) {
 
       <Layout>
         <NavbarTop />
-        <Component {...pageProps} />
+        <Component {...pageProps} isChecked={isChecked} setIsChecked={setIsChecked}/>
         <Footer />
       </Layout>
     </>

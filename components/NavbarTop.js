@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import "../css/NavbarTop.module.css";
@@ -11,9 +11,7 @@ import $ from "jquery";
 import {
   LogoutOutlined,
   MenuOutlined,
-  GlobalOutlined,
 } from "@ant-design/icons";
-import "antd/dist/antd.css";
 import LinkComponent from "./Link";
 import LanguageSwitchLink from "./LanguageSwitchLink";
 import useTranslation from "../lib/useTranslation";
@@ -21,7 +19,6 @@ import useTranslation from "../lib/useTranslation";
 function NavbarTop() {
   const router = useRouter();
   const { isKr } = useTranslation();
-  const [langbox, setLangbox] = useState(false);
 
   const getAdminHomePage = (locale) => process.env.adminRoute + "/" + locale;
 

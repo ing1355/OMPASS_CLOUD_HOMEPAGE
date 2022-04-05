@@ -1,3 +1,6 @@
+.joinBox.hide {
+  display: none;
+}
 :lang(en) .joinPhoneKOR {
   display: none;
 }
@@ -164,6 +167,7 @@ select {
 }
 /* ======================이용약관 ======== */
 .agree-box {
+  max-height: 705px;
   width: 35rem;
   height: auto;
   display: flex;
@@ -191,7 +195,6 @@ select {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-right: 5px;
 }
 .agree-box .agree-column-all .column-box div {
   display: flex;
@@ -199,7 +202,6 @@ select {
   padding: 1rem 0;
 }
 .agree-box .agree-column-all .column-box input {
-  margin-right: 5px;
   width: 15px;
   height: 15px;
   cursor: pointer;
@@ -208,13 +210,15 @@ select {
   font-size: 0.9rem;
   margin-top: -0.2rem;
 }
-.agree-box .agree-column {
+.agree-column {
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
+  max-height: 180px;
+  overflow: hidden;
 }
 
 .agree-box .agree-column .column-box {
@@ -223,7 +227,6 @@ select {
   flex-direction: row;
   height: 30px;
   align-items: center;
-  margin-right: 5px;
 }
 .agree-box .agree-column .column-box div {
   display: flex;
@@ -231,21 +234,26 @@ select {
   padding: 1rem 0;
 }
 .agree-box .agree-column .column-box input {
-  margin-right: 5px;
   width: 15px;
   height: 15px;
   cursor: pointer;
 }
 
-.agree-column .agree-text {
+.agree-text {
   width: 100%;
-  height: 150px !important;
+  max-height: 150px;
+  height: 150px;
   overflow: scroll;
   overflow-x: hidden !important;
   font-weight: 100;
   display: flex;
   flex-direction: column !important;
   border: 1px solid gray;
+}
+
+.agree-box a {
+  width: 100%;
+  text-align: center;
 }
 
 .agree-box button {

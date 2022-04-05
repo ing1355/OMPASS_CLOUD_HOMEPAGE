@@ -5,7 +5,6 @@ import Contents from "./Main_Contents";
 import LinkComponent from "../Link";
 import useTranslation from "../../lib/useTranslation";
 import { DownloadOutlined, SelectOutlined } from "@ant-design/icons";
-import "antd/dist/antd.css";
 
 function Main(props) {
   const { t, isKr } = useTranslation();
@@ -47,7 +46,7 @@ function Main(props) {
             </li>
 
             <li className="button-li">
-              <LinkComponent href="/login">
+              <LinkComponent href="/registration">
                 <SelectOutlined />
                 &nbsp;&nbsp; <p>{t("체험하기")}</p>
               </LinkComponent>

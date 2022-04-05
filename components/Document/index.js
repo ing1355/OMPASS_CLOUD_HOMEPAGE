@@ -11,7 +11,6 @@ import {
   AppstoreOutlined,
   DownOutlined,
   UpOutlined,
-  MoreOutlined,
 } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import useTranslation from "../../lib/useTranslation";
@@ -100,7 +99,7 @@ function Document(props) {
               )}
             </LinkComponent>
 
-            <LinkComponent href="/document/login">
+            <LinkComponent href="/document/registration">
               {props.document_AdminLogin === true ? (
                 <li
                   className="sub backcolor select mobile-bottom"

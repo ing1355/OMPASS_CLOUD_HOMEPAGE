@@ -65,7 +65,7 @@ function pricing() {
           <h6>{t("원모어패스를 사용해 보는 가장 빠르고 쉬운 방법")}</h6>
         </div>
         <div>
-          <LinkComponent href="/login">
+          <LinkComponent href="/registration">
             <button>{t("시작하기")}</button>
           </LinkComponent>
         </div>
