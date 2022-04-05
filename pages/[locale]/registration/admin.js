@@ -245,30 +245,34 @@ function admin({ isChecked }) {
                     <button type="submit">{t("인증메일 발송")}</button>
                 </form>
 
-                <div className={"loginInputBox joinBox emailBox" + (joinEmail ? '' : ' hide')}>
-                    <img width="20%" src={"/static/images/joinemail.png"} />
-                    <br />
-                    <br />
-                    <h3>{t("인증 메일이 발송되었습니다.")}</h3>
-
-                    <p className="join-ko">
-                        <b>{inputEmail}</b> {t("으로 메일이 발송되었습니다.")}
-                    </p>
-                    <p className="join-en">
-                        {t("으로 메일이 발송되었습니다.")} <b>{inputEmail}</b>
-                    </p>
-
-                    <p className="last-p" style={{ marginBottom: "0" }}>
-                        {t(
-                            "메일함으로 가셔서 ˝인증하기˝ 버튼을 누르시면 최종 회원가입이 완료됩니다."
-                        )}
-                    </p>
-                </div>
-
-                <p className="login-page-go login-mobile">
+                {!joinEmail && <p className="login-page-go login-mobile">
                     {t("혹시 계정이 있으신가요?")}
                     <LinkToLoginPage />
+                </p>}
+            </div>
+
+            <div className={"loginInputBox joinBox emailBox" + (joinEmail ? '' : ' hide')}>
+                <img width="20%" src={"/static/images/joinemail.png"} />
+                <br />
+                <br />
+                <h3>{t("인증 메일이 발송되었습니다.")}</h3>
+
+                <p className="join-ko">
+                    <b>{inputEmail}</b> {t("으로 메일이 발송되었습니다.")}
                 </p>
+                <p className="join-en">
+                    {t("으로 메일이 발송되었습니다.")} <b>{inputEmail}</b>
+                </p>
+
+                <p className="last-p" style={{ marginBottom: "0" }}>
+                    {t(
+                        "메일함으로 가셔서 ˝인증하기˝ 버튼을 누르시면 최종 회원가입이 완료됩니다."
+                    )}
+                </p>
+                {joinEmail && <p className="login-page-go login-mobile">
+                    {t("혹시 계정이 있으신가요?")}
+                    <LinkToLoginPage />
+                </p>}
             </div>
 
             <p className="login-page-go login-pc">
