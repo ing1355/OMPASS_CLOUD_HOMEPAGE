@@ -39,6 +39,7 @@
     "next-i18next": "^8.9.0",
     "next-images": "^1.8.1",
     "next-language-detector": "^1.0.2",
+    "next-optimized-classnames": "^1.0.2",
     "prismjs": "^1.25.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0",
