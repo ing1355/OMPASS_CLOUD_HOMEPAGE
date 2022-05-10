@@ -109,7 +109,11 @@ function admin({ isChecked }) {
                             passwordConfirm,
                             mobile,
                         } = e.target.elements;
-
+                        if (!firstName.value.length || !lastName.value.length) {
+                            if(!firstName.value.length) firstName.focus()
+                            else lastName.focus()
+                            return message.error(`${t("이름을 입력해주세요.")}`)
+                        }
                         if (!nameTest(firstName.value)) {
                             firstName.focus();
                             return message.error(
@@ -158,6 +162,10 @@ function admin({ isChecked }) {
                         ) {
                             if (mobile.value.length < inputDialCode.length + 1)
                                 return message.error(`${t("국가 번호를 입력해주세요.")}`);
+                        }
+                        if(!company.value.length) {
+                            company.focus()
+                            return message.error(`${t("회사 이름을 입력해주세요.")}`)
                         }
                         if (!nameTest(company.value)) {
                             company.focus();
