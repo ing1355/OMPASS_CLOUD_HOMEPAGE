@@ -110,7 +110,11 @@ function admin({ isChecked }) {
                 passwordConfirm,
                 mobile,
               } = e.target.elements;
-
+              if (!firstName.value.length || !lastName.value.length) {
+                if (!firstName.value.length) firstName.focus();
+                else lastName.focus();
+                return message.error(`${t("이름을 입력해주세요.")}`);
+              }
               if (!nameTest(firstName.value)) {
                 firstName.focus();
                 return message.error(
@@ -145,20 +149,24 @@ function admin({ isChecked }) {
                 passwordConfirm.focus();
                 return message.error(`${t("비밀번호가 일치하지 않습니다.")}`);
               }
-
-              if (!inputFormat) return message.error(t("PLEASE_INPUT_MOBILE"));
-
-              if (mobile.value.length !== inputFormat.length) {
+              if (
+                inputFormat &&
+                mobile.value.length !== inputFormat.length &&
+                mobile.value.length !== inputDialCode.length + 1
+              ) {
                 mobile.focus();
                 return message.error(`${t("전화번호를 완성해주세요.")}`);
               }
-
               if (
                 inputDialCode &&
                 !mobile.value.startsWith("+" + inputDialCode)
               ) {
                 if (mobile.value.length < inputDialCode.length + 1)
                   return message.error(`${t("국가 번호를 입력해주세요.")}`);
+              }
+              if (!company.value.length) {
+                company.focus();
+                return message.error(`${t("회사 이름을 입력해주세요.")}`);
               }
               if (!nameTest(company.value)) {
                 company.focus();
@@ -294,4 +302,5 @@ function admin({ isChecked }) {
     <Redirect to="/registration" />
   );
 }
+
 export default admin;
