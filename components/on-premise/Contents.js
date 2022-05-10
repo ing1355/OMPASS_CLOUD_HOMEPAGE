@@ -305,7 +305,7 @@ function Contents() {
                       <li>
                         <h5>{t("관리자 인증 강화")}</h5>
                         <p>
-                          {t("FIDO2 Admin 서버 접근 시 OMPASS 2차 인증 적용")}
+                          {t("FIDO2 Admin 서버 접근 시 OMPASS 2차 인증 적용2")}
                         </p>
                       </li>
                       <li>
@@ -406,8 +406,8 @@ function Contents() {
               className="iframeVideo"
               src={
                 isKr
-                  ? "https://www.youtube.com/embed/1-0ltemtiPc"
-                  : "https://www.youtube.com/embed/LEcciL5JKvs"
+                  ? "https://www.youtube.com/embed/_hGqgflvqk0"
+                  : "https://www.youtube.com/embed/xPDcUTDfUmA"
               }
               title="YouTube video player"
               frameBorder="0"

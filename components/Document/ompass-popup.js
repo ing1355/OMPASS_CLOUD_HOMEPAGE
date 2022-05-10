@@ -45,7 +45,11 @@ function ompasspopup() {
           <div className="document-img">
             <img
               width="100%"
-              src={isKr ? "/static/images/rest_api_img_1.png" : "/static/images/rest_api_img_1_eng.png"}
+              src={
+                isKr
+                  ? "/static/images/rest_api_img_1.png"
+                  : "/static/images/rest_api_img_1_eng.png"
+              }
               alt="등록 인터페이스"
             />
           </div>
@@ -66,7 +70,11 @@ function ompasspopup() {
           <div className="document-img">
             <img
               width="100%"
-              src={isKr ? "/static/images/rest_api_img_2.png" : "/static/images/rest_api_img_2_eng.png"}
+              src={
+                isKr
+                  ? "/static/images/rest_api_img_2.png"
+                  : "/static/images/rest_api_img_2_eng.png"
+              }
               alt="등록 인터페이스"
             />
           </div>
@@ -80,13 +88,9 @@ function ompasspopup() {
                 )}
                 <br />
                 {t("인증방식 등록 방법을 보려면")}&nbsp;
-                <LinkComponent
-                  target="_blank"
-                  href="/document/android"
-                >
+                <LinkComponent target="_blank" href="/document/android">
                   {t("여기")}
                 </LinkComponent>
-                &nbsp;
                 {t("를 클릭해주세요.")}
               </p>
             </div>
@@ -122,7 +126,11 @@ function ompasspopup() {
           <div className="document-img">
             <img
               width="100%"
-              src={isKr ? "/static/images/rest_api_img_3.png" : "/static/images/rest_api_img_3_eng.png"}
+              src={
+                isKr
+                  ? "/static/images/rest_api_img_3.png"
+                  : "/static/images/rest_api_img_3_eng.png"
+              }
               alt="등록 인터페이스"
             />
           </div>

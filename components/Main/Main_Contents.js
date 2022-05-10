@@ -371,8 +371,8 @@ function Main_Contents() {
               className="iframeVideo"
               src={
                 isKr
-                  ? "https://www.youtube.com/embed/1-0ltemtiPc"
-                  : "https://www.youtube.com/embed/LEcciL5JKvs"
+                  ? "https://www.youtube.com/embed/_hGqgflvqk0"
+                  : "https://www.youtube.com/embed/xPDcUTDfUmA"
               }
               title="YouTube video player"
               frameBorder="0"
