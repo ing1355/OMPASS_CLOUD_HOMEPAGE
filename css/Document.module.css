@@ -11,9 +11,6 @@
   display: none;
 }
 
-a {
-  text-decoration: none;
-}
 .mobile-title {
   display: none;
 }
@@ -494,6 +491,8 @@ a {
   z-index: 2;
   background-color: #fff !important;
 }
+
+
 .scrollBar {
   width: auto;
   height: 80vh;
@@ -542,9 +541,6 @@ a {
   .pc-title {
     display: none;
   }
-  .sidebar {
-    justify-content: space-between;
-  }
   .mobile-title {
     display: block;
   }
@@ -580,7 +576,9 @@ a {
   }
 
   .sidebar {
-    height: 100%;
+    justify-content: space-between;
+    max-height: 450px;
+    height: 0px;
     width: 100%;
     position: fixed;
     top: 4rem;
@@ -890,14 +888,6 @@ a {
   .code h4 {
     margin-top: 4rem !important;
   }
-  .code h5 {
-    font-size: 0.8rem !important;
-    font-weight: 900;
-    padding: 1rem 0rem;
-    margin-top: 3rem;
-    margin-bottom: 0rem;
-    width: 100%;
-  }
   .label label {
     float: left;
     line-height: 2rem;
@@ -1100,20 +1090,17 @@ a {
     font-weight: bold;
     color: #0d7fa1;
   }
+
   .code h5 {
     font-size: 1rem;
     font-weight: bold;
     border-bottom: 1px solid black;
-    padding: 1rem 0rem;
+    padding: 2rem 0rem;
     margin-top: 1rem;
     margin-bottom: 0rem;
     height: 30px !important;
     line-height: 0px !important;
-  }
-  .code .h5 {
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 0;
+    width: 100%;
   }
   .code img {
     margin-top: 0.5rem !important;

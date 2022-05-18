@@ -1,7 +1,7 @@
 import useTranslation from "../lib/useTranslation";
 import LinkComponent from "./Link";
 
-const getAdminHomePage = (locale) => process.env.adminRoute + "/" + locale;
+const getAdminHomePage = (locale) => `${process.env.adminRoute}/${locale}`;
 
 const LinkToLoginPage = () => {
     const { t, isKr } = useTranslation();

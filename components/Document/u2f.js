@@ -1,6 +1,7 @@
 import React from "react";
 import "../../css/Document.module.css";
 import useTranslation from "../../lib/useTranslation";
+import Git_Demo from "./Git_Demo";
 
 function u2f(props) {
   const { t } = useTranslation();
@@ -10,7 +11,7 @@ function u2f(props) {
       <div className="restapi-div">
         {/* =================================================================== */}
         <div className="document-text-box">
-          <h5 style={{ margin: "0" }}>{t("U2F 란?")}</h5>
+          <h5 style={{ margin: "0" }}>{t("U2F 란?")}<Git_Demo/></h5>
 
           <div className="documnet-box">
             <div className="document-label">

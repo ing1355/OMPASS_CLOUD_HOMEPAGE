@@ -41,7 +41,7 @@ function admin() {
         <div className="rightContentsBox">
           <ul>
             <li>
-              <div class="main">
+              <div className="main">
                 <div className="code">
                   <h4>▶ {t("관리자 관리")}</h4>
 

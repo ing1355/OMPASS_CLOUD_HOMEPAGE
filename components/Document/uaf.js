@@ -1,6 +1,7 @@
 import React from "react";
 import "../../css/Document.module.css";
 import useTranslation from "../../lib/useTranslation";
+import Git_Demo from "./Git_Demo";
 
 function uaf(props) {
   const { t } = useTranslation();
@@ -8,7 +9,7 @@ function uaf(props) {
   return (
     <div className="1st">
       <div className="guide restapi-div">
-        <h5 style={{ margin: "0" }}>{t("UAF 란?")}</h5>
+        <h5 style={{ margin: "0" }}>{t("UAF 란?")}<Git_Demo/></h5>
 
         <p>
           {t(

@@ -778,5 +778,7 @@
   "이용약관 동의": "I have read and agree to Terms of Service.",
   "개인정보 수집 및 이용 동의": "I have read and agree to Privacy Policy.",
   "(필수)": "",
-  "이용약관과 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.": "Please read and agree to both OMPASS Terms of Service and Privacy Policy."
+  "이용약관과 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.": "Please read and agree to both OMPASS Terms of Service and Privacy Policy.",
+  "데모 보기": "See Demo",
+  "OMPASS API를 적용한 DEMO의 소스코드를 제공하고 있습니다." : "We are providing the source code of the DEMO to which the OMPASS API is applied."
 }

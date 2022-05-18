@@ -37,8 +37,8 @@ module.exports = withCSS(
           return config;
         },
         env: {
-          // adminRoute : "https://ompass.kr:4002/login"
-          adminRoute : "https://admin.ompasscloud.com/login"
+          adminRoute : "https://ompass.kr:4002/"
+          // adminRoute : "https://admin.ompasscloud.com/"
         },
         webpack5: false,
         presets,

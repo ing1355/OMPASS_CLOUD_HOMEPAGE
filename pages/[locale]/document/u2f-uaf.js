@@ -42,7 +42,7 @@ function u2fuaf() {
         <div className="rightContentsBox">
           <ul>
             <li>
-              <div class="main">
+              <div className="main">
                 <div className="code">
                   <h4>▶ {t("원모어패스 로그인이란?")}</h4>
 

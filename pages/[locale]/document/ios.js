@@ -42,7 +42,7 @@ function ios(props) {
         <div className="rightContentsBox">
           <ul>
             <li>
-              <div class="main">
+              <div className="main">
                 <div className="code">
                   <h4>▶ iOS</h4>
                   <div className="qrcode-mobile">

@@ -43,7 +43,7 @@ function join(props) {
         <div className="rightContentsBox">
           <ul>
             <li>
-              <div class="main">
+              <div className="main">
                 <div className="code">
                   <h4>▶ {t("회원가입")}</h4>
                   {/* =================================================================== */}

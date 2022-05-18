@@ -62,6 +62,9 @@ function App(props) {
             width: 100% !important;
             overflow: auto !important;
           }
+          a {
+            text-decoration: none;
+          }
           ul,
           li {
             margin-bottom: 0;

@@ -20,7 +20,7 @@ function NavbarTop() {
   const router = useRouter();
   const { isKr } = useTranslation();
 
-  const getAdminHomePage = (locale) => process.env.adminRoute + "/" + locale;
+  const getAdminHomePage = (locale) => `${process.env.adminRoute}/${locale}`;
 
   useEffect(() => {
     $(window)

@@ -41,7 +41,7 @@ function billing(props) {
         <div className="rightContentsBox">
           <ul>
             <li>
-              <div class="main">
+              <div className="main">
                 <div className="code">
                   <h4>▶ {t("요금")}</h4>
                   {/* =================================================================== */}
