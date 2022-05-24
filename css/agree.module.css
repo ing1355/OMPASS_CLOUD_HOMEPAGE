@@ -130,6 +130,22 @@
 .agree-title div label {
   margin-right: 0.2rem;
 }
+
+.sales-level-agreement-table{
+width:40%;
+  border: 2px solid rgb(169, 169, 169);
+  margin-top: 15px;
+}
+
+.sales-level-agreement-table tr{
+  border-bottom: 0.8px solid #000 ;
+  text-align: center;
+  height: 30px;
+  
+}
+.sales-level-agreement-table tr th{
+  font-weight: 900;
+}
 @media (max-width: 1024px) {
   .agree-text-box2 {
     width: 100% !important;

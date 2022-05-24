@@ -69,6 +69,12 @@ function Foooter() {
                 </LinkComponent>
               </p>
 
+              <p className="agree">
+                <LinkComponent className="footer" href="/Sales-Level-Agreement">
+                  {t("서비스 수준 협약")}
+                </LinkComponent>
+              </p>
+
               <p className="copyRight">
                 © OneMoreSecurity Inc. All Rights Reserved.
               </p>

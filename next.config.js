@@ -15,8 +15,8 @@ module.exports = withCSS(
         webpack: function (config, { isServer }) {
           if (!isServer) {
             config.node = {
-              fs: 'empty'
-            }
+              fs: "empty",
+            };
           }
           config.module.rules.push({
             test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
@@ -37,15 +37,15 @@ module.exports = withCSS(
           return config;
         },
         env: {
-          adminRoute : "https://ompass.kr:4002/"
-          // adminRoute : "https://admin.ompasscloud.com/"
+          // adminRoute : "https://ompass.kr:4002/"
+          adminRoute: "https://admin.ompasscloud.com/",
         },
         webpack5: false,
         presets,
         plugins,
         compiler: {
-          styledComponents: true
-        }
+          styledComponents: true,
+        },
       })
     )
   )
