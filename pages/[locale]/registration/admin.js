@@ -77,7 +77,7 @@ function admin({ isChecked }) {
       return message.error(`${t("이메일 형식이 잘못되었습니다.")}`);
     axios
       .get(
-        `${process.env.adminRoute}/v1/admins/existence/${inputEmail}`
+        `${process.env.apiRoute}/v1/admins/existence/${inputEmail}`
       )
       .then(({ data }) => {
         const { duplicate } = data.data;
@@ -177,7 +177,7 @@ function admin({ isChecked }) {
                 );
               }
               axios
-                .post(`${process.env.adminRoute}/v1/admins`, {
+                .post(`${process.env.apiRoute}/v1/admins`, {
                   company: company.value,
                   email: email.value,
                   firstName: firstName.value,
