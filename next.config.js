@@ -15,8 +15,8 @@ module.exports = withCSS(
         webpack: function (config, { isServer }) {
           if (!isServer) {
             config.node = {
-              fs: 'empty'
-            }
+              fs: "empty",
+            };
           }
           config.module.rules.push({
             test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
@@ -45,8 +45,8 @@ module.exports = withCSS(
         presets,
         plugins,
         compiler: {
-          styledComponents: true
-        }
+          styledComponents: true,
+        },
       })
     )
   )

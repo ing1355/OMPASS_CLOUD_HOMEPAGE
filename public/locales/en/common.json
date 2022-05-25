@@ -780,5 +780,35 @@
   "(필수)": "",
   "이용약관과 개인정보 수집 및 이용에 대한 안내 모두 동의해주세요.": "Please read and agree to both OMPASS Terms of Service and Privacy Policy.",
   "데모 보기": "See Demo",
-  "OMPASS API를 적용한 DEMO의 소스코드를 제공하고 있습니다." : "We are providing the source code of the DEMO to which the OMPASS API is applied."
+  "OMPASS API를 적용한 DEMO의 소스코드를 제공하고 있습니다.": "We are providing the source code of the DEMO to which the OMPASS API is applied.",
+
+  "서비스 수준 협약": "Sales Level Agreement",
+  "시행일 | 2022／06／01": "Effective date｜Jun 01, 2022",
+
+  "㈜원모어시큐리티(이하 “회사”)가 운영하는 원모어패스 서비스는 라이선스(이하 “계약”) 기간(30일) 동안 최소 99.9%를 고객이 사용할 수 있도록 보장합니다.(이하 “서비스 수준 협약”). 만약 원모어시큐리티가 서비스 수준 협약을 충족하지 않았다면, 고객은 다음과 같은 서비스 크레딧을 받을 수 있습니다. 원모어시큐리티가 본 서비스 수준 협약을 충족하지 못하는 경우에 대해 고객의 유일하고 배타적인 구제 수단을 명시합니다.": "During the term of your OMPASS license serviced by OneMoreSecurity Inc. (“Agreement”), the OMPASS service will be operational and available to Customer at least 99.9% of thirty days (“OMPASS SLA”). If OMPASS does not meet the OMPASS SLA, and if Customer meets its obligations under this OMPASS SLA, Customer will be eligible to receive the Service Credits described below. This OMPASS SLA states Customer's sole and exclusive remedy for any failure by OMPASS to meet the OMPASS SLA.",
+  "본 서비스 수준 협약의 내용은 다음과 같습니다.": "The contents of this Sales Level Agreement are as follows:",
+  "용어의 정의": "Definitions",
+  "고객의 서비스 크레딧 요청": "Customer Must Request Service Credit",
+  "최대 서비스 크레딧": "Maximum Service Credit",
+  "서비스 수준 협약 제외사항": "OMPASS SLA Exclusions",
+
+  "1. 용어의 정의": "1. Definitions",
+  "다음 용어의 정의는 서비스 수준 협약에 적용됩니다.": "The following definitions shall apply to the OMPASS SLA.",
+  "“고장 시간”은 고객의 모든 사용자에 대해 사용자 오류율이 5%를 초과하는 경우를 의미합니다. 고장 시간은 서버 측 오류율을 기준으로 측정됩니다.": "“Downtime” means when there is more than a five percent user error rate across all of a Customer’s Users. Downtime is measured based on server side error rate.",
+  "“서비스”는 OMPASS FIDO 인증 서비스를 의미합니다.": "“Service” means the OMPASS FIDO authentication service.",
+  "“월별 가동율”은 30일 계약의 총 시간(분)에서 30일 계약 기간 내에 발생한 고장 시간(분)을 빼고, 30일 계약의 총 시간(분)으로 나눈 백분율을 의미합니다.": "“Monthly Uptime Percentage” means the percentage of total number of minutes in thirty days contract minus the number of minutes of Downtime suffered in thirty days contract divided by tthe total number of minutes in thirty days contract.",
+  "“서비스 크레딧”은 다음과 같이 계산되며, 서비스 기간 종료 시점에 고객에게 무료로 추가되는 서비스 일수를 의미합니다.": "“Service Credit” means the number of days of Service to be added to the end of the Service term, at no charge to Customer calculated as follows:",
+  "월별 가동율": "Monthly Uptime Percentage",
+  "서비스 크레딧": "Service Credit",
+
+  "2. 고객의 서비스 크레딧 요청": "2. Customer Must Request Service Credit",
+  "위에 설명된 서비스 크레딧을 받으려면 고객이 서비스 크레딧을 받을 자격이 된 날로부터 30일 이내에 이메일(service@omsecurity.kr)로 회사에 알려야 합니다. 이 요구 사항을 준수하지 않으면 서비스 크레딧을 받을 수 있는 고객의 권리가 박탈됩니다.": "In order to receive any of the Service Credits described above, Customer must notify OneMoreSecurity Inc. by email at service@omsecurity.kr within 30 days from the time Customer becomes eligible to receive a Service Credit. Failure to comply with this requirement will forfeit Customer's right to receive a Service Credit.",
+
+  "3. 최대 서비스 크래딧": "3. Maximum Service Credit",
+  "30일 계약 기간 내에 발생하는 모든 고장 시간에 대해 회사가 고객에게 발행할 서비스 크레딧의 최대 수는 서비스 15일을 초과할 수 없습니다. 서비스 크레딧은 금전적 금액으로 교환되거나 전환될 수 없습니다.": "The aggregate maximum number of Service Credits to be issued by OneMoreSecurity Inc. to Customer for all Downtime that occurs in thirty days contract shall not exceed fifteen days of Service. Service Credits may not be exchanged for, or converted to, monetary amounts.",
+
+  "4. 서비스 수준 협약 제외사항": "4. OMPASS SLA Exclusions",
+  "서비스 수준 협약 또는 성능 문제를 제외한 다음과 같은 경우에는 적용되지 않습니다.: (i) 불가항력적인 사유가 있는 경우 또는 (ii) 원모어패스의 통제 범위에 속하지 않는 하나 이상의 고객 장비 또는 제3자 장비로 인해 발생하는 경우 적용되지 않습니다.": "The OMPASS SLA does not apply to any services that expressly exclude this OMPASS SLA or any performance issues: (i) caused by “Force Majeure” or (ii) that resulted from one or more of Customer’s equipment or third party equipment not within the primary control of OMPASS.",
+
+  "회사는 여기에 조건을 업데이트하여 언제든지 이 서비스 수준 협약을 수정할 수 있는 권리를 보유합니다.": "OneMoreSecurity Inc. reserves the right to modify this OMPASS Service Level Agreement at any time by updating the terms on this site."
 }
