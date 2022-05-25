@@ -37,9 +37,10 @@ module.exports = withCSS(
           return config;
         },
         env: {
-          // adminRoute : "https://ompass.kr:4002"
+          // adminRoute : "https://ompass.kr:4002",
+          // apiRoute : "https://ompass.kr:4002"
           adminRoute : "https://admin.ompasscloud.com",
-          apiRoute: "https://admin-api.ompasscloud.com"    
+          apiRoute: "https://admin-api.ompasscloud.com"
         },
         webpack5: false,
         presets,
