@@ -34,7 +34,7 @@ function privacypolicy() {
   return (
     <div className="agree-text-box2">
       <div className="title-div">
-        <ul>{t("개인정보 처리 방침")}</ul>
+        <ul>{t("개인정보처리방침")}</ul>
         <ul>
           <select className="select">
             <option value="">{t("시행일 | 2022／03／01")}</option>

@@ -65,7 +65,7 @@ function Foooter() {
 
               <p className="agree">
                 <LinkComponent className="footer" href="/privacy-policy">
-                  {t("개인정보 처리 방침")}
+                  {t("개인정보처리방침")}
                 </LinkComponent>
               </p>
 
