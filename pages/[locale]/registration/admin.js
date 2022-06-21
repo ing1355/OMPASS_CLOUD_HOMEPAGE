@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../../../css/Registration.module.css";
 
 import "intl-tel-input/build/css/intlTelInput.css";
 import "react-intl-tel-input/dist/main.css";
@@ -10,7 +9,6 @@ import "react-phone-input-2/lib/style.css";
 import axios from "axios";
 import useTranslation from "../../../lib/useTranslation";
 import { message } from "antd";
-import "antd/dist/antd.css";
 import i18nextConfig from "../../../next-i18next.config";
 import LinkToLoginPage from "../../../components/LinkToLoginPage";
 import { Redirect } from "../../../lib/redirect";
@@ -254,19 +252,14 @@ function admin({ isChecked }) {
             <button type="submit">{t("인증메일 발송")}</button>
           </form>
 
-          {!joinEmail && (
             <p className="login-page-go login-mobile">
               {t("혹시 계정이 있으신가요?")}
               <LinkToLoginPage />
             </p>
-          )}
+
         </div>
 
-        <div
-          className={
-            "loginInputBox joinBox emailBox" + (joinEmail ? "" : " hide")
-          }
-        >
+        <div className={"loginInputBox joinBox emailBox" + (joinEmail ? "" : " hide")}>
           <img width="20%" src={"/static/images/joinemail.png"} />
           <br />
           <br />
@@ -284,18 +277,7 @@ function admin({ isChecked }) {
               "메일함으로 가셔서 ˝인증하기˝ 버튼을 누르시면 최종 회원가입이 완료됩니다."
             )}
           </p>
-          {joinEmail && (
-            <p className="login-page-go login-mobile">
-              {t("혹시 계정이 있으신가요?")}
-              <LinkToLoginPage />
-            </p>
-          )}
         </div>
-
-        <p className="login-page-go login-pc">
-          {t("혹시 계정이 있으신가요?")}
-          <LinkToLoginPage />
-        </p>
       </div>
     </>
   ) : (

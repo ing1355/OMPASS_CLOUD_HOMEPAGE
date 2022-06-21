@@ -244,10 +244,10 @@ select {
   max-height: 150px;
   height: 150px;
   overflow: scroll;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
   font-weight: 100;
-  display: flex;
-  flex-direction: column !important;
+  /* display: flex;
+  flex-direction: column !important; */
   border: 1px solid gray;
 }
 
@@ -278,9 +278,8 @@ select {
 .agree-text-box p {
   padding: 1rem;
   font-size: 0.8rem;
-  padding-bottom: 0 !important;
+  padding-bottom: 0;
   margin-bottom: 0;
-  word-break: keep-all;
 }
 
 .agree-text-box p .in {

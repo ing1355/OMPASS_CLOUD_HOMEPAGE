@@ -8,9 +8,12 @@
     "dev": "next -p 3002",
     "build": "next build",
     "start": "next start -p 3002",
+    "testStart": "next build&&next export&&npm run start",
     "export": "next export",
     "deployComponent": "scp -r ./components oms@192.168.182.140:/usr/local/ompass_homepage",
     "deployPages": "scp -r ./pages oms@192.168.182.140:/usr/local/ompass_homepage",
+    "deployCss": "scp -r ./css oms@192.168.182.140:/usr/local/ompass_homepage",
+    "deployPublic": "scp -r ./public oms@192.168.182.140:/usr/local/ompass_homepage",
     "deployResources": "scp -r ./static/ oms@192.168.182.140:/usr/local/resources",
     "awsInvalidation": "aws cloudfront create-invalidation --distribution-id EVT1Q8TUYRWWD --paths \"/*\" --no-cli-pager",
     "awsDeploy": "next build&&next export&&aws s3 sync ./out s3://ompass-homepage&&aws cloudfront create-invalidation --distribution-id EVT1Q8TUYRWWD --paths \"/*\" --no-cli-pager"

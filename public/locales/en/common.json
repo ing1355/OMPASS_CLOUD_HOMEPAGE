@@ -810,5 +810,6 @@
   "4. 서비스 수준 협약 제외사항": "4. OMPASS SLA Exclusions",
   "서비스 수준 협약 또는 성능 문제를 제외한 다음과 같은 경우에는 적용되지 않습니다.: (i) 불가항력적인 사유가 있는 경우 또는 (ii) 원모어패스의 통제 범위에 속하지 않는 하나 이상의 고객 장비 또는 제3자 장비로 인해 발생하는 경우 적용되지 않습니다.": "The OMPASS SLA does not apply to any services that expressly exclude this OMPASS SLA or any performance issues: (i) caused by “Force Majeure” or (ii) that resulted from one or more of Customer’s equipment or third party equipment not within the primary control of OMPASS.",
 
-  "회사는 여기에 조건을 업데이트하여 언제든지 이 서비스 수준 협약을 수정할 수 있는 권리를 보유합니다.": "OneMoreSecurity Inc. reserves the right to modify this OMPASS Service Level Agreement at any time by updating the terms on this site."
+  "회사는 여기에 조건을 업데이트하여 언제든지 이 서비스 수준 협약을 수정할 수 있는 권리를 보유합니다.": "OneMoreSecurity Inc. reserves the right to modify this OMPASS Service Level Agreement at any time by updating the terms on this site.",
+  "TermsOfPurchase_title_12_3": "Service credit of the Service follows 'Sales Level Agreement'."
 }

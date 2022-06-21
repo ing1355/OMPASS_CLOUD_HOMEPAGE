@@ -5,7 +5,6 @@ import Contents from "../../../components/on-premise/Contents";
 import useTranslation from "../../../lib/useTranslation";
 import i18nextConfig from "../../../next-i18next.config";
 import { DownloadOutlined } from "@ant-design/icons";
-import "antd/dist/antd.css";
 
 const getPathSlugs = () => {
   return i18nextConfig.i18n.locales.map((locale) => ({

@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import NavbarTop from "../components/NavbarTop";
 import useTranslation from "../lib/useTranslation";
 import languageDetector from "../lib/languageDetector";
+import "antd/dist/antd.css";
 
 function App(props) {
   const { t } = useTranslation();
@@ -19,7 +20,7 @@ function App(props) {
       query.locale || languageDetector.detect()
     );
   }, []);
-
+  
   return (
     <>
       <Head>

@@ -24,10 +24,6 @@
       format("truetype");
 }
 
-* {
-  word-break: keep-all;
-}
-
 header {
   width: 95rem;
   height: auto;

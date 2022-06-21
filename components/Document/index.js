@@ -12,7 +12,6 @@ import {
   DownOutlined,
   UpOutlined,
 } from "@ant-design/icons";
-import "antd/dist/antd.css";
 import useTranslation from "../../lib/useTranslation";
 import LinkComponent from "../Link";
 

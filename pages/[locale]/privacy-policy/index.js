@@ -1,5 +1,4 @@
 import React from "react";
-import "../../../css/Footer.module.css";
 import "../../../css/agree.module.css";
 import $ from "jquery";
 import useTranslation from "../../../lib/useTranslation";

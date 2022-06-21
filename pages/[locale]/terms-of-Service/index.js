@@ -1,5 +1,4 @@
 import React from "react";
-import "../../../css/Footer.module.css";
 import "../../../css/agree.module.css";
 import $ from "jquery";
 import useTranslation from "../../../lib/useTranslation";
@@ -664,6 +663,12 @@ function AgretermsofService() {
             {t(
               "본 서비스 및 사이트로부터 회원이 받은 손해가 천재지변 등 불가항력적이거나 회원의 고의 또는 과실로 인하여 발생한 때에는 손해배상을 하지 않습니다."
             )}
+          </li>
+        </ul>
+        <ul>
+          <li>❸</li>
+          <li>
+            {t("TermsOfPurchase_title_12_3")}
           </li>
         </ul>
       </p>
