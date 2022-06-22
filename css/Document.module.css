@@ -321,7 +321,7 @@
 .document {
   width: 85rem !important;
   height: auto;
-  background-color: none;
+  background-color: transparent;
   margin: 0 auto;
   margin-top: 3rem !important;
 }
@@ -483,7 +483,7 @@
 
 /* === */
 .sidebar {
-  height: 100vh;
+  height: calc(100% - 65px);
   width: 18rem;
   position: fixed;
   top: 4rem;
@@ -517,7 +517,7 @@
   .document {
     width: 85rem;
     height: auto;
-    background-color: none;
+    background-color: transparent;
     margin: 0 auto;
     margin-top: 3rem !important;
   }
@@ -1278,4 +1278,15 @@
     position: relative;
     z-index: 100000;
   }
+}
+
+/* ============== test =============== */
+html, body {
+  height: 100%;
+}
+#__next {
+  overflow: hidden;
+  min-height: 100%; 
+  position: relative;
+  padding-bottom: 100px; /* footer height */
 }
