@@ -181,7 +181,7 @@ function SalesLevelAgreement() {
         <ul>
           <li>
             {t(
-              "(i) 불가항력적인 사유가 있는 경우 또는"
+              "(i) 불가항력적인 사유가 있는 경우"
             )}
           </li>
         </ul>
