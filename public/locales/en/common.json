@@ -490,13 +490,13 @@
   "server-side에서 HTTP HEADER에는 Secret Key를 포함하고 Path Variable에는 사용자의 아이디를 포함하여 OMPASS API를 호출합니다.": "Call OMPASS API including the secret key in “HTTP HEADER” and the user ID in “Path Variable” from the server-side.",
   "사용자 초기화 성공 시": "In case user initialization success",
 
-  "상호명：(주)원모어시큐리티 | 대표자：김민식": "OneMoreSecurity Inc. | CEO：Min-Sik Kim",
+  "상호명：(주)원모어시큐리티 | 대표자：김민식": "OneMoreSecurity Inc. | CEO：Min-sik Kim",
   "사업자 번호：735-88-01175 | 통신판매신고번호：제 2022-세종-0150": "Business Number：735-88-01175 | E-Commerce Registration Number：2022-Sejong-0150",
   "TEL：+82 70 4298 3070 | E-Mail：service@omsecurity.kr": "TEL：+82 70 4298 3070 | Email：service@omsecurity.kr",
   "세종특별자치시 한누리대로 2150, 605호 (보람동, 스마트허브 1동)": "Unit 605 Smart Hub 1, 2150, Hannuri-daero, Sejong-si, Republic of Korea",
 
   "상호명：(주)원모어시큐리티": "OneMoreSecurity Inc.",
-  "대표자：김민식": "CEO：Min-Sik Kim",
+  "대표자：김민식": "CEO：Min-sik Kim",
   "사업자 번호：735-88-01175": "Business Number：735-88-01175",
   "통신판매신고번호：제 2022-세종-0150": "E-Commerce Registration Number：2022-Sejong-0150",
 
