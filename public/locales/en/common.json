@@ -794,9 +794,9 @@
 
   "1. 용어의 정의": "1. Definitions",
   "다음 용어의 정의는 서비스 수준 협약에 적용됩니다.": "The following definitions shall apply to the OMPASS SLA.",
-  "“고장 시간”은 고객의 모든 사용자에 대해 사용자 오류율이 5%를 초과하는 경우를 의미합니다. 고장 시간은 서버 측 오류율을 기준으로 측정됩니다.": "“Downtime” means when there is more than a five percent user error rate across all of a Customer’s Users. Downtime is measured based on server side error rate.",
+  "“다운타임”은 고객의 모든 사용자에 대해 사용자 오류율이 5%를 초과하는 경우를 의미합니다. 다운타임은 서버 측 오류율을 기준으로 측정됩니다.": "“Downtime” means when there is more than a five percent user error rate across all of a Customer’s Users. Downtime is measured based on server side error rate.",
   "“서비스”는 OMPASS FIDO 인증 서비스를 의미합니다.": "“Service” means the OMPASS FIDO authentication service.",
-  "“월별 가동율”은 30일 계약의 총 시간(분)에서 30일 계약 기간 내에 발생한 고장 시간(분)을 빼고, 30일 계약의 총 시간(분)으로 나눈 백분율을 의미합니다.": "“Monthly Uptime Percentage” means the percentage of total number of minutes in thirty days contract minus the number of minutes of Downtime suffered in thirty days contract divided by tthe total number of minutes in thirty days contract.",
+  "“월별 가동율”은 30일 계약의 총 시간(분)에서 30일 계약 기간 내에 발생한 다운타임(분)을 빼고, 30일 계약의 총 시간(분)으로 나눈 백분율을 의미합니다.": "“Monthly Uptime Percentage” means the percentage of total number of minutes in thirty days contract minus the number of minutes of Downtime suffered in thirty days contract divided by tthe total number of minutes in thirty days contract.",
   "“서비스 크레딧”은 다음과 같이 계산되며, 서비스 기간 종료 시점에 고객에게 무료로 추가되는 서비스 일수를 의미합니다.": "“Service Credit” means the number of days of Service to be added to the end of the Service term, at no charge to Customer calculated as follows:",
   "월별 가동율": "Monthly Uptime Percentage",
   "서비스 크레딧": "Service Credit",
@@ -805,7 +805,7 @@
   "위에 설명된 서비스 크레딧을 받으려면 고객이 서비스 크레딧을 받을 자격이 된 날로부터 30일 이내에 이메일(service@omsecurity.kr)로 회사에 알려야 합니다. 이 요구 사항을 준수하지 않으면 서비스 크레딧을 받을 수 있는 고객의 권리가 박탈됩니다.": "In order to receive any of the Service Credits described above, Customer must notify OneMoreSecurity Inc. by email at service@omsecurity.kr within 30 days from the time Customer becomes eligible to receive a Service Credit. Failure to comply with this requirement will forfeit Customer's right to receive a Service Credit.",
 
   "3. 최대 서비스 크래딧": "3. Maximum Service Credit",
-  "30일 계약 기간 내에 발생하는 모든 고장 시간에 대해 회사가 고객에게 발행할 서비스 크레딧의 최대 수는 서비스 15일을 초과할 수 없습니다. 서비스 크레딧은 금전적 금액으로 교환되거나 전환될 수 없습니다.": "The aggregate maximum number of Service Credits to be issued by OneMoreSecurity Inc. to Customer for all Downtime that occurs in thirty days contract shall not exceed fifteen days of Service. Service Credits may not be exchanged for, or converted to, monetary amounts.",
+  "30일 계약 기간 내에 발생하는 모든 다운타임에 대해 회사가 고객에게 발행할 서비스 크레딧의 최대 수는 서비스 15일을 초과할 수 없습니다. 서비스 크레딧은 금전적 금액으로 교환되거나 전환될 수 없습니다.": "The aggregate maximum number of Service Credits to be issued by OneMoreSecurity Inc. to Customer for all Downtime that occurs in thirty days contract shall not exceed fifteen days of Service. Service Credits may not be exchanged for, or converted to, monetary amounts.",
 
   "4. 서비스 수준 협약 제외사항": "4. OMPASS SLA Exclusions",
   "서비스 수준 협약 또는 성능 문제를 제외한 다음과 같은 경우에는 적용되지 않습니다.": "The OMPASS SLA does not apply to any services that expressly exclude this OMPASS SLA or any performance issues",
