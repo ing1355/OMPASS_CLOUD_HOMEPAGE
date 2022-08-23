@@ -95,6 +95,20 @@ function admin() {
                       </div>
                       <div className="document-label">
                         <label className="number">❷&nbsp;</label>
+                        <p>
+                          {t("OMPASS ADMIN 페이지에서 표현되는 모든 시간 데이터들을  설정된 시간대를 기준으로 표시해줍니다.")}
+                          <div className="document-label">
+                            <label>→ &nbsp;</label>
+                            <p>{t("회원가입 위치 : 회원가입을 완료한 위치의 시간대로 시간을 표시합니다. (기본 설정)")}</p>
+                          </div>
+                          <div className="document-label">
+                            <label>→ &nbsp;</label>
+                            <p>{t("현재 위치 : 로그인한 위치의 시간대로 시간을 표시합니다.")}</p>
+                          </div>
+                        </p>
+                      </div>
+                      <div className="document-label">
+                        <label className="number">❸&nbsp;</label>
                         <p>{t("관리자 정보 수정이 가능합니다.")}</p>
                       </div>
                       <div className="document-label">
@@ -111,7 +125,7 @@ function admin() {
                         </p>
                       </div>
                       <div className="document-label">
-                        <label className="number">❸&nbsp;</label>
+                        <label className="number">❹&nbsp;</label>
                         <p>
                           <b>
                             {t("로그인한 계정이")}{" "}
@@ -126,7 +140,6 @@ function admin() {
                               {t(
                                 "본인 계정 선택 시 “회원 탈퇴” 버튼이 보여지며, OMPASS 서비스 탈퇴가 가능합니다."
                               )}
-                              )
                             </p>
                           </div>
                           <div className="document-label">
@@ -135,7 +148,6 @@ function admin() {
                               {t(
                                 "Sub Admin 선택 시 “삭제” 버튼이 보여지며, Sub Admin 삭제가 가능합니다."
                               )}
-                              )
                             </p>
                           </div>
                         </p>
@@ -152,7 +164,7 @@ function admin() {
 
                     <div className="documnet-box">
                       <div className="document-label">
-                        <label className="number">❹&nbsp;</label>
+                        <label className="number">❺&nbsp;</label>
                         <p>{t("비밀번호 입력 후 회원 탈퇴가 완료됩니다.")}</p>
                       </div>
                     </div>
