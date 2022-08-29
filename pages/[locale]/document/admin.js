@@ -109,7 +109,7 @@ function admin() {
                       </div>
                       <div className="document-label">
                         <label className="number">❸&nbsp;</label>
-                        <p>{t("관리자 정보 수정이 가능합니다.")}</p>
+                        <p>{t("수정된 관리자 정보를 저장합니다.")}</p>
                       </div>
                       <div className="document-label">
                         <label>* &nbsp;</label>
