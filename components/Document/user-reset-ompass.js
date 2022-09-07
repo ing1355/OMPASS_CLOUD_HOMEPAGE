@@ -84,41 +84,18 @@ function userresetompass(props) {
           style={{
             color: "#3c9edb",
             fontWeight: "bold",
-            marginBottom: "-1.8rem",
+            marginBottom: "-1rem"
           }}
         >
           · {t("OMPASS 등록 초기화 성공 시")}
         </p>
-
-        <h6
-          className="copyblock-message2"
-          style={{
-            color: "rgb(114, 114, 114)",
-            fontSize: "0.8rem",
-            fontWeight: "bold",
-            textAlign: "right",
-          }}
-        >
-          <img
-            width="3.2%"
-            src={"/static/images/CopyButton.png"}
-            alt="copy버튼"
-          />
-          &nbsp;
-          {t("(버튼 클릭 시 Copy 가능) ↓")}　
-        </h6>
-        <CopyBlock
-          className="first codeBox"
-          style={{ background: "#002c50" }}
-          text={`
-            {
-              "code" : 204,
-              "message" : "ok",              
-            }
-          `}
-          language={language}
-          theme={dracula}
-        />
+          <p
+            style={{
+              // fontSize: "18px"
+            }}
+          >
+            {t("HTTP STATUS CODE 204 반환")}
+          </p>
       </div>
     </div>
   );
