@@ -89,11 +89,7 @@ function userresetompass(props) {
         >
           · {t("OMPASS 등록 초기화 성공 시")}
         </p>
-          <p
-            style={{
-              // fontSize: "18px"
-            }}
-          >
+          <p>
             {t("HTTP STATUS CODE 204 반환")}
           </p>
       </div>
