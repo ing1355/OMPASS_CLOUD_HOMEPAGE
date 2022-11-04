@@ -16,7 +16,8 @@
     "deployPublic": "scp -r ./public oms@192.168.182.140:/usr/local/ompass_homepage",
     "deployResources": "scp -r ./static/ oms@192.168.182.140:/usr/local/resources",
     "awsInvalidation": "aws cloudfront create-invalidation --distribution-id EVT1Q8TUYRWWD --paths \"/*\" --no-cli-pager",
-    "awsDeploy": "next build&&next export&&aws s3 sync ./out s3://ompass-homepage&&aws cloudfront create-invalidation --distribution-id EVT1Q8TUYRWWD --paths \"/*\" --no-cli-pager"
+    "awsTestInvalidation": "aws cloudfront create-invalidation --distribution-id EUVWILHE2TN9F --paths \"/*\" --no-cli-pager",
+    "awsDeploy": "next build&&next export&&aws s3 sync ./out s3://ompass-homepage&&npm run awsInvalidation&&npm run awsTestInvalidation"
   },
   "keywords": [],
   "author": "",

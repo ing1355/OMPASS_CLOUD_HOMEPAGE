@@ -41,6 +41,24 @@ function App(props) {
           integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
           crossOrigin="anonymous"
         ></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-C9RFV6ZHHH"
+        ></script>
+        <script>
+          {`
+          window.dataLayer = window.dataLayer || [];
+          // eslint-disable-next-line
+          function gtag() {
+            window.dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-C9RFV6ZHHH", {
+            page_location: window.location.href,
+            page_path: window.location.pathname,
+            page_title: window.document.title,
+          });`}
+        </script>
       </Head>
       <style jsx global>
         {`

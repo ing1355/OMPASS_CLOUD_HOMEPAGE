@@ -147,14 +147,14 @@ function admin({ isChecked }) {
                 passwordConfirm.focus();
                 return message.error(`${t("비밀번호가 일치하지 않습니다.")}`);
               }
-              if (
-                inputFormat &&
-                mobile.value.length !== inputFormat.length &&
-                mobile.value.length !== inputDialCode.length + 1
-              ) {
-                mobile.focus();
-                return message.error(`${t("전화번호를 완성해주세요.")}`);
-              }
+              // if (
+              //   inputFormat &&
+              //   mobile.value.length !== inputFormat.length &&
+              //   mobile.value.length !== inputDialCode.length + 1
+              // ) {
+              //   mobile.focus();
+              //   return message.error(`${t("전화번호를 완성해주세요.")}`);
+              // }
               if (
                 inputDialCode &&
                 !mobile.value.startsWith("+" + inputDialCode)
