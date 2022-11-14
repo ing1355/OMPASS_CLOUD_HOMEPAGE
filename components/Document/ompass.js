@@ -179,7 +179,7 @@ function ompass(props) {
               <td>{t("사용자 아이디")}</td>
             </tr>
             <tr>
-              <td>is_register</td>
+              <td>register</td>
               <td>Boolean</td>
               <td>{t("해당 사용자의 OMPASS 등록 여부")}</td>
             </tr>
@@ -230,7 +230,7 @@ function ompass(props) {
               "message" : "ok",
               "data" : {
                 "user_id" : "omsecurity",
-                "is_register" : false,
+                "register" : false,
                 "ompass_uri" : "https://interface-api.ompasscloud.com/register/did/14?do..."
               }
             }
