@@ -102,8 +102,7 @@ header {
 }
 .MainTitle .button-li a p {
   font-size: 1.1rem;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
 }
 .MainTitle .button-li a:hover {
   background-color: #2fa7fd;
@@ -311,7 +310,7 @@ header {
     bottom: 2rem;
   }
   .Certification-img-li-mobile img {
-    width: 4rem;
+    width: 3rem;
   }
   .Certification-img-li {
     display: none;
