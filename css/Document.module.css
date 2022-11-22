@@ -89,7 +89,7 @@
   margin: 0;
   padding-top: 0;
   font-size: 1rem;
-  word-break: keep-all;
+  white-space: pre;
 }
 .document-text-box .document-label label {
   margin-bottom: 0;
@@ -495,7 +495,7 @@
 
 .scrollBar {
   width: auto;
-  /* height: 80vh; */
+  height: 74vh;
   overflow-x: hidden !important;
   overflow: scroll;
   padding-bottom: 50px;

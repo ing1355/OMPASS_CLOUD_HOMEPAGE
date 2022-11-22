@@ -462,6 +462,7 @@
   "QR 코드를 스캔합니다.": "Scan a QR code.",
   "스마트폰을 교체하거나 OMPASS 앱을 재설치 시, OMPASS 인증장치를 서버에 재등록 후 사용하시기 바랍니다.": "Whenever changing the smartphone or reinstalling the OMPASS app, the corresponding user should use the OMPASS authentication device after re-registerating the device.",
   "(사용자 관리 → 사용자 정보 삭제 시 OMPASS 인증 장치 재 등록이 가능 합니다.)": "(Administrator needs to delete the corresponding user information seperately from “Users Management” everytime the user replaces the smartphone or reinstalls the OMPASS app.)",
+  "OMPASS 인증을 적용하고 있는 웹페이지에서 ID/PW 입력 후 인터페이스 팝업 창이 뜨면 “OMPASS 앱” 버튼을 선택합니다.": "After entering ID/PW on the web page where OMPASS authentication is applied, select the “OMPASS App” button\n when the interface pop-up window appears.",
   "OMPASS 인증을 적용하고 있는 웹페이지에서 ID/PW 입력 하면 자동으로 알림 전송이 됩니다.": "If you enter your ID/PW on the webpage where OMPASS authentication is applied, notifications are sent automatically.",
   "OMPASS QR코드 인증창이 열립니다.": "New window containing a QR code will appear and you can either authenticate via OMPASS app or QR code.",
   "스마트폰에서 OMPASS 인증 알림을 확인합니다.": "Tap on the notification of OMPASS to launch the app from your phone.",
