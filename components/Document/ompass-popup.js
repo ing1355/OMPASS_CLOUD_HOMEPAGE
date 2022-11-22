@@ -57,7 +57,7 @@ function ompasspopup() {
           <div className="documnet-box">
             <div className="document-label">
               <label className="number">❶&nbsp;</label>
-              <p>{t("“2차인증 등록하기” 버튼을 클릭해주세요.")}</p>
+              <p>{t("“OMPASS 앱” 버튼을 클릭해주세요.")}</p>
             </div>
             <div className="document-label">
               <label className="number">❷&nbsp;</label>
@@ -138,7 +138,7 @@ function ompasspopup() {
           <div className="documnet-box">
             <div className="document-label">
               <label className="number">❶&nbsp;</label>
-              <p>{t("“2차 인증하기” 버튼을 클릭해주세요.")}</p>
+              <p>{t("로그인 시 바로 알림이 전송됩니다.")}</p>
             </div>
             <div className="document-label">
               <label className="number">❷&nbsp;</label>

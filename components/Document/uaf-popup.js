@@ -55,7 +55,7 @@ function uafpopup(props) {
             </div>
             <div className="document-label">
               <label className="number">❷&nbsp;</label>
-              <p> {t("“2차 인증하기” 버튼을 클릭해주세요.")}</p>
+              <p> {t("“패스워드 없이 로그인” 버튼을 클릭해주세요.")}</p>
             </div>
             <div className="document-label">
               <label className="number">❸&nbsp;</label>

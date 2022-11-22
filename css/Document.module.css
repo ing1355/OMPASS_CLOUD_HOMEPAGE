@@ -495,7 +495,7 @@
 
 .scrollBar {
   width: auto;
-  height: 80vh;
+  /* height: 80vh; */
   overflow-x: hidden !important;
   overflow: scroll;
   padding-bottom: 50px;
