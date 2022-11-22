@@ -462,11 +462,12 @@
   "QR 코드를 스캔합니다.": "Scan a QR code.",
   "스마트폰을 교체하거나 OMPASS 앱을 재설치 시, OMPASS 인증장치를 서버에 재등록 후 사용하시기 바랍니다.": "Whenever changing the smartphone or reinstalling the OMPASS app, the corresponding user should use the OMPASS authentication device after re-registerating the device.",
   "(사용자 관리 → 사용자 정보 삭제 시 OMPASS 인증 장치 재 등록이 가능 합니다.)": "(Administrator needs to delete the corresponding user information seperately from “Users Management” everytime the user replaces the smartphone or reinstalls the OMPASS app.)",
-  "OMPASS 인증을 적용하고 있는 웹페이지에서 ID/PW 입력 후 인터페이스 팝업 창이 뜨면 “2차 인증하기” 버튼을 선택합니다.": "Click the [2nd AuthN] button when the pop-up window appears after entering a user ID and password.",
+  "OMPASS 인증을 적용하고 있는 웹페이지에서 ID/PW 입력 하면 자동으로 알림 전송이 됩니다.": "If you enter your ID/PW on the webpage where OMPASS authentication is applied, notifications are sent automatically.",
   "OMPASS QR코드 인증창이 열립니다.": "New window containing a QR code will appear and you can either authenticate via OMPASS app or QR code.",
   "스마트폰에서 OMPASS 인증 알림을 확인합니다.": "Tap on the notification of OMPASS to launch the app from your phone.",
   "설정한 인증방식으로 사용자 인증을 완료합니다.": "Complete the user authentication using your registered authentication method.",
   "OMPASS 인증 알림이 오지 않는 경우": "In case the notification of OMPASS does not come.",
+  "“QR코드로 로그인 하기” 버튼을 클릭합니다.": "Click the “Login with QR Code” button.",
   "화면에 나온 QR 코드를 확인합니다.": "Check the QR code on the screen.",
 
   "iOS 전용 앱 스토어에서 원모어패스(OMPASS) v1.0을 다운로드하여 설치해야 합니다.": "Users need to download and install OMPASS v1.0 from the app store.",

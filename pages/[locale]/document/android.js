@@ -272,19 +272,21 @@ function android(props) {
                     <div className="documnet-box">
                       <div className="document-label">
                         <label className="number">❶&nbsp;</label>
-                        <p>{t("OMPASS 앱에서 버튼을 누릅니다.")}</p>
+                        <p>
+                          {t("“QR코드로 로그인 하기” 버튼을 클릭합니다.")}
+                        </p>
                       </div>
                       <div className="document-label">
                         <label className="number">❷&nbsp;</label>
-                        <p>{t("QR 코드를 스캔합니다.")}</p>
+                        <p>{t("화면에 나온 QR 코드를 확인합니다.")}</p>
                       </div>
                       <div className="document-label">
                         <label className="number">❸&nbsp;</label>
-                        <p>
-                          {t(
-                            "QR 코드를 인식한 결과 화면으로 ‘확인’ 버튼을 누른 후 사용자 인증 과정을 거쳐 인증을 완료하시면 됩니다."
-                          )}
-                        </p>
+                        <p>{t("OMPASS 앱에서 버튼을 누릅니다.")}</p>
+                      </div>
+                      <div className="document-label">
+                        <label className="number">❹&nbsp;</label>
+                        <p>{t("QR 코드를 스캔합니다.")}</p>
                       </div>
                     </div>
                   </div>
