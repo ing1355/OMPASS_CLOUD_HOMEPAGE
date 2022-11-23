@@ -278,7 +278,7 @@ function android(props) {
                       </div>
                       <div className="document-label">
                         <label className="number">❷&nbsp;</label>
-                        <p>{t("화면에 나온 QR 코드를 확인합니다.")}</p>
+                        <p>{t("QR 코드를 생성합니다.")}</p>
                       </div>
                       <div className="document-label">
                         <label className="number">❸&nbsp;</label>
