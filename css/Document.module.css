@@ -97,6 +97,7 @@
 
 .document-text-box .document-label .number {
   font-size: 1.2rem;
+  white-space: nowrap;
 }
 .pdf-download {
   width: 100%;
