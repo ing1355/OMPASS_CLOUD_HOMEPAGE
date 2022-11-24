@@ -469,7 +469,7 @@
   "설정한 인증방식으로 사용자 인증을 완료합니다.": "Complete the user authentication using your registered authentication method.",
   "OMPASS 인증 알림이 오지 않는 경우": "In case the notification of OMPASS does not come.",
   "“QR코드로 로그인 하기” 버튼을 클릭합니다.": "Click the “Login with QR Code” button.",
-  "화면에 나온 QR 코드를 확인합니다.": "Check the QR code on the screen.",
+  "QR 코드를 생성합니다.": "Generate a QR code.",
 
   "iOS 전용 앱 스토어에서 원모어패스(OMPASS) v1.0을 다운로드하여 설치해야 합니다.": "Users need to download and install OMPASS v1.0 from the app store.",
   "얼굴인식, PIN CODE, 패턴 3가지 인증방식 중 2가지 이상 등록해야 합니다.": "Register at least two authentication methods from face, pin code, and pattern.",
