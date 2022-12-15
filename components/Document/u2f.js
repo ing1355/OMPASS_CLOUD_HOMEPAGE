@@ -11,7 +11,7 @@ function u2f(props) {
       <div className="restapi-div">
         {/* =================================================================== */}
         <div className="document-text-box">
-          <h5 style={{ margin: "0" }}>{t("U2F 란?")}<Git_Demo/></h5>
+          <h5 style={{ margin: "0", display: "flex", alignItems: "center" }}>{t("U2F 란?")}<Git_Demo/></h5>
 
           <div className="documnet-box">
             <div className="document-label">
