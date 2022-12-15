@@ -338,24 +338,28 @@ function Main_Contents() {
                   className="icon"
                   src={"/static/images/1.png"}
                   alt="지문인식 아이콘"
+                  style={{marginRight:"3px"}}
                 />{" "}
                 {t("지문")},{" "}
                 <img
                   className="icon"
                   src={"/static/images/2.png"}
                   alt="얼굴인식 아이콘"
+                  style={{marginRight:"3px"}}
                 />{" "}
                 {t("얼굴인식")},{" "}
                 <img
                   className="icon"
                   src={"/static/images/3.png"}
                   alt="패턴 아이콘"
+                  style={{marginRight:"3px"}}
                 />
                 {t("패턴")},{" "}
                 <img
                   className="icon"
                   src={"/static/images/4.png"}
                   alt="핀 코드 아이콘"
+                  style={{marginRight:"3px"}}
                 />{" "}
                 {t("핀코드")}
               </span>

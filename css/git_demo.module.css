@@ -1,28 +1,37 @@
 .git-demo-container {
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 700;
     margin-left: 1rem;
     position: relative;
+    color: white;
+    background-color: #0a58ca;
+    border: 2px solid #0a58ca;
+    padding: .4rem .7rem;
+    border-radius: .2rem;
+    transition: all 0.3s;
 }
 
 .git-demo-container:hover {
-    text-decoration: underline;
+    color: #0a58ca;
+    background-color: white;
 }
 
+
 .git-demo-container[name]:hover::after {
+    font-size: .9rem;
     content: attr(name);
     color: #3b697a;
     position: absolute;
-    top: 110%;
+    top: 115%;
     left: 12px;
 }
 
 .git-demo-container[name]:lang(en)::after {
-    width: 590px;
+    width: 700px;
 }
 
 .git-demo-container[name]:lang(ko)::after {
-    width: 400px;
+    width: 500px;
 }
 
 @media (max-width: 1024px) {

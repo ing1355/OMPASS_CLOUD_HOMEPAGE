@@ -21,8 +21,8 @@
   "구축형으로 가기": "On-Premise",
   "클라우드형으로 가기": "Cloud",
 
-  "원모어패스 (구축형)": "OMPASS (On-Premise)",
-  "원모어패스 (클라우드)": "OMPASS (Cloud)",
+  "원모어패스 (구축형)": "OneMorePASS (OMPASS) On-Premise",
+  "원모어패스 (클라우드)": "OneMorePASS (OMPASS) Cloud",
   "차세대 통합 인증 솔루션(FIDO 인증)": "FIDO (Fast IDentity Online) Solution",
   "원모어패스는 FIDO를 기반으로 하는 인증 플랫폼 입니다.": "Biometric and Passwordless Authentication",
   "체험하기": "Free Trial",
@@ -82,10 +82,10 @@
   "FIDO2 Admin 서버 접근 시 OMPASS 2차 인증 적용": "Requires OMPASS authentication separately when accessing the admin page",
   "비인가 접근 IP 차단": "IP address block from unauthorized access",
   "FIDO2 Admin 서버 접근 시 IP 접근통제 정책 적용": "Verifies user access country that can be set by an administrator",
-  "Phishing 공격 등에 강력 대응 가능": "Prespond strongly againt phishing attack",
+  "Phishing 공격 등에 강력 대응 가능": "Prespond strongly againts phishing attack",
   "사용자 접근 기기(브라우저) 검증 기능 적용": "Verifies the user access device (or browser)",
   "모바일 인증장치 보안성 강화": "Reinforcement of mobile authentication device security",
-  "모바일 인증장치 탈옥, 위변조 및 최신버전 여부 검증 기능 적용": "Verifies the jailbreak, forgery, and latest version of the user device",
+  "모바일 인증장치 탈옥, 위변조 및 최신버전 여부 검증 기능 적용": "Verifies jailbreaking, rooting, and latest version of the mobile authentication device",
 
   "사양·구성도": "Specification Diagram",
   "원모어패스는": "OMPASS",
