@@ -376,7 +376,7 @@ function Main_Contents() {
               src={
                 isKr
                   ? "https://www.youtube.com/embed/MMNlcNh-1RE"
-                  : "https://www.youtube.com/embed/xPDcUTDfUmA"
+                  : "https://www.youtube.com/embed/oyPRHNtUaU4"
               }
               title="YouTube video player"
               frameBorder="0"
