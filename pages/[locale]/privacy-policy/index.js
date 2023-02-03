@@ -224,11 +224,7 @@ function privacypolicy() {
         </ul>
         <ul className="agree-text-ko in">
           <li>-</li>
-          <li>{t("내용：서비스 처음 사용 시 휴대폰 본인 인증을 진행")}</li>
-        </ul>
-        <ul className="agree-text-ko in">
-          <li>-</li>
-          <li>{t("비고：진위 확인 후 고유식별정보 등은 저장되지 않음")}</li>
+          <li>{t("서비스 처음 사용 시 이메일 본인 인증을 진행")}</li>
         </ul>
       </p>
 
