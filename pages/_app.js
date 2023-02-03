@@ -24,7 +24,7 @@ function App(props) {
   return (
     <>
       <Head>
-        <link rel="icon" href="/static/images/logo.png" />
+        <link rel="icon" href="/static/images/favicon.ico" />
         <meta charSet="utf-8" />
         <title>{t("원모어패스 클라우드")}</title>
         <meta name="description" content="원모어패스 클라우드 서비스입니다." />
