@@ -78,10 +78,6 @@ header {
   margin-top: 1rem;
 }
 
-.MainTitle .Certification-img-li img {
-  width: 15rem;
-}
-
 :lang(en) .MainTitle .Certification-img-li img {
   width: 19rem;
 }
@@ -306,9 +302,6 @@ header {
     position: absolute;
     margin-left: 1rem;
     bottom: 2rem;
-  }
-  .Certification-img-li-mobile img {
-    width: 3rem;
   }
 
   .Certification-img-li {
