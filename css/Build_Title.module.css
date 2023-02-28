@@ -76,10 +76,6 @@ header {
   margin-top: 1rem;
 }
 
-.MainTitle .Certification-img-li img {
-  width: 15rem;
-}
-
 .MainTitle .button-li {
   display: flex;
   width: 100%;
@@ -310,7 +306,7 @@ header {
     bottom: 2rem;
   }
   .Certification-img-li-mobile img {
-    width: 3rem;
+    width: 60%;
   }
   .Certification-img-li {
     display: none;
