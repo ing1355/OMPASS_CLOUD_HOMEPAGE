@@ -78,9 +78,6 @@ header {
   margin-top: 1rem;
 }
 
-:lang(en) .MainTitle .Certification-img-li img {
-  width: 19rem;
-}
 .MainTitle .button-li {
   display: flex;
   width: 100%;
