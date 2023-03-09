@@ -190,7 +190,8 @@ header {
   }
 
   .MainTitle .Certification-img-li img {
-    width: 10rem;
+    width: 30%;
+    min-width: 15rem;
   }
 
   .MainTitle a {
@@ -306,7 +307,7 @@ header {
     bottom: 2rem;
   }
   .Certification-img-li-mobile img {
-    width: 60%;
+    /* width: 60%; */
   }
   .Certification-img-li {
     display: none;
