@@ -1,10 +1,9 @@
 import React from "react";
-
 import "../../css/Document.module.css";
 import useTranslation from "../../lib/useTranslation";
 
 function authNtoken1(props) {
-  const { t } = useTranslation();
+  const { t, isKr } = useTranslation();
 
   return (
     <div className="6st 7st">
@@ -20,6 +19,15 @@ function authNtoken1(props) {
             "리다이렉트된 인증 토큰을 파싱(client-side)하여 server-side로 전달합니다."
           )}
         </p>
+
+        <p style={{ fontWeight: "bold", marginBottom: "0" }}>■ {t("예시")}</p>
+        <div class="document-img">
+          <img
+            width="70%"
+            src={isKr ? "/static/images/rest_api_img_8.png" : "/static/images/rest_api_img_8_eng.png"}
+            alt="access token"
+          />
+        </div>
       </div>
     </div>
   );
