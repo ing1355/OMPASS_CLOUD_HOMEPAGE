@@ -278,7 +278,8 @@ header {
     word-break: keep-all;
   }
   .MainTitle .Certification-img-li img {
-    width: 12rem;
+    min-width: auto;
+    width: 80%;
   }
   .MainTitle .button-li {
     margin-top: 2rem;
@@ -307,7 +308,7 @@ header {
     bottom: 2rem;
   }
   .Certification-img-li-mobile img {
-    /* width: 60%; */
+    width: 60%;
   }
   .Certification-img-li {
     display: none;
