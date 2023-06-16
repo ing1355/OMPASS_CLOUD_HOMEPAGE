@@ -69,7 +69,7 @@
   "구축 기간 최소화": "Minimize developing time",
   "적용 시간 및 구축 업무 최소화를 위한 연동 모듈(인터페이스 서버) 제공": "Provides linking module (interface server) to minimize applying time and developing work",
   "통합 인증 서비스": "Intergrated authentication service",
-  "웹기반 서비스, 윈도우즈 클라이언트, 모바일앱, 리눅스 PAM, MacOS 클라이언트 연동 가능": "Possible to link web-based service, Windows client, mobile app, Linux PAM, MacOS client",
+  "웹기반 서비스, 윈도우즈 클라이언트, 윈도우즈 로그인, 모바일앱, 리눅스 PAM, MacOS 클라이언트 연동 가능": "Possible to link web-based service, Windows client, Windows login, mobile app, Linux PAM, MacOS client",
   "고객 환경 최적화": "Optimized the customer environment",
   "FIDO UAF(Universal Authentication Framework), U2F(Universal Second Factor) 모두 지원 가능": "Supports UAF (Universal Authentication Framework) and U2F (Universal Second Factor)",
   "통신사 보인인증 서비스 연계 지원": "",
