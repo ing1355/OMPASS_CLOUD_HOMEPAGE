@@ -393,7 +393,7 @@ function Main_Contents() {
               className="iframeVideo"
               src={
                 isKr
-                  ? "https://www.youtube.com/embed/MMNlcNh-1RE"
+                  ? "https://www.youtube.com/embed/KsFukpPL6wg?si=4nt0Lod5UMzM6fyL"
                   : "https://www.youtube.com/embed/oyPRHNtUaU4"
               }
               title="YouTube video player"
