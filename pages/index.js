@@ -1,4 +1,3 @@
-import "../css/Main.module.css";
 import React from "react";
 import { Redirect } from "../lib/redirect";
 

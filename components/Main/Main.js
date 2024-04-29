@@ -1,18 +1,17 @@
 import React from "react";
-import "../../css/Cloud_Title.module.css";
-import "../../css/Cloud_Contents.module.css";
+import styles from "../../css/Cloud_Title.module.css";
 import Contents from "./Main_Contents";
 import LinkComponent from "../Link";
 import useTranslation from "../../lib/useTranslation";
 import { DownloadOutlined, SelectOutlined } from "@ant-design/icons";
 
-function Main(props) {
+function Main() {
   const { t, isKr } = useTranslation();
   return (
     <header>
-      <div className="cloudHeader">
-        <div className="MainBgBox"></div>
-        <div className="MainTitle">
+      <div className={styles["cloudHeader"]}>
+        <div className={styles["MainBgBox"]}></div>
+        <div className={styles["MainTitle"]}>
           <ul>
             <li>
               <h1>
@@ -21,11 +20,11 @@ function Main(props) {
                 {t("차세대 통합 인증 솔루션(FIDO 인증)")}
               </h1>
 
-              <p className="title-p">
+              <p className={styles["title-p"]}>
                 {t("원모어패스는 FIDO를 기반으로 하는 인증 플랫폼 입니다.")}
               </p>
             </li>
-            <li className="Certification-img-li">
+            <li className={styles["Certification-img-li"]}>
               <div>
                 {isKr ? (
                   <img src={"/static/images/Certification.png"} />
@@ -35,7 +34,7 @@ function Main(props) {
               </div>
             </li>
 
-            <li className="Certification-img-li-mobile">
+            <li className={styles["Certification-img-li-mobile"]}>
               <div>
                 {isKr ? (
                   <img src={"/static/images/Certification_mobile.png"} />
@@ -45,7 +44,7 @@ function Main(props) {
               </div>
             </li>
 
-            <li className="button-li">
+            <li className={styles["button-li"]}>
               <LinkComponent href="/registration">
                 <SelectOutlined />
                 &nbsp;&nbsp; <p>{t("체험하기")}</p>

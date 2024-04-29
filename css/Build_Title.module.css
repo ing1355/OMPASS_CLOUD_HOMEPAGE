@@ -99,6 +99,7 @@ header {
 .MainTitle .button-li a p {
   font-size: 1.1rem;
   text-align: center;
+  margin-bottom: 0;
 }
 .MainTitle .button-li a:hover {
   background-color: #2fa7fd;
@@ -155,9 +156,6 @@ header {
   }
   .contentsBox5 span {
     font-size: 1.1rem !important;
-  }
-  .contentsBox7 .supportContents3 {
-    width: 90% !important;
   }
   .contentsBox6 .videoDiv {
     width: 85%;
@@ -336,9 +334,9 @@ header {
   .MainTitle .title-p {
     text-align: center;
   }
-  .MainTitle a {
+  /* .MainTitle a {
     margin: 0.5rem !important;
-  }
+  } */
   .MainTitle h1 {
     font-size: 1.9rem !important;
     line-height: 2.7rem !important;

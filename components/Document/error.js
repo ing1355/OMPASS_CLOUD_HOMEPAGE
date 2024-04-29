@@ -1,8 +1,7 @@
 import React from "react";
 
-import "../../css/Document.module.css";
+import styles from "../../css/Document.module.css";
 import { Table } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import useTranslation from "../../lib/useTranslation";
 
 function error() {
@@ -10,9 +9,9 @@ function error() {
 
   return (
     <div className="8st 9st">
-      <div className="guide restapi-div error-table">
+      <div className={`${styles["guide"]} ${styles["restapi-div"]} ${styles["error-table"]}`}>
         <h5 style={{ margin: "0" }}>{t("API 에러 메시지")}</h5>
-        <Table striped bordered hover size="sm" className="codeTable">
+        <Table striped bordered hover size="sm" className={styles["codeTable"]}>
           <thead>
             <tr>
               <th>code</th>

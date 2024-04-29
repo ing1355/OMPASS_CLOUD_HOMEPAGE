@@ -1,12 +1,12 @@
 import React from "react";
-import "../../css/Document.module.css";
+import styles from "../../css/Document.module.css";
 import useTranslation from "../../lib/useTranslation";
 
 function uafprocess() {
   const { t, isKr } = useTranslation();
 
   return (
-    <div className="guide restapi-div 3st">
+    <div className={`${styles["guide"]} ${styles["restapi-div"]} 3st`}>
       <h5 style={{ margin: "0" }}> {t("OMPASS 적용 프로세스")}</h5>
       <br />
 

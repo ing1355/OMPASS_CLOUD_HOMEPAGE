@@ -11,7 +11,7 @@ const LinkComponent = ({ children, skipLocaleHandling, style, className, disable
         href = href ? `/${locale}${href}` : router.pathname.replace('[locale]', locale)
     }
     return <>
-        <Link href={rest.href.pathname ? {pathname: href, query: rest.href.query} : href} passHref>
+        <Link href={rest.href.pathname ? {pathname: href, query: rest.href.query} : href} passHref legacyBehavior>
             <a {...rest} style={style} className={className}>{children}</a>
         </Link>
     </>

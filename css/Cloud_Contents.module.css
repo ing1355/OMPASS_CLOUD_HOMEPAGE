@@ -1,3 +1,6 @@
+.cloud-div {
+  padding-bottom: 100px;
+}
 :lang(en) .DiagramImgKo {
   display: none;
 }
@@ -451,9 +454,6 @@
 @media (max-width: 768px) {
   .CloudcontentsBox1 .contentsSubBox {
     padding: 0 3rem;
-  }
-  .OmpassSolutionBox {
-    width: 90%;
   }
   .CloudcontentsBox5 span {
     font-size: 0.8rem !important;

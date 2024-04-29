@@ -1,48 +1,27 @@
 import React from "react";
-import "../../css/Document.module.css";
+import styles from "../../css/Document.module.css";
 import useTranslation from "../../lib/useTranslation";
 import LinkComponent from "../Link";
+import { DocumentBox, DocumentCustomStyle, DocumentImage, DocumentLabel, DocumentTextBox } from "./DocumentComponets";
 
 function ompasspopup() {
   const { t, isKr } = useTranslation();
 
   return (
-    <div className="5st">
-      <div className="guide restapi-div">
+    <div className={styles["5st"]}>
+      <div className={`${styles["guide"]} ${styles["restapi-div"]}`}>
         <h5 style={{ margin: "0" }}>{t("OMPASS 등록 및 U2F 인증")}</h5>
-        <h6 className="sub-title">{t("client-side")}</h6>
+        <h6 className={styles["sub-title"]}>{t("client-side")}</h6>
         <p style={{ marginBottom: "0" }}>
           {t("응답받은 OMPASS URI를 브라우저(client-side)에서 호출합니다.")}
         </p>
         {/* =================================================================== */}
 
-        <div className="document-text-box">
-          <div
-            className="document-label"
-            style={{
-              color: "#3c9edb",
-              fontSize: "1rem",
-              fontWeight: "bold",
-            }}
-          >
-            <p> {t("등록 인터페이스 호출 예시 (팝업 창)")}</p>
-          </div>
-          <div
-            className="document-label"
-            style={{
-              color: "#3c9edb",
-              fontSize: "1rem",
-              fontWeight: "bold",
-            }}
-          >
-            <label>-&nbsp;</label>
-            <p>
-              {t(
-                "OMPASS 에 등록되어 있지 않은 사용자인 경우 아래와 같은 등록 팝업 창이 표시됩니다."
-              )}
-            </p>
-          </div>
-          <div className="document-img">
+        <DocumentTextBox>
+          <DocumentLabel noIcon title="등록 인터페이스 호출 예시 (팝업 창)" style={DocumentCustomStyle} />
+          <DocumentLabel icon="-" title="OMPASS 에 등록되어 있지 않은 사용자인 경우 아래와 같은 등록 팝업 창이 표시됩니다." style={DocumentCustomStyle} />
+
+          <DocumentImage>
             <img
               width="100%"
               src={
@@ -52,22 +31,17 @@ function ompasspopup() {
               }
               alt="등록 인터페이스"
             />
-          </div>
+          </DocumentImage>
 
-          <div className="documnet-box">
-            <div className="document-label">
-              <label className="number">❶&nbsp;</label>
-              <p>{t("“OMPASS 앱” 버튼을 클릭해주세요.")}</p>
-            </div>
-            <div className="document-label">
-              <label className="number">❷&nbsp;</label>
-              <p>{t("QR코드를 OMPASS 앱으로 스캔해주세요.")}</p>
-            </div>
-          </div>
-        </div>
+          <DocumentBox>
+            <DocumentLabel num={1} title="“OMPASS 앱” 버튼을 클릭해주세요." />
+            <DocumentLabel num={2} title="QR코드를 OMPASS 앱으로 스캔해주세요." />
+
+          </DocumentBox>
+        </DocumentTextBox>
         {/* =================================================================== */}
-        <div className="document-text-box">
-          <div className="document-img">
+        <DocumentTextBox>
+          <DocumentImage>
             <img
               width="100%"
               src={
@@ -77,53 +51,27 @@ function ompasspopup() {
               }
               alt="등록 인터페이스"
             />
-          </div>
+          </DocumentImage>
 
-          <div className="documnet-box">
-            <div className="document-label">
-              <label className="number">❸&nbsp;</label>
-              <p>
-                {t(
-                  "인증방식 등록 완료 후 선택한 인증방식으로 등록을 완료해주세요."
-                )}
-                <br />
-                {t("인증방식 등록 방법을 보려면")}&nbsp;
-                <LinkComponent target="_blank" href="/document/android">
-                  {t("여기")}
-                </LinkComponent>
-                {t("를 클릭해주세요.")}
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* =================================================================== */}
-        <div className="document-text-box" style={{ borderBottom: "0" }}>
-          <div
-            className="document-label"
-            style={{
-              color: "#3c9edb",
-              fontSize: "1rem",
-              fontWeight: "bold",
-            }}
-          >
-            <p> {t("인증 인터페이스 호출 예시 (팝업 창)")}</p>
-          </div>
-          <div
-            className="document-label"
-            style={{
-              color: "#3c9edb",
-              fontSize: "1rem",
-              fontWeight: "bold",
-            }}
-          >
-            <label>-&nbsp;</label>
-            <p>
+          <DocumentBox>
+            <DocumentLabel num={3} customTitle={<div className={styles['divP']}>
               {t(
-                "OMPASS 에 등록되어 있는 사용자인 경우 아래와 같은 인증 팝업 창이 표시됩니다."
+                "인증방식 등록 완료 후 선택한 인증방식으로 등록을 완료해주세요."
               )}
-            </p>
-          </div>
-          <div className="document-img">
+              <br />
+              {t("인증방식 등록 방법을 보려면")}&nbsp;
+              <LinkComponent target="_blank" href="/document/android">
+                {t("여기")}
+              </LinkComponent>
+              {t("를 클릭해주세요.")}
+            </div>} />
+          </DocumentBox>
+        </DocumentTextBox>
+        {/* =================================================================== */}
+        <DocumentTextBox style={{ borderBottom: "0" }}>
+          <DocumentLabel noIcon title="인증 인터페이스 호출 예시 (팝업 창)" style={DocumentCustomStyle} />
+          <DocumentLabel icon="-" title="OMPASS 에 등록되어 있는 사용자인 경우 아래와 같은 인증 팝업 창이 표시됩니다." style={DocumentCustomStyle} />
+          <DocumentImage>
             <img
               width="100%"
               src={
@@ -133,23 +81,15 @@ function ompasspopup() {
               }
               alt="등록 인터페이스"
             />
-          </div>
+          </DocumentImage>
 
-          <div className="documnet-box">
-            <div className="document-label">
-              <label className="number">❶&nbsp;</label>
-              <p>{t("로그인 시 바로 알림이 전송됩니다.")}</p>
-            </div>
-            <div className="document-label">
-              <label className="number">❷&nbsp;</label>
-              <p>{t("모바일로 OMPASS 인증 알림이 옵니다.")}</p>
-            </div>
-            <div className="document-label">
-              <label className="number">❸&nbsp;</label>
-              <p>{t("기존에 선택했던 인증방식으로 인증을 완료해주세요.")}</p>
-            </div>
-          </div>
-        </div>
+          <DocumentBox>
+            <DocumentLabel num={1} title="로그인 시 바로 알림이 전송됩니다." />
+            <DocumentLabel num={2} title="모바일로 OMPASS 인증 알림이 옵니다." />
+            <DocumentLabel num={3} title="기존에 선택했던 인증방식으로 인증을 완료해주세요." />
+
+          </DocumentBox>
+        </DocumentTextBox>
         {/* =================================================================== */}
       </div>
     </div>

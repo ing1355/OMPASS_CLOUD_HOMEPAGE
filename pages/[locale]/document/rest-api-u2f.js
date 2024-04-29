@@ -1,7 +1,4 @@
 import React from "react";
-
-import "../../../css/Document.module.css";
-import Document from "../../../components/Document";
 import Start from "../../../components/Document/start";
 import Ompassprocess from "../../../components/Document/ompass-process";
 import Ompass from "../../../components/Document/ompass";
@@ -10,13 +7,10 @@ import AuthNtoken1 from "../../../components/Document/authN-token-1";
 import AuthNtoken2 from "../../../components/Document/authN-token-2";
 import Error from "../../../components/Document/error";
 import U2f from "../../../components/Document/u2f";
-import $ from "jquery";
 
-import { DownloadOutlined } from "@ant-design/icons";
-
-import "bootstrap/dist/css/bootstrap.min.css";
 import useTranslation from "../../../lib/useTranslation";
 import i18nextConfig from "../../../next-i18next.config";
+import { DocumentLayout, DocumentPdfDownload, DocumentPopBox, DocumentPopBoxContainer } from "../../../components/Document/DocumentComponets";
 
 const getPathSlugs = () => {
   return i18nextConfig.i18n.locales.map((locale) => ({
@@ -42,133 +36,42 @@ export async function getStaticProps({ params }) {
   };
 }
 
-function restapi(props) {
-  const { t, isKr } = useTranslation();
+function restapi() {
+  const { isKr } = useTranslation();
 
-  const start = true;
+  return <><DocumentLayout customTitle="U2F">
+    <DocumentPdfDownload src={isKr
+      ? "/static/pdf/REST API_U2F.pdf"
+      : "/static/pdf/REST API_U2F_eng.pdf"} />
 
-  return (
-    <div className="document RestAPIbox">
-      <ul className="documentLeft">
-        <Document start={start} />
-      </ul>
-      <ul className="documentRight">
-        <div className="rightContentsBox">
-          <ul>
-            <li>
-              <div className="main rest-api">
-                <div className="code">
-                  <h4>▶ U2F</h4>
-                  <div className="pdf-download">
-                    <a
-                      href={
-                        isKr
-                          ? "/static/pdf/REST API_U2F.pdf"
-                          : "/static/pdf/REST API_U2F_eng.pdf"
-                      }
-                      download
-                    >
-                      <DownloadOutlined /> &nbsp; {t("PDF 다운받기")}
-                    </a>
-                  </div>
+    <U2f />
 
-                  <U2f />
+    <Start />
 
-                  <Start />
+    <Ompassprocess />
 
-                  <Ompassprocess />
+    <Ompass />
 
-                  <Ompass />
+    <Ompasspopup />
 
-                  <Ompasspopup />
+    <AuthNtoken1 />
 
-                  <AuthNtoken1 />
+    <AuthNtoken2 />
 
-                  <AuthNtoken2 />
+    <Error />
 
-                  <Error />
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
 
-        <div className="popbox">
-          <h3
-            onClick={() => {
-              window.scrollTo(0, 0);
-            }}
-          >
-            U2F
-          </h3>
-          <p
-            onClick={() => {
-              var offset = $(".1st").offset();
-              $("html,body").animate({ scrollTop: offset.top - 120 }, "linear");
-            }}
-          >
-            {t("U2F 란?")}
-          </p>
-          <p
-            onClick={() => {
-              var offset = $(".2st").offset();
-              $("html,body").animate({ scrollTop: offset.top - 120 }, "linear");
-            }}
-          >
-            {t("준비 사항")}
-          </p>
-          <p
-            onClick={() => {
-              var offset = $(".3st").offset();
-              $("html,body").animate({ scrollTop: offset.top - 120 }, "linear");
-            }}
-          >
-            {t("OMPASS 적용 프로세스")}
-          </p>
-          <p
-            onClick={() => {
-              var offset = $(".4st").offset();
-              $("html,body").animate({ scrollTop: offset.top - 120 }, "linear");
-            }}
-          >
-            OMPASS-U2F
-          </p>
-          <p
-            onClick={() => {
-              var offset = $(".5st").offset();
-              $("html,body").animate({ scrollTop: offset.top - 120 }, "linear");
-            }}
-          >
-            {t("OMPASS 등록 및 U2F 인증")}
-          </p>
-
-          <p
-            onClick={() => {
-              var offset = $(".6st").offset();
-              $("html,body").animate({ scrollTop: offset.top - 120 }, "linear");
-            }}
-          >
-            {t("인증 토큰 받기")}
-          </p>
-          <p
-            onClick={() => {
-              var offset = $(".77st").offset();
-              $("html,body").animate({ scrollTop: offset.top - 120 }, "linear");
-            }}
-          >
-            {t("인증 토큰 검증")}
-          </p>
-          <p
-            onClick={() => {
-              var offset = $(".9st").offset();
-              $("html,body").animate({ scrollTop: offset.top - 120 }, "linear");
-            }}
-          >
-            {t("API 에러 메시지")}
-          </p>
-        </div>
-      </ul>
-    </div>
-  );
+  </DocumentLayout>
+    <DocumentPopBoxContainer customTitle="U2F">
+      <DocumentPopBox num={1} title="U2F 란?" />
+      <DocumentPopBox num={2} title="준비 사항" />
+      <DocumentPopBox num={3} title="OMPASS 적용 프로세스" />
+      <DocumentPopBox num={4} customTitle="OMPASS-U2F" />
+      <DocumentPopBox num={5} title="OMPASS 등록 및 U2F 인증" />
+      <DocumentPopBox num={6} title="인증 토큰 받기" />
+      <DocumentPopBox num={7} title="인증 토큰 검증" />
+      <DocumentPopBox num={8} title="API 에러 메시지" />
+    </DocumentPopBoxContainer>
+  </>
 }
 export default restapi;

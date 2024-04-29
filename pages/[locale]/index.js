@@ -1,5 +1,4 @@
 import Main from "../../components/Main/Main";
-import "../../css/Main.module.css";
 import React from "react";
 import i18nextConfig from "../../next-i18next.config";
 

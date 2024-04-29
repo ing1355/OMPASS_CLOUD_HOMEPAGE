@@ -69,7 +69,7 @@
   "구축 기간 최소화": "Minimize developing time",
   "적용 시간 및 구축 업무 최소화를 위한 연동 모듈(인터페이스 서버) 제공": "Provides linking module (interface server) to minimize applying time and developing work",
   "통합 인증 서비스": "Intergrated authentication service",
-  "웹기반 서비스, 윈도우즈 클라이언트, 윈도우즈 로그인, 모바일앱, 리눅스 PAM, MacOS 클라이언트 연동 가능": "Possible to link web-based service, Windows client, Windows login, mobile app, Linux PAM, MacOS client",
+  "웹기반 서비스, 윈도우즈 클라이언트, 모바일앱, 리눅스 PAM, MacOS 클라이언트 연동 가능": "Possible to link web-based service, Windows client, mobile app, Linux PAM, MacOS client",
   "고객 환경 최적화": "Optimized the customer environment",
   "FIDO UAF(Universal Authentication Framework), U2F(Universal Second Factor) 모두 지원 가능": "Supports UAF (Universal Authentication Framework) and U2F (Universal Second Factor)",
   "통신사 보인인증 서비스 연계 지원": "",
@@ -102,12 +102,11 @@
 
   "성": "First Name",
   "이름": "Last Name",
-  "이메일": "Email Address",
+  "인증 메일": "Mail Authentication",
   "중복확인": "Check Availability",
   "비밀번호": "Password",
   "비밀번호 확인": "Confirm Password",
   "회사이름": "Company / Organization Name",
-  "사원 수": "Number of employees",
   "완료": "Submit",
 
   "원모어패스 요금제": "",
@@ -286,6 +285,7 @@
   "˝인증메일 발송˝ 클릭 시": "When you click ˝Send Verification Email˝",
 
   "이메일 형식이 잘못되었습니다.": "Invalid email address format",
+  "올바르지 않은 인증번호 입니다.": "Invalid certification number",
   "중복되는 이메일이 존재합니다.": "There is already a user with this email address.",
   "사용 가능한 이메일입니다.": "This email address is available.",
   "중복확인은 필수입니다.": "Check availablity is required.",
@@ -610,7 +610,7 @@
   "- 경찰청사이버수사국 https：//cyberbureau.police.go.kr/ / 국번없이 182": "Cyber Bureau, National Police Agency https://cyberbureau.police.go.kr/ Call +82-182",
   "- 대검찰청사이버수사과 https：//www.spo.go.kr/ / 국번없이 1301": "Cybercrime Investigation Division, Supreme Prosecutors’ Office https://www.spo.go.kr/ Call +82-1301",
   "- 개인정보침해신고센터 (한국인터넷진흥원 운영) https：//privacy.kisa.or.kr/ / 국번없이 118": "Privacy Infringement Report Center (operated by KISA) https://privacy.kisa.or.kr/ Call +82-118",
-  "- 개인정보분쟁조정위원회 (한국인터넷진흥원 운영)  https：//www.kopico.go.kr/ / 1833-6972": "Personal Information Dispute Mediation Committee (operated by KISA) https://www.kopico.go.kr/ Call +82-1833-6972",
+  "- 개인정보분쟁조정위원회 (한국인터넷진흥원 운영) https：//www.kopico.go.kr/ / 1833-6972": "Personal Information Dispute Mediation Committee (operated by KISA) https://www.kopico.go.kr/ Call +82-1833-6972",
 
   "OMPASS에 오신 것을 환영합니다. 저희는 OMPASS 웹사이트를 고객에 대한 서비스로 유지합니다. 당사 사이트를 이용함으로써 귀하는 다음 서비스 약관을 준수하고 이에 구속되는 데 동의하는 것입니다. 다음 약관을 주의 깊게 검토하십시오. 이 조건에 동의하지 않으면 이 사이트를 이용하면 안 됩니다.": "Welcome to OMPASS. We maintain this website as a service to our customers. By using our site, you are agreeing to comply with and be bound by the following Terms of Service. Please review the following terms carefully. If you do not agree to these terms, you should not use this site.",
 
@@ -820,5 +820,22 @@
   "(ii) 원모어패스의 통제 범위에 속하지 않는 하나 이상의 고객 장비 또는 제3자 장비로 인해 발생하는 경우": "(ii) that resulted from one or more of Customer’s equipment or third party equipment not within the primary control of OMPASS.",
 
   "회사는 여기에 조건을 업데이트하여 언제든지 이 서비스 수준 협약을 수정할 수 있는 권리를 보유합니다.": "OneMoreSecurity Inc. reserves the right to modify this OMPASS Service Level Agreement at any time by updating the terms on this site.",
-  "TermsOfPurchase_title_12_3": "Service credit of the Service follows 'Sales Level Agreement'."
+  "TermsOfPurchase_title_12_3": "Service credit of the Service follows 'Sales Level Agreement'.",
+  "REST API": "REST API",
+
+  "emailCodeRequest": "Send",
+  "emailCode": "Certification Number",
+  "domain": "Domain",
+  "이메일로 인증 코드가 발송되었습니다.": "A cerification number has been sent to your email",
+  "올바른 인증 코드입니다.": "This is the correct cerification number",
+  "조직 도메인을 입력해주세요.": "Please enter your domain",
+  "다음": "Next",
+  "일치하는 도메인이 존재하지 않습니다.": "No matching domain exists",
+  "해당 도메인은 이미 존재합니다.": "That domain already exists",
+  "도메인은 3~30자로 입력해주세요.": "Please enter 3 to 30 characters for the domain",
+  "가입완료": "Registration complete",
+  "가입요청": "Registration request",
+  "도메인이 생성되었습니다.": "Your domain has been created",
+  "이제부터 생성된 도메인으로 로그인이 가능합니다.": "From now on, you can log in with the created domain",
+  "가입이 완료되었습니다.": "Your registration has been completed"
 }

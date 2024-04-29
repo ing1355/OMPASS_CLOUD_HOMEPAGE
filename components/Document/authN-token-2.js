@@ -1,9 +1,9 @@
 import React from "react";
-import "../../css/Document.module.css";
+import styles from "../../css/Document.module.css";
 import useTranslation from "../../lib/useTranslation";
 import { dracula, CopyBlock, CodeBlock } from "react-code-blocks";
 import { Table } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { CopyMessage } from "./DocumentComponets";
 
 function authNtoken2(props) {
   const { t } = useTranslation();
@@ -12,9 +12,9 @@ function authNtoken2(props) {
 
   return (
     <div className="7st 8st 77st">
-      <div className="guide restapi-div">
+      <div className={`${styles["guide"]} ${styles["restapi-div"]}`}>
         <h5 style={{ margin: "0" }}>{t("인증 토큰 검증")}</h5>
-        <h6 className="sub-title">{t("server-side")}</h6>
+        <h6 className={styles["sub-title"]}>{t("server-side")}</h6>
         <p style={{ marginBottom: "0" }}>
           {t(
             "client-side 에서 전달받은 인증 토큰을 포함하여 OMPASS 인증 토큰 검증 API를 호출하여 토큰의 유효성을 검증 받습니다."
@@ -24,10 +24,10 @@ function authNtoken2(props) {
             "API 요청의 응답 HTTP STATUS CODE 가 200 이면 해당 아이디를 확인 후 로그인 처리합니다."
           )}
         </p>
-        <div className="copyblock">
-          <h6 className="codeH6">■ {t("OMPASS 성공 토큰 검증 API")}</h6>
+        <div className={styles["copyblock"]}>
+          <h6 className={styles["codeH6"]}>■ {t("OMPASS 성공 토큰 검증 API")}</h6>
           <h6
-            className="copyblock-message"
+            className={styles["copyblock-message"]}
             style={{
               color: "rgb(114, 114, 114)",
               fontSize: "0.8rem",
@@ -37,7 +37,7 @@ function authNtoken2(props) {
           ></h6>
         </div>
         <CodeBlock
-          className="first codeBox"
+          className={`${styles["first"]} ${styles["codeBox"]}`}
           style={{ background: "#002c50" }}
           text={`
             POST 
@@ -48,9 +48,9 @@ function authNtoken2(props) {
           theme={dracula}
         />
         <br />
-        <h6 className="codeH6">■ Header </h6>
-        <div className="error-table">
-          <Table striped bordered hover size="sm" className="codeTable">
+        <h6 className={styles["codeH6"]}>■ Header </h6>
+        <div className={styles["error-table"]}>
+          <Table striped bordered hover size="sm" className={styles["codeTable"]}>
             <thead>
               <tr>
                 <th>Key</th>
@@ -58,12 +58,12 @@ function authNtoken2(props) {
                 <th>Description</th>
               </tr>
             </thead>
-            <tbody className="adff">
+            <tbody className={styles["adff"]}>
               <tr>
-                <td className="adf" rowSpan="3">
+                <td className={styles["adf"]} rowSpan="3">
                   Authorization
                 </td>
-                <td className="adf" rowSpan="3">
+                <td className={styles["adf"]} rowSpan="3">
                   Bearer
                 </td>
                 <td>{t("어플리케이션에 할당된 Secret Key")}</td>
@@ -85,8 +85,8 @@ function authNtoken2(props) {
         </div>
 
         <br />
-        <h6 className="codeH6">■ Request Body (JSON) </h6>
-        <Table striped bordered hover size="sm" className="codeTable">
+        <h6 className={styles["codeH6"]}>■ Request Body (JSON) </h6>
+        <Table striped bordered hover size="sm" className={styles["codeTable"]}>
           <thead>
             <tr>
               <th>Name</th>
@@ -109,27 +109,12 @@ function authNtoken2(props) {
         </Table>
 
         <br />
-        <div className="copyblock">
-          <h6 className="codeH6">■ Example of Request Body </h6>
-          <h6
-            className="copyblock-message"
-            style={{
-              color: "rgb(114, 114, 114)",
-              fontSize: "0.8rem",
-              fontWeight: "bold",
-              textAlign: "right",
-            }}
-          >
-            <img
-              width="11%"
-              src={"/static/images/CopyButton.png"}
-              alt="copy버튼"
-            />
-            {t("(버튼 클릭 시 Copy 가능) ↓")}　
-          </h6>
+        <div className={styles["copyblock"]}>
+          <h6 className={styles["codeH6"]}>■ Example of Request Body </h6>
+          <CopyMessage theme={1} width={"11%"}/>
         </div>
         <CopyBlock
-          className="first codeBox"
+          className={`${styles["first"]} ${styles["codeBox"]}`}
           style={{ background: "#002c50" }}
           text={`
             {
@@ -142,11 +127,11 @@ function authNtoken2(props) {
         />
 
         <br />
-        <h6 className="codeH6">■ Response (JSON)</h6>
+        <h6 className={styles["codeH6"]}>■ Response (JSON)</h6>
         <p style={{ color: "#3c9edb", fontWeight: "bold" }}>
           · {t("인증 성공 시")}
         </p>
-        <Table striped bordered hover size="sm" className="codeTable">
+        <Table striped bordered hover size="sm" className={styles["codeTable"]}>
           <thead>
             <tr>
               <th>Key</th>
@@ -162,25 +147,9 @@ function authNtoken2(props) {
             </tr>
           </tbody>
         </Table>
-        <h6
-          className="copyblock-message2"
-          style={{
-            color: "rgb(114, 114, 114)",
-            fontSize: "0.8rem",
-            fontWeight: "bold",
-            textAlign: "right",
-          }}
-        >
-          <img
-            width="2.7%"
-            src={"/static/images/CopyButton.png"}
-            alt="copy버튼"
-          />
-          &nbsp;
-          {t("(버튼 클릭 시 Copy 가능) ↓")}　
-        </h6>
+        <CopyMessage theme={2} width={"2.7%"}/>
         <CopyBlock
-          className="first codeBox"
+          className={`${styles["first"]} ${styles["codeBox"]}`}
           style={{ background: "#002c50" }}
           text={`
             {

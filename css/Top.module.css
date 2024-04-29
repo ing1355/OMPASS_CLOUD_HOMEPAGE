@@ -1,4 +1,4 @@
-#TopButton {
+.TopButton {
   width: 5rem;
   height: 3rem;
   background: #000;
@@ -12,22 +12,22 @@
   bottom: 0;
   z-index: 30;
 }
-#TopButton:hover {
+.TopButton:hover {
   background-color: #fff;
   color: #0ca6ff;
 }
 @media (max-width: 1920px) {
-  #TopButton {
+  .TopButton {
     right: 0rem;
   }
 }
 @media (max-width: 540px) {
-  #TopButton {
+  .TopButton {
     width: 3.2rem;
     height: 2.2rem;
     font-size: 0.6rem;
   }
-  #TopButton:hover {
+  .TopButton:hover {
     background-color: #000;
     color: #fff;
   }

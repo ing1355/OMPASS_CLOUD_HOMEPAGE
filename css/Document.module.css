@@ -15,6 +15,10 @@
   display: none;
 }
 
+.codeTable tbody {
+  border-top: 2px solid;
+}
+
 /* ==================새로운거============= */
 
 .adf {
@@ -59,17 +63,17 @@
   align-items: baseline;
   padding: 0.3rem 0.5rem;
 }
-.document-text-box .document-label-notice div p {
+.document-text-box .document-label-notice div p, .document-text-box .document-label-notice div .divP {
   margin: 0;
   padding: 0;
   line-height: 1.3rem;
   font-size: 0.9rem;
 }
-.document-text-box .document-label-notice div:first-child p {
+.document-text-box .document-label-notice div:first-child p, .document-text-box .document-label-notice div:first-child .divP {
   padding-top: 0.5rem;
 }
 
-.document-text-box .document-label-notice div:last-child p {
+.document-text-box .document-label-notice div:last-child p, .document-text-box .document-label-notice div:last-child .divP {
   padding-bottom: 0.5rem;
 }
 .document-text-box .document-label-notice-sub {
@@ -85,7 +89,7 @@
   padding: 0;
   margin: 0;
 }
-.document-text-box .document-label p {
+.document-text-box .document-label p, .document-label .divP {
   margin: 0;
   padding-top: 0;
   font-size: 1rem;
@@ -221,7 +225,6 @@
   font-weight: bold;
   padding: 0 1rem 1rem;
   border-bottom: 1px solid #3b697a;
-  cursor: pointer;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -393,7 +396,11 @@
   font-size: 1rem;
   line-height: 2.2rem;
   padding: 1rem 0rem 0 0;
-
+  word-break: keep-all;
+}
+.code .divP {
+  font-size: 1rem;
+  line-height: 2.2rem;
   word-break: keep-all;
 }
 .codeH6 {
@@ -526,7 +533,7 @@
     height: 80vh;
     overflow-x: hidden !important;
     overflow: scroll;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
   }
 }
 /* ---------------------- 1024 ----------------------- */
@@ -1197,7 +1204,7 @@
     line-height: 1rem;
     width: 100%;
   }
-  .document-text-box .document-label p {
+  .document-text-box .document-label p, .document-label .divP {
     font-size: 0.7rem;
     line-height: 1rem;
     width: 100%;

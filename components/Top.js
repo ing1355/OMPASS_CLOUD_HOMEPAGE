@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Top.module.css";
+import styles from "../css/Top.module.css";
 import useTranslation from "../lib/useTranslation";
 
 function Top() {
@@ -9,7 +9,7 @@ function Top() {
 
   const { t } = useTranslation();
   return (
-    <button id="TopButton" onClick={TopButton}>
+    <button className={styles["TopButton"]} onClick={TopButton}>
       {t("Top")}
     </button>
   );

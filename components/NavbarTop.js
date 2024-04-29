@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 
-import "../css/NavbarTop.module.css";
+import styles from "../css/NavbarTop.module.css";
 
-import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
@@ -15,17 +14,19 @@ import {
 import LinkComponent from "./Link";
 import LanguageSwitchLink from "./LanguageSwitchLink";
 import useTranslation from "../lib/useTranslation";
+import { AdminLoginRoute } from "../lib/ConstantsValues";
 
 function NavbarTop() {
   const router = useRouter();
   const { isKr } = useTranslation();
 
-  const getAdminHomePage = (locale) => `${process.env.adminRoute}/${locale}`;
+  // const getAdminHomePage = (locale) => `${process.env.adminRoute}/${locale}`;
 
   useEffect(() => {
     $(window)
-      .resize(function () {
-        if (window.outerWidth <= 780) {
+    .resize(function () {
+      if (window.outerWidth <= 780) {
+          console.log($.contains(".nav-menu-item"))
           $(".nav-menu-item, .dropDown_bg").hide();
           $(".nav-menu-item li").click(function () {
             $(".nav-menu-item, .dropDown_bg").show();
@@ -39,19 +40,19 @@ function NavbarTop() {
   });
 
   return (
-    <div className="navbar-div">
-      <nav className="navbar-nav">
-        <ul className="menu-title">
-          <li className="logo">
+    <div className={styles["navbar-div"]}>
+      <nav className={styles["navbar-nav"]}>
+        <ul className={styles["menu-title"]}>
+          <li className={styles["logo"]}>
             <LinkComponent href="/">OMPASS</LinkComponent>
           </li>
-          <li className="mobile-button">
+          <li className={styles["mobile-button"]}>
             <div>
               <LanguageSwitchLink
                 locale={isKr ? "en" : "ko"}
-                className={isKr ? "langenbutton" : "langkobutton"}
+                className={styles[isKr ? "langenbutton" : "langkobutton"]}
               >
-                <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
+                <FontAwesomeIcon className={styles["globalIcon"]} icon={faGlobe} />
                 &nbsp;{isKr ? "EN" : "KO"}
               </LanguageSwitchLink>
             </div>
@@ -62,12 +63,12 @@ function NavbarTop() {
                 $(".scrollBar").hide();
               }}
             >
-              <MenuOutlined className="mobile-menu-icon" />
+              <MenuOutlined className={styles["mobile-menu-icon"]} />
             </div>
           </li>
         </ul>
-        <ul className="nav-menu-item">
-          <div className="nav-menu-item-div">
+        <ul className={styles["nav-menu-item"]}>
+          <div className={styles["nav-menu-item-div"]}>
             <li>
               <LinkComponent href="/">Home</LinkComponent>
             </li>
@@ -88,35 +89,37 @@ function NavbarTop() {
             )}
           </div>
 
-          <div className="langbutton-mobile-div">
-            <li className="admin-login-button-mobile">
+          <div className={styles["langbutton-mobile-div"]}>
+            <li className={styles["admin-login-button-mobile"]}>
               <LinkComponent
-                href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
+                // href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
+                href={AdminLoginRoute}
                 target="_blank"
               >
-                <LogoutOutlined className="locale-global-icon" />
+                <LogoutOutlined />
                 &nbsp;ADMIN LOGIN
               </LinkComponent>
             </li>
           </div>
         </ul>
 
-        <ul className="nav-menu-item langbutton-pc">
+        <ul className={`${styles["nav-menu-item"]} ${styles["langbutton-pc"]}`}>
           <li style={{ marginRight: "1rem" }}>
             <LanguageSwitchLink
               locale={isKr ? "en" : "ko"}
-              className={isKr ? "langenbutton" : "langkobutton"}
+              className={styles[isKr ? "langenbutton" : "langkobutton"]}
             >
-              <FontAwesomeIcon className="globalIcon" icon={faGlobe} />
+              <FontAwesomeIcon className={styles["globalIcon"]} icon={faGlobe} />
               &nbsp;{isKr ? "EN" : "KO"}
             </LanguageSwitchLink>
           </li>
-          <li className="admin-login-button">
+          <li className={styles["admin-login-button"]}>
             <LinkComponent
-              href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
+              // href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
+              href={AdminLoginRoute}
               target="_blank"
             >
-              <LogoutOutlined className="locale-global-icon" />
+              <LogoutOutlined className={styles["locale-global-icon"]} />
               &nbsp; ADMIN LOGIN
             </LinkComponent>
           </li>

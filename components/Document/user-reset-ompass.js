@@ -1,9 +1,8 @@
 import React from "react";
-import "../../css/Document.module.css";
+import styles from "../../css/Document.module.css";
 import useTranslation from "../../lib/useTranslation";
-import { dracula, CopyBlock, CodeBlock } from "react-code-blocks";
+import { dracula, CodeBlock } from "react-code-blocks";
 import { Table } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function userresetompass(props) {
   const { t } = useTranslation();
@@ -11,18 +10,18 @@ function userresetompass(props) {
 
   return (
     <div>
-      <div className="guide restapi-div 2st">
+      <div className={`${styles["guide"]} ${styles["restapi-div"]} 2st`}>
         <h5 style={{ margin: "0" }}> {t("OMPASS 등록 초기화 API")}</h5>
-        <h6 className="sub-title">{t("server-side")}</h6>
+        <h6 className={styles["sub-title"]}>{t("server-side")}</h6>
         <p style={{ marginBottom: "0" }}>
           {t(
             "server-side에서 HTTP HEADER에는 Secret Key를 포함하고 Path Variable에는 사용자의 아이디를 포함하여 OMPASS API를 호출합니다."
           )}
         </p>
-        <div className="copyblock">
-          <h6 className="codeH6">■ {t("OMPASS 등록 초기화 API")}</h6>
+        <div className={styles["copyblock"]}>
+          <h6 className={styles["codeH6"]}>■ {t("OMPASS 등록 초기화 API")}</h6>
           <h6
-            className="copyblock-message"
+            className={styles["copyblock-message"]}
             style={{
               color: "rgb(114, 114, 114)",
               fontSize: "0.8rem",
@@ -32,7 +31,7 @@ function userresetompass(props) {
           ></h6>
         </div>
         <CodeBlock
-          className="first codeBox"
+          className={`${styles["first"]} ${styles["codeBox"]}`}
           style={{ background: "#002c50" }}
           text={`
             DELETE 
@@ -43,9 +42,9 @@ function userresetompass(props) {
           theme={dracula}
         />
         <br />
-        <h6 className="codeH6">■ Header </h6>
-        <div className="error-table">
-          <Table striped bordered hover size="sm" className="codeTable">
+        <h6 className={styles["codeH6"]}>■ Header </h6>
+        <div className={styles["error-table"]}>
+          <Table striped bordered hover size="sm" className={styles["codeTable"]}>
             <thead>
               <tr>
                 <th>Key</th>
@@ -79,7 +78,7 @@ function userresetompass(props) {
           </Table>
         </div>
         <br />
-        <h6 className="codeH6">■ Response (JSON)</h6>
+        <h6 className={styles["codeH6"]}>■ Response (JSON)</h6>
         <p
           style={{
             color: "#3c9edb",

@@ -1,14 +1,14 @@
 import React from "react";
-import "../../css/Document.module.css";
+import styles from "../../css/Document.module.css";
 import useTranslation from "../../lib/useTranslation";
 
 function uafloginbutton() {
   const { t, isKr } = useTranslation();
 
   return (
-    <div className="guide restapi-div 4st">
+    <div className={`${styles["guide"]} ${styles["restapi-div"]} 4st`}>
       <h5 style={{ margin: "0" }}> {t("UAF 로그인 버튼 추가하기")}</h5>
-      <h6 className="sub-title">{t("client-side")}</h6>
+      <h6 className={styles["sub-title"]}>{t("client-side")}</h6>
       <p style={{ marginBottom: "0" }}>
         {t(
           "기존의 로그인 버튼 외에 UAF 방식으로 로그인 할 수 있는 버튼을 로그인 페이지에 구현합니다."

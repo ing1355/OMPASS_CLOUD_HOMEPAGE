@@ -416,10 +416,6 @@
   padding-bottom: 9rem !important;
 }
 
-.contentsBox7 .supportContents3 {
-  width: 65rem;
-}
-
 @media (max-width: 1200px) {
   .contentsBox7 {
     padding: 0 !important;
@@ -949,11 +945,6 @@
     width: 100% !important;
     height: auto;
   }
-  .contentsBox7 .supportContents3 {
-    margin: 0 auto;
-    width: 90% !important;
-    padding: 2rem;
-  }
 
   .contentsBox7 {
     background: #f9fafb;
@@ -1000,21 +991,9 @@
   .contentsBox2 .contentsSubBox .contents2Box li div p:nth-child(2) {
     margin-left: 20px;
   }
-  .contentsBox7 .supportContents3 {
-    padding: 1rem;
-    width: 100%;
-  }
 }
 @media (max-width: 384px) {
-  .contentsBox7 .supportContents3 {
-    padding: 1rem;
-    width: 100%;
-    flex-direction: column;
-  }
 
-  .contentsBox7 .supportContents3 ul div {
-    flex-direction: column;
-  }
   .contents2Box .FontAwesomeIcon-p {
     width: 35px;
     margin-top: 0 !important;

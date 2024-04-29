@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../css/Pricing.module.css";
+import styles from "../../../css/Pricing.module.css";
 import useTranslation from "../../../lib/useTranslation";
 import LinkComponent from "../../../components/Link";
 import i18nextConfig from "../../../next-i18next.config";
@@ -31,13 +31,13 @@ export async function getStaticProps({ params }) {
 function pricing() {
   const { t } = useTranslation();
   return (
-    <div className="pricingBox">
-      <div className="pricingTtileBox">
+    <div className={styles["pricingBox"]}>
+      <div className={styles["pricingTtileBox"]}>
         <h2>Pricing</h2>
       </div>
-      <div className="pricingContentsBox1">
+      <div className={styles["pricingContentsBox1"]}>
         <ul>
-          <li className="country">
+          <li className={styles["country"]}>
             <h4>{t("클라우드 형")}</h4>
             <p>{t("가격/사용자/월")}</p>
           </li>
@@ -59,7 +59,7 @@ function pricing() {
         </ul>
       </div>
 
-      <div className="pricingContents3Box">
+      <div className={styles["pricingContents3Box"]}>
         <div>
           <h3>{t("무료")}</h3>
           <h6>{t("원모어패스를 사용해 보는 가장 빠르고 쉬운 방법")}</h6>

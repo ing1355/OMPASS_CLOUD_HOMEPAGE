@@ -1,9 +1,9 @@
 import React from "react";
-import "../../css/Document.module.css";
+import styles from "../../css/Document.module.css";
 import useTranslation from "../../lib/useTranslation";
 import { dracula, CopyBlock, CodeBlock } from "react-code-blocks";
 import { Table } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { CopyMessage } from "./DocumentComponets";
 
 function uafompass(props) {
   const { t, isKr } = useTranslation();
@@ -11,28 +11,19 @@ function uafompass(props) {
 
   return (
     <div className="5st">
-      <div className="guide restapi-div">
+      <div className={`${styles["guide"]} ${styles["restapi-div"]}`}>
         <h5 style={{ margin: "0" }}> OMPASS-UAF</h5>
-        <h6 className="sub-title">{t("server-side")}</h6>
+        <h6 className={styles["sub-title"]}>{t("server-side")}</h6>
         <p style={{ marginBottom: "0" }}>
           {t(
             "server-side에서 사용자의 패스워드 인증이 완료된 후 HTTP HEADER에는 Secret Key를 포함하고 Request Body에는 사용자의 아이디를 포함하여 OMPASS API를 호출합니다."
           )}
         </p>
-        <div className="copyblock">
-          <h6 className="codeH6">■ {t("OMPASS UAF 인증 API")}</h6>
-          <h6
-            className="copyblock-message"
-            style={{
-              color: "rgb(114, 114, 114)",
-              fontSize: "0.8rem",
-              fontWeight: "bold",
-              textAlign: "right",
-            }}
-          ></h6>
+        <div className={styles["copyblock"]}>
+          <h6 className={styles["codeH6"]}>■ {t("OMPASS UAF 인증 API")}</h6>
         </div>
         <CodeBlock
-          className="first codeBox"
+          className={`${styles["first"]} ${styles["codeBox"]}`}
           style={{ background: "#002c50" }}
           text={`
             POST 
@@ -43,9 +34,9 @@ function uafompass(props) {
           theme={dracula}
         />
         <br />
-        <h6 className="codeH6">■ Header </h6>
-        <div className="error-table">
-          <Table striped bordered hover size="sm" className="codeTable">
+        <h6 className={styles["codeH6"]}>■ Header </h6>
+        <div className={styles["error-table"]}>
+          <Table striped bordered hover size="sm" className={styles["codeTable"]}>
             <thead>
               <tr>
                 <th>Key</th>
@@ -78,26 +69,11 @@ function uafompass(props) {
             </tbody>
           </Table>
         </div>
-        <div className="copyblock">
-          <h6 className="codeH6">■ Example of Request Body </h6>
-          <h6
-            className="copyblock-message"
-            style={{
-              color: "rgb(114, 114, 114)",
-              fontSize: "0.8rem",
-              fontWeight: "bold",
-              textAlign: "right",
-            }}
-          >
-            <img
-              width="11%"
-              src={"/static/images/CopyButton.png"}
-              alt="copy버튼"
-            />
-            {t("(버튼 클릭 시 Copy 가능) ↓")}　
-          </h6>
+        <div className={styles["copyblock"]}>
+          <h6 className={styles["codeH6"]}>■ Example of Request Body </h6>
+          <CopyMessage theme={1} width={"11%"}/>          
         </div>
-        <Table striped bordered hover size="sm" className="codeTable">
+        <Table striped bordered hover size="sm" className={styles["codeTable"]}>
           <thead>
             <tr>
               <th>Key</th>
@@ -119,7 +95,7 @@ function uafompass(props) {
         {isKr ? (
           <div>
             <CopyBlock
-              className="first codeBox"
+              className={`${styles["first"]} ${styles["codeBox"]}`}
               style={{ background: "#002c50" }}
               text={`
               {
@@ -134,7 +110,7 @@ function uafompass(props) {
         ) : (
           <div>
             <CopyBlock
-              className="first codeBox"
+              className={`${styles["first"]} ${styles["codeBox"]}`}
               style={{ background: "#002c50" }}
               text={`
             {
@@ -149,11 +125,11 @@ function uafompass(props) {
         )}
 
         <br />
-        <h6 className="codeH6">■ Response (JSON)</h6>
+        <h6 className={styles["codeH6"]}>■ Response (JSON)</h6>
         <p style={{ color: "#3c9edb", fontWeight: "bold" }}>
           · {t("인증 성공 시")}
         </p>
-        <Table striped bordered hover size="sm" className="codeTable">
+        <Table striped bordered hover size="sm" className={styles["codeTable"]}>
           <thead>
             <tr>
               <th>Key</th>
@@ -173,24 +149,9 @@ function uafompass(props) {
             </tr>
           </tbody>
         </Table>
-        <h6
-          className="copyblock-message2"
-          style={{
-            color: "rgb(114, 114, 114)",
-            fontSize: "0.8rem",
-            fontWeight: "bold",
-            textAlign: "right",
-          }}
-        >
-          <img
-            width="3.5%"
-            src={"/static/images/CopyButton.png"}
-            alt="copy버튼"
-          />
-          {t("(버튼 클릭 시 Copy 가능) ↓")}　
-        </h6>
+        <CopyMessage theme={2} width={"3.5%"}/>
         <CopyBlock
-          className="first codeBox"
+          className={`${styles["first"]} ${styles["codeBox"]}`}
           style={{ background: "#002c50" }}
           text={`
             {

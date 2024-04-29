@@ -9,6 +9,62 @@
   margin-bottom: 1.5rem;
 }
 
+.agree-text-box div ul {
+  display: flex;
+  flex-direction: row;
+}
+.agree-text-box div ul li:first-child {
+  margin-right: 0.2rem;
+}
+.agree-text-box div {
+  padding: 1rem;
+  font-size: 0.8rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.agree-text-box div .in {
+  margin-left: 1rem;
+}
+
+.agree-text-box div h5 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  word-break: keep-all;
+}
+
+.bottom {
+  font-size: 1rem;
+  word-break: keep-all;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid gray;
+  padding: 2rem 0;
+  margin-bottom: 0;
+}
+
+.bottom ul {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: .5rem;
+}
+.agree-text-box2 > .content ul:last-child {
+  margin-bottom: 0;
+}
+.bottom ul li:first-child {
+  margin-right: 0.2rem;
+}
+.bottom ul:last-child {
+  margin-bottom: 0;
+}
+
+.agree-text-box .bottom {
+  margin-bottom: 1rem;
+  padding-top: 0;
+}
+.agree-text-box .bottom2 {
+  margin-bottom: 1rem;
+}
 /* ================== */
 .agree-text-box2 {
   width: 85rem;
@@ -45,13 +101,6 @@
 .agree-text-box2 .select option {
   text-align: center;
 }
-.agree-text-box2 {
-  width: 85rem;
-  background: #fff;
-  margin: 0 auto;
-  padding: 3rem 5rem;
-  margin-top: 4rem;
-}
 
 .agree-text-box2 h4 {
   margin-top: 2rem;
@@ -60,7 +109,7 @@
   margin-bottom: 0;
 }
 
-.agree-text-box2 p {
+.agree-text-box2 > .content {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid gray;
@@ -68,11 +117,11 @@
   margin-bottom: 0;
 }
 
-.agree-text-box2 p ul {
+.agree-text-box2 > .content ul {
   display: flex;
   flex-direction: row;
 }
-.agree-text-box2 p ul li:first-child {
+.agree-text-box2 > .content ul li:first-child {
   margin-right: 0.2rem;
 }
 .agree-text-box2 h5 {
@@ -80,7 +129,7 @@
   font-weight: bold;
 }
 
-.agree-text-box2 p {
+.agree-text-box2 > .content, .agree-text-box2 > .agree-title p {
   font-size: 1rem;
   word-break: keep-all;
 }
@@ -89,11 +138,8 @@
   margin-left: 1rem;
 }
 
-.agree-text-box2 p ul {
+.agree-text-box2 > .content ul {
   margin-bottom: 0.5rem;
-}
-.agree-text-box2 p ul:last-child {
-  margin-bottom: 0;
 }
 
 .agree-text-box2 .enter {
@@ -169,7 +215,7 @@ width:40%;
   .agree-text-box2 h5 {
     font-size: 1.2rem;
   }
-  .agree-text-box2 p {
+  .agree-text-box2 > .content {
     font-size: 0.9rem;
   }
   .agree-text-box2 h4 {
@@ -190,7 +236,7 @@ width:40%;
   .agree-text-box2 h5 {
     font-size: 1.1rem;
   }
-  .agree-text-box2 p {
+  .agree-text-box2 > .content {
     font-size: 0.8rem;
   }
   .agree-text-box2 h4 {

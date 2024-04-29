@@ -23,7 +23,7 @@ const LanguageSwitchLink = ({ children, locale, className, ...rest }) => {
   };
 
   return (
-    <Link href={href} passHref>
+    <Link href={href} passHref legacyBehavior>
       <a className={className} onClick={changeLanguage}>
         &nbsp;
         {children ? children : <li>{locale === "ko" ? "KO" : "EN"}</li>}

@@ -1,14 +1,13 @@
 import React from "react";
 import $ from "jquery";
-import "../../../css/Registration.module.css";
-
-import Agree1 from "../../../components/Agree1";
-import Agree2 from "../../../components/Agree2";
+import styles from "../../../css/Registration.module.css";
 
 import useTranslation from "../../../lib/useTranslation";
 import i18nextConfig from "../../../next-i18next.config";
 import LinkToLoginPage from "../../../components/LinkToLoginPage";
 import LinkComponent from "../../../components/Link";
+import Agree1 from "../../../components/Agree/Agree1";
+import Agree2 from "../../../components/Agree/Agree2";
 
 const getPathSlugs = () => {
   return i18nextConfig.i18n.locales.map((locale) => ({
@@ -33,7 +32,7 @@ export async function getStaticProps({ params }) {
     },
   };
 }
-function login({setIsChecked}) {
+function Registration({setIsChecked}) {
   const { t } = useTranslation();
   
   function allCheck(e) {
@@ -71,12 +70,12 @@ function login({setIsChecked}) {
     }
   };
 
-  return <div className="LoginBox">
-      <div className="agree-box">
+  return <div className={styles['LoginBox']}>
+      <div className={styles['agree-box']}>
         <h3>OMPASS</h3>
         
-        <ul className="agree-column-all">
-          <li className="column-box">
+        <ul className={styles["agree-column-all"]}>
+          <li className={styles["column-box"]}>
             <div>
               <input
                 type="checkbox"
@@ -97,11 +96,11 @@ function login({setIsChecked}) {
           </li>
         </ul>
 
-        <ul className="agree-column">
-          <li className="column-box">
+        <ul className={styles["agree-column"]}>
+          <li className={styles["column-box"]}>
             <div>
               <input
-                className="check_all_list"
+                className={"check_all_list"}
                 type="checkbox"
                 name="pointCheck2"
                 id="agree1"
@@ -114,16 +113,16 @@ function login({setIsChecked}) {
               </label>
             </div>
           </li>
-          <li className="agree-text">
+          <li className={styles["agree-text"]}>
             <Agree1 />
           </li>
         </ul>
 
-        <ul className="agree-column">
-          <li className="column-box">
+        <ul className={styles["agree-column"]}>
+          <li className={styles["column-box"]}>
             <div>
               <input
-                className="check_all_list"
+                className={"check_all_list"}
                 type="checkbox"
                 name="pointCheck3"
                 id="agree2"
@@ -136,7 +135,7 @@ function login({setIsChecked}) {
               </label>
             </div>
           </li>
-          <li className="agree-text">
+          <li className={styles["agree-text"]}>
             <Agree2 />
           </li>
         </ul>
@@ -145,16 +144,16 @@ function login({setIsChecked}) {
           <button onClick={agreeCheck}>{t("확인")}</button>
         </LinkComponent>
 
-        <p className="login-page-go login-mobile">
+        <p className={`${styles["login-page-go"]} ${styles["login-mobile"]}`}>
           {t("혹시 계정이 있으신가요?")}
           <LinkToLoginPage />
         </p>
       </div>
 
-      <p className="login-page-go login-pc">
+      <p className={`${styles["login-page-go"]} ${styles["login-pc"]}`}>
         {t("혹시 계정이 있으신가요?")}
         <LinkToLoginPage />
       </p>
     </div>;
 }
-export default login;
+export default Registration;

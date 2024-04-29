@@ -2,12 +2,6 @@
 html, body {
   height: 100%;
 }
-#__next {
-  overflow: hidden;
-  min-height: 100%; 
-  position: relative;
-  padding-bottom: 100px; /* footer height */
-}
 /* ============= footer 가변내용에 대응한 하단 고정[E] ============= */
 .footerTextBox-mobile {
   display: none;

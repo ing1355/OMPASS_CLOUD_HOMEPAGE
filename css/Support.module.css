@@ -139,52 +139,6 @@
   color: #fff !important;
   cursor: auto;
 }
-.supportContents3 {
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  padding: 5rem 0;
-  text-align: center;
-}
-.supportContents3 h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
-.supportContents3 ul div {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  width: 100%;
-  height: 150px;
-  margin: 0 auto;
-  margin-top: 2rem;
-  background-color: #316480;
-  align-items: center;
-  justify-content: center;
-  color: #fff !important;
-  font-weight: bold;
-  font-size: 2rem;
-}
-.supportContents3 ul a:hover {
-  text-decoration: underline !important;
-}
-.supportContents3 p {
-  font-size: 1.2rem;
-  line-height: 1rem;
-}
-.supportContents3 .supportfontawsome {
-  width: 50px !important;
-}
-.supportContents3 ul div p {
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin-bottom: 0;
-  margin-left: 0.5rem;
-}
 
 .supportContents2 a {
   text-align: left;
@@ -481,54 +435,5 @@
   }
   .supportContents2Box a:hover {
     font-weight: bold;
-  }
-  .supportContents3 {
-    width: 90%;
-    height: auto;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 3rem 0;
-    text-align: center;
-  }
-  .supportContents3 h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  .supportContents3 p {
-    font-size: 0.8rem !important;
-  }
-
-  .supportContents3 ul div {
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    width: 100%;
-    height: 70px;
-    margin: 0 auto;
-    margin-top: 2rem;
-    background-color: #316480;
-    align-items: center;
-    justify-content: center;
-    color: #fff !important;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-  .supportContents3 ul a:hover {
-    text-decoration: underline !important;
-  }
-  .supportContents3 p {
-    font-size: 0.8rem;
-    line-height: 1rem;
-  }
-  .supportContents3 .supportfontawsome {
-    width: 20px !important;
-  }
-  .supportContents3 ul div p {
-    font-size: 0.8rem !important;
-    font-weight: 500;
-    margin-bottom: 0;
-    margin-left: 0.2rem;
   }
 }
