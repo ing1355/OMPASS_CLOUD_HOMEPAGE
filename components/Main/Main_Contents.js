@@ -242,7 +242,7 @@ function Main_Contents() {
       </div>
       <div className={`${styles["contentsBox6"]} ${styles["cloudVideo"]}`}>
         <div className={styles["contentsSubBox"]}>
-          <h2>{t("원모어패스 시연영상")}</h2>
+          <h2>{t("소개영상")}</h2>
           <div className={styles["videoDiv"]}>
             <iframe
               className={styles["iframeVideo"]}

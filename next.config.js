@@ -39,14 +39,14 @@ module.exports = withTM({
       }
       return config
     },
-    async rewrites() {
-      return [
-        {
-          source: "/v2/:path*",
-          destination: `http://192.168.182.141:8080/v2/:path*`
-        },
-      ];
-    },
+    // async rewrites() {
+    //   return [
+    //     {
+    //       source: "/v2/:path*",
+    //       destination: `http://192.168.182.141:8080/v2/:path*`
+    //     },
+    //   ];
+    // },
     trailingSlash: true,
   })
 
