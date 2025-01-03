@@ -9,7 +9,8 @@ const withTM = require('next-transpile-modules')(['@ant-design/icons', 'rc-util'
 // const presets = ["next/babel"];
 // const plugins = [nextModeBabelPlugin("ssr")];
 
-module.exports = withTM({
+module.exports = {
+  output: 'export', ...withTM({
     compiler: {
       removeConsole: false,
     },
@@ -48,7 +49,9 @@ module.exports = withTM({
     //   ];
     // },
     trailingSlash: true,
+    output: 'export'
   })
+}
 
 // module.exports = withTM(
 //   withCSS(
