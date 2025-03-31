@@ -160,9 +160,9 @@ const privacypolicy = () => {
       </WithTitle>
 
       <WithTitle title="10. 개인정보보호 책임자" index={10} className={styles['bottom']}>
-        {t("개인정보보호책임자：강누리 과장")}
+        {t("개인정보보호책임자：김민식 대표")}
         <br />
-        {t("개인정보보호 관련 문의처：070-4298-3070, partner@omsecurity.kr")}
+        {t("개인정보보호 관련 문의처：070-4298-3070, ceo@omsecurity.kr")}
         <br />
         {t(
           "개인정보에 관하여 궁금한 사항이 있을 경우, 언제든지 위 연락처를 통해 문의하실 수 있습니다."

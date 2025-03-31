@@ -32,9 +32,9 @@ export async function getStaticProps({ params }) {
     },
   };
 }
-function Registration({setIsChecked}) {
+function Registration({ setIsChecked }) {
   const { t } = useTranslation();
-  
+
   function allCheck(e) {
     if (e.target.checked) {
       document.querySelectorAll(".check_all_list").forEach(function (v, i) {
@@ -71,89 +71,77 @@ function Registration({setIsChecked}) {
   };
 
   return <div className={styles['LoginBox']}>
-      <div className={styles['agree-box']}>
-        <h3>OMPASS</h3>
-        
-        <ul className={styles["agree-column-all"]}>
-          <li className={styles["column-box"]}>
-            <div>
-              <input
-                type="checkbox"
-                name="pointCheck1"
-                id="allCheck"
-                onClick={() => {
-                  allCheck(event);
-                }}
-              />
-            </div>
-            <div>
-              <label>
-                {t(
-                  "원모어패스의 이용약관, 개인정보 수집 및 이용(선택)에 모두 동의합니다."
-                )}
-              </label>
-            </div>
-          </li>
-        </ul>
+    <div className={styles['agree-box']}>
+      <h3>OMPASS</h3>
 
-        <ul className={styles["agree-column"]}>
-          <li className={styles["column-box"]}>
-            <div>
-              <input
-                className={"check_all_list"}
-                type="checkbox"
-                name="pointCheck2"
-                id="agree1"
-                onClick={checkAllList}
-              />
-            </div>
-            <div>
-              <label htmlFor="agree1">
-                {t("이용약관 동의")} <b>{t("(필수)")}</b>
-              </label>
-            </div>
-          </li>
-          <li className={styles["agree-text"]}>
-            <Agree1 />
-          </li>
-        </ul>
+      <ul className={styles["agree-column-all"]}>
+        <li className={styles["column-box"]}>
+          <label>
+            <input
+              type="checkbox"
+              name="pointCheck1"
+              id="allCheck"
+              onClick={() => {
+                allCheck(event);
+              }}
+            />
+            {t(
+              "원모어패스의 이용약관, 개인정보 수집 및 이용(선택)에 모두 동의합니다."
+            )}
+          </label>
+        </li>
+      </ul>
 
-        <ul className={styles["agree-column"]}>
-          <li className={styles["column-box"]}>
-            <div>
-              <input
-                className={"check_all_list"}
-                type="checkbox"
-                name="pointCheck3"
-                id="agree2"
-                onClick={checkAllList}
-              />
-            </div>
-            <div>
-              <label htmlFor="agree2">
-                {t("개인정보 수집 및 이용 동의")} <b>{t("(필수)")}</b>
-              </label>
-            </div>
-          </li>
-          <li className={styles["agree-text"]}>
-            <Agree2 />
-          </li>
-        </ul>
+      <ul className={styles["agree-column"]}>
+        <li className={styles["column-box"]}>
+          <label htmlFor="agree1">
+            <input
+              className={"check_all_list"}
+              type="checkbox"
+              name="pointCheck2"
+              id="agree1"
+              onClick={checkAllList}
+            />
+            {t("이용약관 동의")} <b>{t("(필수)")}</b>
+          </label>
+        </li>
+        <li className={styles["agree-text"]}>
+          <Agree1 />
+        </li>
+      </ul>
 
-        <LinkComponent href='/registration/admin'>
-          <button onClick={agreeCheck}>{t("확인")}</button>
-        </LinkComponent>
+      <ul className={styles["agree-column"]}>
+        <li className={styles["column-box"]}>
+          <label htmlFor="agree2">
+            <input
+              className={"check_all_list"}
+              type="checkbox"
+              name="pointCheck3"
+              id="agree2"
+              onClick={checkAllList}
+            />
+            {t("개인정보 수집 및 이용 동의")} <b>{t("(필수)")}</b>
+          </label>
+        </li>
+        <li className={styles["agree-text"]}>
+          <Agree2 />
+        </li>
+      </ul>
 
-        <p className={`${styles["login-page-go"]} ${styles["login-mobile"]}`}>
-          {t("혹시 계정이 있으신가요?")}
-          <LinkToLoginPage />
-        </p>
-      </div>
+      <LinkComponent href='/registration/admin'>
+        <button onClick={agreeCheck}>{t("확인")}</button>
+      </LinkComponent>
 
-      <p className={`${styles["login-page-go"]} ${styles["login-pc"]}`}>
+      <p className={`${styles["login-page-go"]} ${styles["login-mobile"]}`}>
         {t("혹시 계정이 있으신가요?")}
         <LinkToLoginPage />
       </p>
-    </div>;
+    </div>
+
+    <p className={`${styles["login-page-go"]} ${styles["login-pc"]}`}>
+      {t("혹시 계정이 있으신가요?")}
+      <LinkToLoginPage />
+    </p>
+  </div>;
 }
 export default Registration;

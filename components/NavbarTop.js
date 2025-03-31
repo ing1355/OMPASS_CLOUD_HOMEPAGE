@@ -14,13 +14,13 @@ import {
 import LinkComponent from "./Link";
 import LanguageSwitchLink from "./LanguageSwitchLink";
 import useTranslation from "../lib/useTranslation";
-import { AdminLoginRoute } from "../lib/ConstantsValues";
+import { AdminLoginRoute, getAdminHomePage } from "../lib/ConstantsValues";
 
 function NavbarTop() {
   const router = useRouter();
   const { isKr } = useTranslation();
 
-  // const getAdminHomePage = (locale) => `${process.env.adminRoute}/${locale}`;
+  
 
   useEffect(() => {
     $(window)
@@ -92,8 +92,8 @@ function NavbarTop() {
           <div className={styles["langbutton-mobile-div"]}>
             <li className={styles["admin-login-button-mobile"]}>
               <LinkComponent
-                // href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
-                href={AdminLoginRoute}
+                href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
+                // href={AdminLoginRoute}
                 target="_blank"
               >
                 <LogoutOutlined />
@@ -115,8 +115,8 @@ function NavbarTop() {
           </li>
           <li className={styles["admin-login-button"]}>
             <LinkComponent
-              // href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
-              href={AdminLoginRoute}
+              href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
+              // href={AdminLoginRoute}
               target="_blank"
             >
               <LogoutOutlined className={styles["locale-global-icon"]} />

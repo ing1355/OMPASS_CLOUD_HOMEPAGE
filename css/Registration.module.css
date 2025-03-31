@@ -273,21 +273,23 @@ button[type="submit"] {
   align-items: flex-start;
 }
 
-.agree-box .agree-column-all .column-box div {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
-}
-
 .agree-box .agree-column-all .column-box input {
   width: 15px;
   height: 15px;
   cursor: pointer;
 }
 
-.agree-box .agree-column-all .column-box label {
+.agree-box .agree-column-all .column-box label, .agree-box .agree-column .column-box label {
   font-size: 0.9rem;
-  margin-top: -0.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.agree-box .agree-column-all .column-box label {
+  margin: 1rem 0;
 }
 
 .agree-column {

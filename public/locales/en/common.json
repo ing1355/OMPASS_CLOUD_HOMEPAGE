@@ -497,13 +497,13 @@
   "server-side에서 HTTP HEADER에는 Secret Key를 포함하고 Path Variable에는 사용자의 아이디를 포함하여 OMPASS API를 호출합니다.": "Call OMPASS API including the secret key in “HTTP HEADER” and the user ID in “Path Variable” from the server-side.",
   "사용자 초기화 성공 시": "In case user initialization success",
 
-  "상호명：(주)원모어시큐리티 | 대표자：김민식": "OneMoreSecurity Inc. | CEO：KIM, MIN SIK",
+  "상호명：(주)원모어시큐리티 | 대표자：김민식": "OneMoreSecurity Inc. | CEO：Minsik Kim",
   "사업자 번호：735-88-01175 | 통신판매신고번호：제 2022-세종-0150": "Business Number：735-88-01175 | E-Commerce Registration Number：2022-Sejong-0150",
   "TEL：+82 70 4298 3070 | E-Mail：service@omsecurity.kr": "TEL：+82 70 4298 3070 | Email：service@omsecurity.kr",
   "회사 주소": "Unit 511~512 Smart Hub 1, 2150, Hannuri-daero, Sejong-si, Republic of Korea",
 
   "상호명：(주)원모어시큐리티": "OneMoreSecurity Inc.",
-  "대표자：김민식": "CEO：KIM, MIN SIK",
+  "대표자：김민식": "CEO：Minsik Kim",
   "사업자 번호：735-88-01175": "Business Number：735-88-01175",
   "통신판매신고번호：제 2022-세종-0150": "E-Commerce Registration Number：2022-Sejong-0150",
 
@@ -601,8 +601,8 @@
   "‘회사’는 이용자에게 개인화된 서비스를 제공하기 위하여 '쿠키(cookie)'를 사용합니다. '쿠키(cookie)'는 HTTP 서버에서 이용자의 브라우저에게 보내는 데이터파일로써 이용자의 기기에 저장됩니다. 쿠키(cookie)에는 사용한 웹사이트의 정보 및 이용자의 개인정보가 담길 수 있습니다. 이용자는 웹브라우저의 옵션을 조정하여 모든 쿠키를 다 받아들이거나, 쿠키가 설치될 때 통지를 보내도록 하거나, 아니면 모든 쿠키를 거부할 수 있습니다.": "The Company uses cookies to provide personalized services to users. As the data file sent by the HTTP server to the user’s browser and stored in the user’s device, a cookie may contain information on the websites used by the user and personal information of the user. Users can choose to accept all cookies, receive a notification when a cookie is installed, or reject all cookies by adjusting the options of the Internet web browser.",
 
   "10. 개인정보보호 책임자": "10. Personal information manager",
-  "개인정보보호책임자：강누리 과장": "Chief Privacy Manager：Nury Kang",
-  "개인정보보호 관련 문의처：070-4298-3070, partner@omsecurity.kr": "Contact for privacy related inquiries：070-4298-3070, partner@omsecurity.kr",
+  "개인정보보호책임자：김민식 대표": "Chief Privacy Manager：Minsik Kim",
+  "개인정보보호 관련 문의처：070-4298-3070, ceo@omsecurity.kr": "Contact for privacy related inquiries：070-4298-3070, ceo@omsecurity.kr",
   "개인정보에 관하여 궁금한 사항이 있을 경우, 언제든지 위 연락처를 통해 문의하실 수 있습니다.": "If you have any questions about your personal information, please contact us anytime.",
 
   "기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.": "For other questions about reporting or consulting on privacy violation, please contact the following institutions in South Korea：",
