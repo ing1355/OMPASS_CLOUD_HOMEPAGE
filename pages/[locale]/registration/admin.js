@@ -103,11 +103,8 @@ function admin({ isChecked }) {
         }
       )
       .then(({ data }) => {
-        const { isValidateCode } = data
-        setCodeVerificated(isValidateCode)
-        if (!isValidateCode) {
-          return message.error(t("ERR_012"))
-        }
+        setCodeVerificated(true)
+        message.success(t("올바른 인증 코드입니다."))
       }).catch(err => {
         const { code } = err.response.data
         message.error(t(code))
@@ -242,8 +239,10 @@ function admin({ isChecked }) {
                   {
                     username: username.value,
                     password: password.value,
-                    lastName: lastName.value,
-                    firstName: firstName.value,
+                    name: {
+                      firstName: firstName.value,
+                      lastName: lastName.value
+                    },
                     email: email.value,
                     phone: mobile.value,
                     subDomain: inputDomain,
