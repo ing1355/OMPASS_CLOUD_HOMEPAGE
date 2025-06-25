@@ -17,7 +17,9 @@ module.exports = {
     env: {
       // adminRoute : "https://ompass.kr:4002",
       // apiRoute : "https://ompass.kr:4002"
-      adminRoute: "https://admin.ompasscloud.com"
+      // adminRoute: "https://admin.ompasscloud.com"
+      // adminRoute: "https://back-admin.ompasscloud.com"
+      adminRoute: "https://test.ompasscloud.com"
       // adminRoute : "https://192.168.182.140:9004"
     },
     webpack: (config) => {
@@ -44,8 +46,8 @@ module.exports = {
     //   return [
     //     {
     //       source: "/v2/:path*",
-    //       destination: `http://192.168.182.141:8080/v2/:path*`
-    //     },
+    //       destination: "https://test.ompasscloud.com/v2/:path*"
+    //     }
     //   ];
     // },
     trailingSlash: true,

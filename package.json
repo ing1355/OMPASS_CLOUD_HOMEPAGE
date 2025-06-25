@@ -1,6 +1,7 @@
 {
   "name": "OMPASS_Cloud",
   "version": "1.0.0",
+  "proxy": "https://test.ompasscloud.com",
   "description": "",
   "main": "index.js",
   "scripts": {

@@ -12,6 +12,7 @@ import LinkToLoginPage from "../../../components/LinkToLoginPage";
 import { Redirect } from "../../../lib/redirect";
 import { isExistDomainApi } from "../../../lib/ApiFunctions";
 import { useRouter } from "next/router";
+import { domainRegex, emailRegex, idRegex, nameRegex, passwordRegex } from "../../../lib/Regex";
 
 const getPathSlugs = () => {
   return i18nextConfig.i18n.locales.map((locale) => ({
@@ -38,19 +39,19 @@ export async function getStaticProps({ params }) {
 }
 
 function admin({ isChecked }) {
-  const { t } = useTranslation();
+  const { t, isKr } = useTranslation();
   const [joinEmail, setJoinEmail] = useState(false);
   const [inputEmail, setInputEmail] = useState('');
   const [inputDomain, setInputDomain] = useState('');
   const [sended, setSended] = useState(false)
   const [inputCode, setInputCode] = useState('')
   const [codeVerificated, setCodeVerificated] = useState(false)
+  const [domainChecked, setDomainChecked] = useState(false)
   const [domainError, setDomainError] = useState(false)
   const [domainLengthError, setDomainLengthError] = useState(false)
   const [loading, setLoading] = useState(false)
   const router = useRouter()
   const timerId = useRef(0)
-
   // const [inputCountryCode, setInputCountryCode] = useState("kr");
   const [inputFormat, setInputFormat] = useState(null);
   const [inputDialCode, setInputDialCode] = useState(null);
@@ -59,25 +60,6 @@ function admin({ isChecked }) {
     const _ = /[0-9]{6,6}/;
     return _.test(value);
   }
-
-  const nameTest = (value) => {
-    const _ = /^[^ㄱ-ㅎㅏ-ㅣ]*$|^\s[^ㄱ-ㅎㅏ-ㅣ]*$|^[^ㄱ-ㅎㅏ-ㅣ]*$/;
-    const __ = /^[ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z0-9 ]{1,16}$/;
-    return _.test(value) && __.test(value);
-  };
-
-  const passwordTest = (value) => {
-    const _ =
-      /(?=.*[a-zA-Z])(?=.*[\d])(?=.*[\W]).{8,16}|(?=.*[a-zA-Z])(?=.*[\d]).{10,16}|(?=.*[a-zA-Z])(?=.*[\W]).{10,16}|(?=.*[\d])(?=.*[\W]).{10,16}/;
-
-    return _.test(value);
-  };
-
-  const emailTest = (value) => {
-    const _ =
-      /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
-    return _.test(value);
-  };
 
   const inputEmailChange = (e) => {
     setInputEmail(e.target.value);
@@ -88,6 +70,7 @@ function admin({ isChecked }) {
   };
 
   const inputDomainChange = (e) => {
+    setDomainChecked(false)
     setInputDomain(e.target.value);
   };
 
@@ -112,24 +95,31 @@ function admin({ isChecked }) {
   };
 
   const sendEmailVerificationCode = () => {
-    if (!emailTest(inputEmail)) return message.error(`${t("이메일 형식이 잘못되었습니다.")}`);
+    if (!emailRegex.test(inputEmail)) return message.error(`${t("이메일 형식이 잘못되었습니다.")}`);
     axios
       .post(
-        `/v2/users/verification-code`, {
+        `/v2/users/email/root-signup/verification-code`, {
         email: inputEmail
       }
       )
       .then(({ data }) => {
         setSended(true)
         message.success(t("이메일로 인증 코드가 발송되었습니다."))
-      });
+      }).catch(err => {
+        message.error(t("이메일 인증 코드 발송에 실패하였습니다."))
+      })
   }
 
   const checkDomainFunc = async () => {
     const { data } = await isExistDomainApi(inputDomain)
     const { isExist } = data
-    if (isExist) setDomainError(true)
-    else setDomainError(false)
+    if (isExist) {
+      setDomainError(true)
+      setDomainChecked(false)
+    } else {
+      setDomainError(false)
+      setDomainChecked(true)
+    }
   }
 
   useEffect(() => {
@@ -165,36 +155,103 @@ function admin({ isChecked }) {
                 password,
                 passwordConfirm,
                 mobile,
+                code
               } = e.target.elements;
-              if (!inputDomain.length) {
-                return message.error(t('도메인은 3~30자로 입력해주세요.'))
+              if (!domain.value) {
+                domain.focus()
+                return message.error(t('도메인을 입력해주세요.'))
               }
-              if (!firstName.value.length || !lastName.value.length) {
-                if (!firstName.value.length) firstName.focus();
-                else lastName.focus();
-                return message.error(`${t("이름을 입력해주세요.")}`);
+              if (!domainRegex.test(domain.value)) {
+                domain.focus()
+                return message.error(t('도메인은 3~30자의 영문 대소문자 및 숫자만 사용 가능합니다.'))
               }
-              if (!nameTest(firstName.value)) {
-                firstName.focus();
-                return message.error(
-                  `${t(
-                    "이름은 영문 대소문자 및 완성된 한글과 숫자만 사용 가능합니다."
-                  )}`
-                );
+              if (!domainChecked) {
+                domain.focus()
+                return message.error(t('도메인을 확인해주세요.'))
               }
-              if (!nameTest(lastName.value)) {
-                lastName.focus();
-                return message.error(
-                  `${t(
-                    "이름은 영문 대소문자 및 완성된 한글과 숫자만 사용 가능합니다."
-                  )}`
-                );
+              if (!email.value) {
+                email.focus();
+                return message.error(`${t("이메일을 입력해주세요.")}`);
               }
-              if (!emailTest(email.value)) {
+              if (!emailRegex.test(email.value)) {
                 email.focus();
                 return message.error(`${t("이메일 형식이 잘못되었습니다.")}`);
               }
-              if (!passwordTest(password.value)) {
+              if (!sended) {
+                return message.error(t('인증 요청 버튼을 눌러 인증 코드를 발송해주세요.'))
+              }
+              if (!code.value) {
+                code.focus()
+                return message.error(t('인증 코드를 입력해주세요.'))
+              }
+              if (!codeVerificated) {
+                code.focus()
+                return message.error(t('인증 코드를 확인해주세요.'))
+              }
+              if(isKr) {
+                if (!lastName.value.length) {
+                  lastName.focus();
+                  return message.error(`${t("성을 입력해주세요.")}`);
+                }
+                if (!nameRegex.test(lastName.value)) {
+                  lastName.focus();
+                  return message.error(
+                    `${t(
+                      "성은 영문 대소문자 및 완성된 한글과 숫자만 사용 가능합니다."
+                    )}`
+                  );
+                }
+                if (!firstName.value.length) {
+                  firstName.focus();
+                  return message.error(`${t("이름을 입력해주세요.")}`);
+                }
+                if (!nameRegex.test(firstName.value)) {
+                  firstName.focus();
+                  return message.error(
+                    `${t(
+                      "이름은 영문 대소문자 및 완성된 한글과 숫자만 사용 가능합니다."
+                    )}`
+                  );
+                }
+              } else {
+                if (!firstName.value.length) {
+                  firstName.focus();
+                  return message.error(`${t("이름을 입력해주세요.")}`);
+                }
+                if (!nameRegex.test(firstName.value)) {
+                  firstName.focus();
+                  return message.error(
+                    `${t(
+                      "이름은 영문 대소문자 및 완성된 한글과 숫자만 사용 가능합니다."
+                    )}`
+                  );
+                }
+                if (!lastName.value.length) {
+                  lastName.focus();
+                  return message.error(`${t("성을 입력해주세요.")}`);
+                }
+                if (!nameRegex.test(lastName.value)) {
+                  lastName.focus();
+                  return message.error(
+                    `${t(
+                      "성은 영문 대소문자 및 완성된 한글과 숫자만 사용 가능합니다."
+                    )}`
+                  );
+                }
+              }
+              if (!username.value) {
+                username.focus();
+                return message.error(`${t("아이디를 입력해주세요.")}`);
+              }
+              if (!idRegex.test(username.value)) {
+                username.focus();
+                return message.error(`${t("아이디는 4~16자의 영소문자 및 숫자만 사용 가능합니다.")}`);
+              }
+              if (!password.value) {
+                password.focus();
+                return message.error(`${t("비밀번호를 입력해주세요.")}`);
+              }
+              if (!passwordRegex.test(password.value)) {
                 password.focus();
                 return message.error(
                   `${t(
@@ -272,7 +329,7 @@ function admin({ isChecked }) {
               <div>
                 <input
                   name="domain"
-                  maxLength="24"
+                  maxLength="30"
                   placeholder={t("domain")}
                   onChange={inputDomainChange}
                 />
@@ -282,13 +339,13 @@ function admin({ isChecked }) {
               </div>
               <div className={styles["domain-error-text"]}>
                 {domainError ? t('해당 도메인은 이미 존재합니다.') : ''}
-                {domainLengthError ? t('도메인은 3~30자로 입력해주세요.') : ''}
+                {domainLengthError ? t('도메인은 3~30자의 영문 대소문자 및 숫자만 사용 가능합니다.') : ''}
               </div>
             </div>
             <div className={styles["joinEmail"]}>
               <input
                 name="email"
-                maxLength="40"
+                maxLength="48"
                 placeholder={t("인증 메일")}
                 disabled={sended}
                 onChange={inputEmailChange}
@@ -321,13 +378,11 @@ function admin({ isChecked }) {
             </div>
             <div className={styles["joinName"]}>
               <input
-                type="text"
-                minLength="1"
-                name="firstName"
+                name={isKr ? "lastName" : "firstName"}
                 maxLength="16"
-                placeholder={t("성")}
+                placeholder={t(isKr ? "성" : "이름")}
               />
-              <input name="lastName" maxLength="16" placeholder={t("이름")} />
+              <input name={isKr ? "firstName" : "lastName"} maxLength="16" placeholder={t(isKr ? "이름" : "성")} />
             </div>
             <input
               name="username"
@@ -355,7 +410,9 @@ function admin({ isChecked }) {
                   name: "mobile",
                 }}
                 onChange={(value, countryInfo) => {
-                  const { format, dialCode } = countryInfo;
+                  console.log(value, countryInfo)
+
+                  const { format, dialCode, countryCode } = countryInfo;
                   if (inputFormat !== format) setInputFormat(format);
                   if (inputDialCode !== dialCode) setInputDialCode(dialCode);
                   // setInputCountryCode(countryInfo.countryCode);

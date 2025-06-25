@@ -13,8 +13,8 @@ const LinkToLoginPage = () => {
                 fontWeight: "500",
                 color: "blue",
             }}
-            href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
-            // href={AdminLoginRoute}
+            // href={isKr ? getAdminHomePage("ko") : getAdminHomePage("en")}
+            href={AdminLoginRoute}
             target="_blank"
         >
             {t("로그인 페이지 이동하기")}
